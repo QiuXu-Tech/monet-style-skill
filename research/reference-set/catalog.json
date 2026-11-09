@@ -37,7 +37,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Boston",
-      "legacy_topic": "Boston"
+      "legacy_topic": "Boston",
+      "thumbnail_image": "thumbnails/commons-79292489.jpg",
+      "thumbnail_bytes": 50388,
+      "thumbnail_sha256": "8161518ec3353285fdaf79bdff000c555bf6d6c26637a47379c32198f59bc944",
+      "thumbnail_width": 500,
+      "thumbnail_height": 329
     },
     {
       "id": "commons-863158",
@@ -71,7 +76,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "VanGogh",
-      "legacy_topic": "VanGogh"
+      "legacy_topic": "VanGogh",
+      "thumbnail_image": "thumbnails/commons-863158.jpg",
+      "thumbnail_bytes": 52434,
+      "thumbnail_sha256": "a4c192ac193e1ddf1d2448fdbec3d3874fc793bd00e3e75ffc614b52b9e85603",
+      "thumbnail_width": 500,
+      "thumbnail_height": 328
     },
     {
       "id": "commons-157446014",
@@ -105,7 +115,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Zurich",
-      "legacy_topic": "Zurich"
+      "legacy_topic": "Zurich",
+      "thumbnail_image": "thumbnails/commons-157446014.jpg",
+      "thumbnail_bytes": 50410,
+      "thumbnail_sha256": "3f1a03938026d4e46bc7da70123229bee72bba3b6038dfb3e03993cac039b28d",
+      "thumbnail_width": 500,
+      "thumbnail_height": 333
     },
     {
       "id": "commons-7175403",
@@ -139,7 +154,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Orsay",
-      "legacy_topic": "Orsay"
+      "legacy_topic": "Orsay",
+      "thumbnail_image": "thumbnails/commons-7175403.jpg",
+      "thumbnail_bytes": 66271,
+      "thumbnail_sha256": "98b8e897cb9d67b2033797eb7cb541a39c425fa766ac95cede8b0e8b57bf5bd7",
+      "thumbnail_width": 500,
+      "thumbnail_height": 379
     },
     {
       "id": "commons-10173226",
@@ -173,7 +193,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "London",
-      "legacy_topic": "London"
+      "legacy_topic": "London",
+      "thumbnail_image": "thumbnails/commons-10173226.jpg",
+      "thumbnail_bytes": 45938,
+      "thumbnail_sha256": "06417f5f7176a50fa85370f1420c709be075a03ceb47df018115b13c6c4b30b2",
+      "thumbnail_width": 500,
+      "thumbnail_height": 274
     },
     {
       "id": "commons-22140698",
@@ -207,7 +232,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Boston",
-      "legacy_topic": "Boston"
+      "legacy_topic": "Boston",
+      "thumbnail_image": "thumbnails/commons-22140698.jpg",
+      "thumbnail_bytes": 80391,
+      "thumbnail_sha256": "0eaf26af2853fb0a36ba00559221cac908231cd5cf0ec7ac9c52942bef9bc092",
+      "thumbnail_width": 500,
+      "thumbnail_height": 455
     },
     {
       "id": "cma-1953-155",
@@ -240,7 +270,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "flowers"
+      "legacy_topic": "flowers",
+      "thumbnail_image": "thumbnails/cma-1953-155.jpg",
+      "thumbnail_bytes": 67019,
+      "thumbnail_sha256": "989e5841d13df03b3f627e0dc7ff372774719fe49c6bb05f138645c06594f5aa",
+      "thumbnail_width": 380,
+      "thumbnail_height": 500
     },
     {
       "id": "commons-21897301",
@@ -274,7 +309,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Tokyo",
-      "legacy_topic": "Tokyo"
+      "legacy_topic": "Tokyo",
+      "thumbnail_image": "thumbnails/commons-21897301.jpg",
+      "thumbnail_bytes": 54570,
+      "thumbnail_sha256": "3feec0f38e718a9fec3ba64b54ae946ea20c2cab69b703f4c7d2e24fbf0f913d",
+      "thumbnail_width": 280,
+      "thumbnail_height": 500
     },
     {
       "id": "commons-81309009",
@@ -307,7 +347,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "landscape"
+      "legacy_topic": "landscape",
+      "thumbnail_image": "thumbnails/commons-81309009.jpg",
+      "thumbnail_bytes": 63321,
+      "thumbnail_sha256": "226019c9b57bf37a76d7bc39f9e097c1b658e59996e266553f95764032beb622",
+      "thumbnail_width": 500,
+      "thumbnail_height": 347
     },
     {
       "id": "commons-81308970",
@@ -340,7 +385,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "interior"
+      "legacy_topic": "interior",
+      "thumbnail_image": "thumbnails/commons-81308970.jpg",
+      "thumbnail_bytes": 39764,
+      "thumbnail_sha256": "982d998da9044798a2373b12ccb486a2f1aa1270cd48e58b03ac522eddecbb74",
+      "thumbnail_width": 500,
+      "thumbnail_height": 386
     },
     {
       "id": "commons-155866",
@@ -374,7 +424,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Orsay",
-      "legacy_topic": "Orsay"
+      "legacy_topic": "Orsay",
+      "thumbnail_image": "thumbnails/commons-155866.jpg",
+      "thumbnail_bytes": 59937,
+      "thumbnail_sha256": "58a9e069682bae114d7451fd22576d423acbca8a2a09bedcd3efdebc390eb41e",
+      "thumbnail_width": 293,
+      "thumbnail_height": 500
     },
     {
       "id": "cma-1958-39",
@@ -407,7 +462,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "figure"
+      "legacy_topic": "figure",
+      "thumbnail_image": "thumbnails/cma-1958-39.jpg",
+      "thumbnail_bytes": 58733,
+      "thumbnail_sha256": "dab954d918d1c8ce96fc20eb7d4eb7aaa8e0f83d225ad144beb6f91fe1ac5ef9",
+      "thumbnail_width": 401,
+      "thumbnail_height": 500
     },
     {
       "id": "commons-7743668",
@@ -441,7 +501,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "London",
-      "legacy_topic": "London"
+      "legacy_topic": "London",
+      "thumbnail_image": "thumbnails/commons-7743668.jpg",
+      "thumbnail_bytes": 76944,
+      "thumbnail_sha256": "0eef634206a603186e4f8255fff8190e784e4366a7e39817323905c748968da5",
+      "thumbnail_width": 500,
+      "thumbnail_height": 397
     },
     {
       "id": "commons-155829",
@@ -475,7 +540,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "London",
-      "legacy_topic": "London"
+      "legacy_topic": "London",
+      "thumbnail_image": "thumbnails/commons-155829.jpg",
+      "thumbnail_bytes": 62035,
+      "thumbnail_sha256": "3f151a4d5f2ac27a5c32b23eea06627ac8bb43df66b02cdab10e1b349fe06a6d",
+      "thumbnail_width": 500,
+      "thumbnail_height": 411
     },
     {
       "id": "commons-73011096",
@@ -509,7 +579,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Orsay",
-      "legacy_topic": "Orsay"
+      "legacy_topic": "Orsay",
+      "thumbnail_image": "thumbnails/commons-73011096.jpg",
+      "thumbnail_bytes": 52124,
+      "thumbnail_sha256": "25639a6f3deacbdf0325ebbfea6b8f9f3ee37f48b66fd3257729e3f9f860ad3b",
+      "thumbnail_width": 500,
+      "thumbnail_height": 375
     },
     {
       "id": "commons-22621660",
@@ -543,7 +618,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "VanGogh",
-      "legacy_topic": "VanGogh"
+      "legacy_topic": "VanGogh",
+      "thumbnail_image": "thumbnails/commons-22621660.jpg",
+      "thumbnail_bytes": 51160,
+      "thumbnail_sha256": "8404ddde8b5d87eaf56b3f965a74a5cce5a469af0ba5166ffdc9faf93f17912f",
+      "thumbnail_width": 500,
+      "thumbnail_height": 320
     },
     {
       "id": "commons-30782845",
@@ -577,7 +657,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Marmottan",
-      "legacy_topic": "Marmottan"
+      "legacy_topic": "Marmottan",
+      "thumbnail_image": "thumbnails/commons-30782845.jpg",
+      "thumbnail_bytes": 39597,
+      "thumbnail_sha256": "a8fd118463d35d802e80d7ed4024f10a5611c9017fc50c0576792e7b60f80dcd",
+      "thumbnail_width": 500,
+      "thumbnail_height": 229
     },
     {
       "id": "commons-55105249",
@@ -611,7 +696,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Orsay",
-      "legacy_topic": "Orsay"
+      "legacy_topic": "Orsay",
+      "thumbnail_image": "thumbnails/commons-55105249.jpg",
+      "thumbnail_bytes": 53040,
+      "thumbnail_sha256": "328875c1c14c5aa73f284e5c4df89f686807eb9af671850579bde4b6d31ec1c1",
+      "thumbnail_width": 500,
+      "thumbnail_height": 318
     },
     {
       "id": "commons-189209464",
@@ -645,7 +735,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Wales",
-      "legacy_topic": "Wales"
+      "legacy_topic": "Wales",
+      "thumbnail_image": "thumbnails/commons-189209464.jpg",
+      "thumbnail_bytes": 113441,
+      "thumbnail_sha256": "f29fd70549bf97bb272eb3628b7a80a9b5f1e643fd2f984b699511b996333a3d",
+      "thumbnail_width": 500,
+      "thumbnail_height": 324
     },
     {
       "id": "commons-68140862",
@@ -679,7 +774,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "London",
-      "legacy_topic": "London"
+      "legacy_topic": "London",
+      "thumbnail_image": "thumbnails/commons-68140862.jpg",
+      "thumbnail_bytes": 35824,
+      "thumbnail_sha256": "7158d90533f1c291bc3a72aeb4cfde56f93a8560741e5c818cdf0032bc923464",
+      "thumbnail_width": 500,
+      "thumbnail_height": 318
     },
     {
       "id": "commons-20298267",
@@ -713,7 +813,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Glyptotek",
-      "legacy_topic": "Glyptotek"
+      "legacy_topic": "Glyptotek",
+      "thumbnail_image": "thumbnails/commons-20298267.jpg",
+      "thumbnail_bytes": 41519,
+      "thumbnail_sha256": "7d1a76ae7b2dfdf832292a943482cd7bd16e4bb8e792809c135e089c6bf607ee",
+      "thumbnail_width": 500,
+      "thumbnail_height": 317
     },
     {
       "id": "commons-39850360",
@@ -747,7 +852,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "VanGogh",
-      "legacy_topic": "VanGogh"
+      "legacy_topic": "VanGogh",
+      "thumbnail_image": "thumbnails/commons-39850360.jpg",
+      "thumbnail_bytes": 44781,
+      "thumbnail_sha256": "b6e250cacfa7db590b57820cbeb5d63f7427514384af95034a5da87c1f8020ac",
+      "thumbnail_width": 500,
+      "thumbnail_height": 323
     },
     {
       "id": "commons-35581559",
@@ -781,7 +891,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Hermitage",
-      "legacy_topic": "Hermitage"
+      "legacy_topic": "Hermitage",
+      "thumbnail_image": "thumbnails/commons-35581559.jpg",
+      "thumbnail_bytes": 100121,
+      "thumbnail_sha256": "f9a49f8c80d4755332a83dfc02fb2da185477c4daf04cc40322a10cdd651cddc",
+      "thumbnail_width": 500,
+      "thumbnail_height": 414
     },
     {
       "id": "commons-81308957",
@@ -814,7 +929,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "landscape"
+      "legacy_topic": "landscape",
+      "thumbnail_image": "thumbnails/commons-81308957.jpg",
+      "thumbnail_bytes": 58998,
+      "thumbnail_sha256": "22be92924b54e3a1940521d72de76ae5194b53261d71aacd7e279a486e53f82e",
+      "thumbnail_width": 500,
+      "thumbnail_height": 382
     },
     {
       "id": "commons-144597507",
@@ -848,7 +968,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Pola",
-      "legacy_topic": "Pola"
+      "legacy_topic": "Pola",
+      "thumbnail_image": "thumbnails/commons-144597507.jpg",
+      "thumbnail_bytes": 61479,
+      "thumbnail_sha256": "eaeffce5f114060ad745cb908959bedfd5d4756dd8a5f3db24a1db7f6498f670",
+      "thumbnail_width": 500,
+      "thumbnail_height": 389
     },
     {
       "id": "commons-155845",
@@ -882,7 +1007,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Orsay",
-      "legacy_topic": "Orsay"
+      "legacy_topic": "Orsay",
+      "thumbnail_image": "thumbnails/commons-155845.jpg",
+      "thumbnail_bytes": 57520,
+      "thumbnail_sha256": "f99072600e2d15d1dcb92f78bfe7ebfdda007ee13ef314ec9ae273b663e5d0c6",
+      "thumbnail_width": 500,
+      "thumbnail_height": 378
     },
     {
       "id": "commons-132134",
@@ -919,7 +1049,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "sunrise"
+      "legacy_topic": "sunrise",
+      "thumbnail_image": "thumbnails/commons-132134.jpg",
+      "thumbnail_bytes": 64138,
+      "thumbnail_sha256": "975c95d3e16238d50b7b418de1f941b987e98a1be8e505ae229911f00d806f86",
+      "thumbnail_width": 500,
+      "thumbnail_height": 384
     },
     {
       "id": "commons-7186182",
@@ -953,7 +1088,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Orsay",
-      "legacy_topic": "Orsay"
+      "legacy_topic": "Orsay",
+      "thumbnail_image": "thumbnails/commons-7186182.jpg",
+      "thumbnail_bytes": 54573,
+      "thumbnail_sha256": "e8f2afe5804db5cce4d796ea64fa47dd2ebd48340c921c150a4668e728e7abe5",
+      "thumbnail_width": 500,
+      "thumbnail_height": 378
     },
     {
       "id": "commons-81309013",
@@ -986,7 +1126,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "river"
+      "legacy_topic": "river",
+      "thumbnail_image": "thumbnails/commons-81309013.jpg",
+      "thumbnail_bytes": 73949,
+      "thumbnail_sha256": "ba628f15f7fe57e8c0c7b0f88f220c7c78853096d61b0879f417e88062892e66",
+      "thumbnail_width": 500,
+      "thumbnail_height": 406
     },
     {
       "id": "commons-3969966",
@@ -1022,7 +1167,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Pola",
-      "legacy_topic": "Pola"
+      "legacy_topic": "Pola",
+      "thumbnail_image": "thumbnails/commons-3969966.jpg",
+      "thumbnail_bytes": 53776,
+      "thumbnail_sha256": "1cd8840b86f2caef12d05911d6e4c87fcc9f0f194d574670e543e7364f3e6950",
+      "thumbnail_width": 500,
+      "thumbnail_height": 315
     },
     {
       "id": "commons-31597382",
@@ -1056,7 +1206,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "London",
-      "legacy_topic": "London"
+      "legacy_topic": "London",
+      "thumbnail_image": "thumbnails/commons-31597382.jpg",
+      "thumbnail_bytes": 37126,
+      "thumbnail_sha256": "10274a8d71db1b1024ddb871b2c81d7a2ceb4c8527be58a32afd9c6b27f74c66",
+      "thumbnail_width": 500,
+      "thumbnail_height": 281
     },
     {
       "id": "commons-36198086",
@@ -1090,7 +1245,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Pushkin",
-      "legacy_topic": "Pushkin"
+      "legacy_topic": "Pushkin",
+      "thumbnail_image": "thumbnails/commons-36198086.jpg",
+      "thumbnail_bytes": 56295,
+      "thumbnail_sha256": "1b6214969a5baaedcccd1bb51c248852b04e1e4d8678d9a5b625375be0c09cd3",
+      "thumbnail_width": 500,
+      "thumbnail_height": 384
     },
     {
       "id": "commons-81309016",
@@ -1123,7 +1283,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "garden"
+      "legacy_topic": "garden",
+      "thumbnail_image": "thumbnails/commons-81309016.jpg",
+      "thumbnail_bytes": 79920,
+      "thumbnail_sha256": "2df5d1dabbb5db9ff0fa4371e66ca18c9ff852a6248ae7c095b812864c742dfb",
+      "thumbnail_width": 500,
+      "thumbnail_height": 374
     },
     {
       "id": "commons-80588154",
@@ -1156,7 +1321,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "garden"
+      "legacy_topic": "garden",
+      "thumbnail_image": "thumbnails/commons-80588154.jpg",
+      "thumbnail_bytes": 84290,
+      "thumbnail_sha256": "5ca7fa10afff61e5d595d01b073f163150e71df881304ad2562d0eab0bf8fb15",
+      "thumbnail_width": 500,
+      "thumbnail_height": 406
     },
     {
       "id": "commons-35581174",
@@ -1190,7 +1360,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Hermitage",
-      "legacy_topic": "Hermitage"
+      "legacy_topic": "Hermitage",
+      "thumbnail_image": "thumbnails/commons-35581174.jpg",
+      "thumbnail_bytes": 92183,
+      "thumbnail_sha256": "569f4efffe7755c13b9b2178d358a6c9f361fb840aa383b0f034527bbf5e9803",
+      "thumbnail_width": 500,
+      "thumbnail_height": 376
     },
     {
       "id": "commons-155878",
@@ -1224,7 +1399,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Orsay",
-      "legacy_topic": "Orsay"
+      "legacy_topic": "Orsay",
+      "thumbnail_image": "thumbnails/commons-155878.jpg",
+      "thumbnail_bytes": 59140,
+      "thumbnail_sha256": "9f3971987b19ceccae9f72c9913d0df1bf4d8782ca8da8cd547a7af59bf657c7",
+      "thumbnail_width": 500,
+      "thumbnail_height": 312
     },
     {
       "id": "commons-79297441",
@@ -1260,7 +1440,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Boston",
-      "legacy_topic": "Boston"
+      "legacy_topic": "Boston",
+      "thumbnail_image": "thumbnails/commons-79297441.jpg",
+      "thumbnail_bytes": 76803,
+      "thumbnail_sha256": "cf86477eaaa5acc68c3e6a4f974e41b34e3c75f9005380ae552206fe0c514bc3",
+      "thumbnail_width": 500,
+      "thumbnail_height": 370
     },
     {
       "id": "commons-919413",
@@ -1296,7 +1481,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Tokyo",
-      "legacy_topic": "Tokyo"
+      "legacy_topic": "Tokyo",
+      "thumbnail_image": "thumbnails/commons-919413.jpg",
+      "thumbnail_bytes": 56009,
+      "thumbnail_sha256": "55f2deff3cc7d1562cd097d4ea544219a3c481681c25cd89a1e2959a9eaa9596",
+      "thumbnail_width": 500,
+      "thumbnail_height": 418
     },
     {
       "id": "commons-21857387",
@@ -1330,7 +1520,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Orsay",
-      "legacy_topic": "Orsay"
+      "legacy_topic": "Orsay",
+      "thumbnail_image": "thumbnails/commons-21857387.jpg",
+      "thumbnail_bytes": 84278,
+      "thumbnail_sha256": "391d74a5a388c94731bac2b74365b119f0aa2449eec241bdad08d7a2aa6597c3",
+      "thumbnail_width": 500,
+      "thumbnail_height": 411
     },
     {
       "id": "commons-30347832",
@@ -1367,7 +1562,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Marmottan",
-      "legacy_topic": "Marmottan"
+      "legacy_topic": "Marmottan",
+      "thumbnail_image": "thumbnails/commons-30347832.jpg",
+      "thumbnail_bytes": 80871,
+      "thumbnail_sha256": "c82528498785ddd321212d682a8397c1d6f5130098121fd37b1c9050c002b5c3",
+      "thumbnail_width": 500,
+      "thumbnail_height": 376
     },
     {
       "id": "commons-48315535",
@@ -1401,7 +1601,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Marmottan",
-      "legacy_topic": "Marmottan"
+      "legacy_topic": "Marmottan",
+      "thumbnail_image": "thumbnails/commons-48315535.jpg",
+      "thumbnail_bytes": 87889,
+      "thumbnail_sha256": "ff4871926bc72d2912c9953d9dc15a4b67385531f2e260a91e706c7d65509241",
+      "thumbnail_width": 500,
+      "thumbnail_height": 397
     },
     {
       "id": "commons-81309412",
@@ -1434,7 +1639,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "figure"
+      "legacy_topic": "figure",
+      "thumbnail_image": "thumbnails/commons-81309412.jpg",
+      "thumbnail_bytes": 81656,
+      "thumbnail_sha256": "4a7070be63e82e1df2e123a0b071ca1305f6b45b72746e501139211a38117df7",
+      "thumbnail_width": 403,
+      "thumbnail_height": 500
     },
     {
       "id": "commons-81308962",
@@ -1469,7 +1679,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "bridge"
+      "legacy_topic": "bridge",
+      "thumbnail_image": "thumbnails/commons-81308962.jpg",
+      "thumbnail_bytes": 71136,
+      "thumbnail_sha256": "d77faad55aef1661578ffd64d8d07bf4273891f9a609277e3874a3d5080410eb",
+      "thumbnail_width": 500,
+      "thumbnail_height": 376
     },
     {
       "id": "commons-506301",
@@ -1503,7 +1718,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Boston",
-      "legacy_topic": "Boston"
+      "legacy_topic": "Boston",
+      "thumbnail_image": "thumbnails/commons-506301.jpg",
+      "thumbnail_bytes": 62783,
+      "thumbnail_sha256": "414927efc08adbfc0c36934f793d14b4abd7fa0446bc7d9bf68020f4002fedf7",
+      "thumbnail_width": 303,
+      "thumbnail_height": 500
     },
     {
       "id": "commons-34218007",
@@ -1537,7 +1757,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Hermitage",
-      "legacy_topic": "Hermitage"
+      "legacy_topic": "Hermitage",
+      "thumbnail_image": "thumbnails/commons-34218007.jpg",
+      "thumbnail_bytes": 116049,
+      "thumbnail_sha256": "864cb5e075849be020c2e2e45c407225f28b30297913c4836d69824c09364b50",
+      "thumbnail_width": 500,
+      "thumbnail_height": 376
     },
     {
       "id": "commons-15260661",
@@ -1571,7 +1796,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Marmottan",
-      "legacy_topic": "Marmottan"
+      "legacy_topic": "Marmottan",
+      "thumbnail_image": "thumbnails/commons-15260661.jpg",
+      "thumbnail_bytes": 106006,
+      "thumbnail_sha256": "9bd79930e715bc3bc63a0e41e08d401dcbbf93d82a4b68655ba1b3e11e8e387c",
+      "thumbnail_width": 500,
+      "thumbnail_height": 368
     },
     {
       "id": "commons-21909091",
@@ -1606,7 +1836,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "station"
+      "legacy_topic": "station",
+      "thumbnail_image": "thumbnails/commons-21909091.jpg",
+      "thumbnail_bytes": 72222,
+      "thumbnail_sha256": "2dd59e98af3ebeff5560be19ec462de5df3bab28ef82276d6a41bdd233eb4dad",
+      "thumbnail_width": 500,
+      "thumbnail_height": 375
     },
     {
       "id": "commons-7186206",
@@ -1640,7 +1875,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Orsay",
-      "legacy_topic": "Orsay"
+      "legacy_topic": "Orsay",
+      "thumbnail_image": "thumbnails/commons-7186206.jpg",
+      "thumbnail_bytes": 83268,
+      "thumbnail_sha256": "eb4d58b3a8b4e402c2027c07e54f076faeb1436fb483b5ae589f8055962c8598",
+      "thumbnail_width": 489,
+      "thumbnail_height": 500
     },
     {
       "id": "commons-38221349",
@@ -1674,7 +1914,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Hermitage",
-      "legacy_topic": "Hermitage"
+      "legacy_topic": "Hermitage",
+      "thumbnail_image": "thumbnails/commons-38221349.jpg",
+      "thumbnail_bytes": 112509,
+      "thumbnail_sha256": "9598f4bbde9d44e81f729992af2805087376fbae69ef35ba73eda7d9d508761c",
+      "thumbnail_width": 500,
+      "thumbnail_height": 444
     },
     {
       "id": "commons-30676817",
@@ -1708,7 +1953,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "London",
-      "legacy_topic": "London"
+      "legacy_topic": "London",
+      "thumbnail_image": "thumbnails/commons-30676817.jpg",
+      "thumbnail_bytes": 79898,
+      "thumbnail_sha256": "50ee747b1d5330c938a69e560bc2c4aa8cb653320b31a0bbc8c3f17a076ac622",
+      "thumbnail_width": 500,
+      "thumbnail_height": 359
     },
     {
       "id": "commons-5791927",
@@ -1744,7 +1994,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Pola",
-      "legacy_topic": "Pola"
+      "legacy_topic": "Pola",
+      "thumbnail_image": "thumbnails/commons-5791927.jpg",
+      "thumbnail_bytes": 70636,
+      "thumbnail_sha256": "ea140591b15f198ef1f73e06c876b791c9133296da1a3aa57771e3b0cb5404c3",
+      "thumbnail_width": 500,
+      "thumbnail_height": 373
     },
     {
       "id": "commons-12374439",
@@ -1780,7 +2035,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Orsay",
-      "legacy_topic": "Orsay"
+      "legacy_topic": "Orsay",
+      "thumbnail_image": "thumbnails/commons-12374439.jpg",
+      "thumbnail_bytes": 101582,
+      "thumbnail_sha256": "4802ce805834c0e8eac2ef50b8c331102cec6f5765a5f20c27dcc44b10cd4d75",
+      "thumbnail_width": 500,
+      "thumbnail_height": 380
     },
     {
       "id": "commons-98294423",
@@ -1814,7 +2074,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Norway",
-      "legacy_topic": "Norway"
+      "legacy_topic": "Norway",
+      "thumbnail_image": "thumbnails/commons-98294423.jpg",
+      "thumbnail_bytes": 67158,
+      "thumbnail_sha256": "5ced9b8b49e1fac2aa96c089a16d45fe76daefa2e8d9566a676c7deb1ec145d7",
+      "thumbnail_width": 500,
+      "thumbnail_height": 403
     },
     {
       "id": "commons-76621738",
@@ -1848,7 +2113,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Marmottan",
-      "legacy_topic": "Marmottan"
+      "legacy_topic": "Marmottan",
+      "thumbnail_image": "thumbnails/commons-76621738.jpg",
+      "thumbnail_bytes": 81808,
+      "thumbnail_sha256": "bbd4992de4fb68b35f3476873b34d0176b335fc74d0ddd33c59ff799453ea840",
+      "thumbnail_width": 396,
+      "thumbnail_height": 500
     },
     {
       "id": "commons-81308959",
@@ -1881,7 +2151,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "river"
+      "legacy_topic": "river",
+      "thumbnail_image": "thumbnails/commons-81308959.jpg",
+      "thumbnail_bytes": 83750,
+      "thumbnail_sha256": "ab656fd0d8e3f5e60a683fbec7de02ce21293c909f56e166a4b052194a0f3478",
+      "thumbnail_width": 500,
+      "thumbnail_height": 364
     },
     {
       "id": "commons-15418936",
@@ -1918,7 +2193,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Orsay",
-      "legacy_topic": "Orsay"
+      "legacy_topic": "Orsay",
+      "thumbnail_image": "thumbnails/commons-15418936.jpg",
+      "thumbnail_bytes": 51953,
+      "thumbnail_sha256": "8eafbfb8ee7b187f6d49769a2964a9fdaf85041449629995af80eaeea6d49517",
+      "thumbnail_width": 500,
+      "thumbnail_height": 303
     },
     {
       "id": "commons-81309099",
@@ -1951,7 +2231,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "landscape"
+      "legacy_topic": "landscape",
+      "thumbnail_image": "thumbnails/commons-81309099.jpg",
+      "thumbnail_bytes": 74975,
+      "thumbnail_sha256": "b54a4c7928901a4a42abd1769f9dc37975e6ad5952816c2798cb5833040d0a0c",
+      "thumbnail_width": 500,
+      "thumbnail_height": 400
     },
     {
       "id": "commons-81309118",
@@ -1984,7 +2269,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "figure"
+      "legacy_topic": "figure",
+      "thumbnail_image": "thumbnails/commons-81309118.jpg",
+      "thumbnail_bytes": 91564,
+      "thumbnail_sha256": "f920b3a0616d8418b487a923615165dc88128d8b87051befba500ece6d0b1a91",
+      "thumbnail_width": 367,
+      "thumbnail_height": 500
     },
     {
       "id": "commons-21897381",
@@ -2018,7 +2308,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Tokyo",
-      "legacy_topic": "Tokyo"
+      "legacy_topic": "Tokyo",
+      "thumbnail_image": "thumbnails/commons-21897381.jpg",
+      "thumbnail_bytes": 77843,
+      "thumbnail_sha256": "bf7e4174419ced709254357f3939f49907061f25fc389634b2a221f756013ecb",
+      "thumbnail_width": 500,
+      "thumbnail_height": 420
     },
     {
       "id": "commons-22009559",
@@ -2052,7 +2347,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Boston",
-      "legacy_topic": "Boston"
+      "legacy_topic": "Boston",
+      "thumbnail_image": "thumbnails/commons-22009559.jpg",
+      "thumbnail_bytes": 92968,
+      "thumbnail_sha256": "141dea820772215feb7c428d1ba6b363db91ec367139377e48a87970b3b2c3a1",
+      "thumbnail_width": 396,
+      "thumbnail_height": 500
     },
     {
       "id": "commons-6595394",
@@ -2088,7 +2388,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "London",
-      "legacy_topic": "London"
+      "legacy_topic": "London",
+      "thumbnail_image": "thumbnails/commons-6595394.jpg",
+      "thumbnail_bytes": 68020,
+      "thumbnail_sha256": "92eda0227abc474f1248229743030c675ff164c7bb6e0856f560a78f374dae07",
+      "thumbnail_width": 500,
+      "thumbnail_height": 361
     },
     {
       "id": "commons-38257714",
@@ -2122,7 +2427,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Basel",
-      "legacy_topic": "Basel"
+      "legacy_topic": "Basel",
+      "thumbnail_image": "thumbnails/commons-38257714.jpg",
+      "thumbnail_bytes": 80542,
+      "thumbnail_sha256": "ccc38f370e3481cd4afc4e7c86a969f9fb62dd1088db83010109faf213ea7ec3",
+      "thumbnail_width": 500,
+      "thumbnail_height": 403
     },
     {
       "id": "commons-81309015",
@@ -2155,7 +2465,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "garden"
+      "legacy_topic": "garden",
+      "thumbnail_image": "thumbnails/commons-81309015.jpg",
+      "thumbnail_bytes": 97259,
+      "thumbnail_sha256": "0c31ae5fa34210316199e3cbe01d747e25881501603cedeb929254d84ed62e25",
+      "thumbnail_width": 399,
+      "thumbnail_height": 500
     },
     {
       "id": "commons-22940540",
@@ -2189,7 +2504,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Glyptotek",
-      "legacy_topic": "Glyptotek"
+      "legacy_topic": "Glyptotek",
+      "thumbnail_image": "thumbnails/commons-22940540.jpg",
+      "thumbnail_bytes": 65829,
+      "thumbnail_sha256": "6735e74eee5b82ae5cdc6961e1b41cbf0976f53981e0f021a0f2db387ae7ecbf",
+      "thumbnail_width": 500,
+      "thumbnail_height": 357
     },
     {
       "id": "commons-21909351",
@@ -2222,7 +2542,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "figure-seascape"
+      "legacy_topic": "figure-seascape",
+      "thumbnail_image": "thumbnails/commons-21909351.jpg",
+      "thumbnail_bytes": 75666,
+      "thumbnail_sha256": "bedb87829c00f383fbe649d8e1188a4c0d39f06f3d4a11ca0b1ae71de102b4d2",
+      "thumbnail_width": 500,
+      "thumbnail_height": 400
     },
     {
       "id": "commons-81308967",
@@ -2255,7 +2580,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "seascape"
+      "legacy_topic": "seascape",
+      "thumbnail_image": "thumbnails/commons-81308967.jpg",
+      "thumbnail_bytes": 37287,
+      "thumbnail_sha256": "6f2537625f7bad981179fd7e2eef560758c48946026dc04f2734ff13cb19bc1a",
+      "thumbnail_width": 500,
+      "thumbnail_height": 298
     },
     {
       "id": "commons-151469575",
@@ -2289,7 +2619,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Zurich",
-      "legacy_topic": "Zurich"
+      "legacy_topic": "Zurich",
+      "thumbnail_image": "thumbnails/commons-151469575.jpg",
+      "thumbnail_bytes": 79431,
+      "thumbnail_sha256": "7ea9a34b233050572dea60d26a9c133fe1c7f0acb22ad9cf7651dd837e57ec2f",
+      "thumbnail_width": 500,
+      "thumbnail_height": 400
     },
     {
       "id": "commons-136743124",
@@ -2326,7 +2661,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Marmottan",
-      "legacy_topic": "Marmottan"
+      "legacy_topic": "Marmottan",
+      "thumbnail_image": "thumbnails/commons-136743124.jpg",
+      "thumbnail_bytes": 76584,
+      "thumbnail_sha256": "c0c686eef09b10bc4c462229fc921f10712e1dbf2bb32565da53ad1916d2f458",
+      "thumbnail_width": 500,
+      "thumbnail_height": 399
     },
     {
       "id": "cma-1947-196",
@@ -2359,7 +2699,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "seascape"
+      "legacy_topic": "seascape",
+      "thumbnail_image": "thumbnails/cma-1947-196.jpg",
+      "thumbnail_bytes": 48527,
+      "thumbnail_sha256": "b22ca7001219624fb0c11eb5c7411ec4cfdc64a02c41f28f636586eb765545d6",
+      "thumbnail_width": 500,
+      "thumbnail_height": 368
     },
     {
       "id": "commons-22140927",
@@ -2393,7 +2738,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Boston",
-      "legacy_topic": "Boston"
+      "legacy_topic": "Boston",
+      "thumbnail_image": "thumbnails/commons-22140927.jpg",
+      "thumbnail_bytes": 90741,
+      "thumbnail_sha256": "340ab0780ca3ffad7f88526fad16a16e3d3edac0cc213ff6b06af12075c2f09d",
+      "thumbnail_width": 500,
+      "thumbnail_height": 369
     },
     {
       "id": "commons-76621609",
@@ -2427,7 +2777,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Marmottan",
-      "legacy_topic": "Marmottan"
+      "legacy_topic": "Marmottan",
+      "thumbnail_image": "thumbnails/commons-76621609.jpg",
+      "thumbnail_bytes": 61627,
+      "thumbnail_sha256": "fa897223919734cf233ac37176cf40bdda27496021df7ca3a81d8e9e63547671",
+      "thumbnail_width": 423,
+      "thumbnail_height": 500
     },
     {
       "id": "commons-155848",
@@ -2461,7 +2816,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Orsay",
-      "legacy_topic": "Orsay"
+      "legacy_topic": "Orsay",
+      "thumbnail_image": "thumbnails/commons-155848.jpg",
+      "thumbnail_bytes": 79826,
+      "thumbnail_sha256": "bd96d09da9b5d7c1a3343c2efe21aeb2f4746a17b7d2fd6d44f3c85f38ed5325",
+      "thumbnail_width": 500,
+      "thumbnail_height": 403
     },
     {
       "id": "commons-35581710",
@@ -2497,7 +2857,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Hermitage",
-      "legacy_topic": "Hermitage"
+      "legacy_topic": "Hermitage",
+      "thumbnail_image": "thumbnails/commons-35581710.jpg",
+      "thumbnail_bytes": 79821,
+      "thumbnail_sha256": "d1d6225885c2ee8a9577f2cafa8de6d8cec6912e2640c7cb4a4574647aae7731",
+      "thumbnail_width": 500,
+      "thumbnail_height": 403
     },
     {
       "id": "commons-71722062",
@@ -2531,7 +2896,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Boston",
-      "legacy_topic": "Boston"
+      "legacy_topic": "Boston",
+      "thumbnail_image": "thumbnails/commons-71722062.jpg",
+      "thumbnail_bytes": 92936,
+      "thumbnail_sha256": "1cd5fb35ed967d25d1b28af10b1c23b0f87bd403ac2cac6d5bcab365ce851b15",
+      "thumbnail_width": 500,
+      "thumbnail_height": 396
     },
     {
       "id": "commons-167623093",
@@ -2565,7 +2935,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Haystacks",
-      "legacy_topic": "Pola"
+      "legacy_topic": "Pola",
+      "thumbnail_image": "thumbnails/commons-167623093.jpg",
+      "thumbnail_bytes": 841618,
+      "thumbnail_sha256": "04dfa481ed46140749775c014d8918c049e5c1caf5abfb478d1cc65e06df2440",
+      "thumbnail_width": 500,
+      "thumbnail_height": 404
     },
     {
       "id": "commons-11592629",
@@ -2599,7 +2974,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Rijksmuseum",
-      "legacy_topic": "Rijksmuseum"
+      "legacy_topic": "Rijksmuseum",
+      "thumbnail_image": "thumbnails/commons-11592629.jpg",
+      "thumbnail_bytes": 73433,
+      "thumbnail_sha256": "8e4478c0cec3e7df00d84fca1ef3e7efaaf0cc276f25c7dc8667a1df1c4b16a8",
+      "thumbnail_width": 500,
+      "thumbnail_height": 398
     },
     {
       "id": "commons-15260751",
@@ -2635,7 +3015,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Marmottan",
-      "legacy_topic": "Marmottan"
+      "legacy_topic": "Marmottan",
+      "thumbnail_image": "thumbnails/commons-15260751.jpg",
+      "thumbnail_bytes": 103330,
+      "thumbnail_sha256": "0d001098589ea74200a0977303d0fabb32629c314eebdf3f2a467f5164e313e0",
+      "thumbnail_width": 500,
+      "thumbnail_height": 403
     },
     {
       "id": "commons-36198971",
@@ -2669,7 +3054,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Pushkin",
-      "legacy_topic": "Pushkin"
+      "legacy_topic": "Pushkin",
+      "thumbnail_image": "thumbnails/commons-36198971.jpg",
+      "thumbnail_bytes": 50738,
+      "thumbnail_sha256": "897808659d73ca2938cd29d39e3be00cdc819fc2cca38286a7662bdd71938a31",
+      "thumbnail_width": 500,
+      "thumbnail_height": 402
     },
     {
       "id": "commons-80588147",
@@ -2702,7 +3092,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "seascape"
+      "legacy_topic": "seascape",
+      "thumbnail_image": "thumbnails/commons-80588147.jpg",
+      "thumbnail_bytes": 91787,
+      "thumbnail_sha256": "66fab3e70403c4d4d51cf35283cdb979d305193afbbaf6f5b66d31dd38fb8ddb",
+      "thumbnail_width": 500,
+      "thumbnail_height": 394
     },
     {
       "id": "commons-143914564",
@@ -2736,7 +3131,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Zurich",
-      "legacy_topic": "Zurich"
+      "legacy_topic": "Zurich",
+      "thumbnail_image": "thumbnails/commons-143914564.jpg",
+      "thumbnail_bytes": 109899,
+      "thumbnail_sha256": "5fe6f7edf58ed55429fad8ef629116caba6c5f056d3ed7386a2fbf793d8bf9b1",
+      "thumbnail_width": 500,
+      "thumbnail_height": 401
     },
     {
       "id": "commons-22141643",
@@ -2770,7 +3170,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Boston",
-      "legacy_topic": "Boston"
+      "legacy_topic": "Boston",
+      "thumbnail_image": "thumbnails/commons-22141643.jpg",
+      "thumbnail_bytes": 83719,
+      "thumbnail_sha256": "ad2a01637aed61d8879a9043181ad0af3f31f9773cf3dda39a252662ddb2d2bc",
+      "thumbnail_width": 500,
+      "thumbnail_height": 399
     },
     {
       "id": "commons-157426016",
@@ -2806,7 +3211,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Zurich",
-      "legacy_topic": "Zurich"
+      "legacy_topic": "Zurich",
+      "thumbnail_image": "thumbnails/commons-157426016.jpg",
+      "thumbnail_bytes": 91672,
+      "thumbnail_sha256": "c36142b5e644fc47b1f730676a2b2a1d98ffc5b24172e98162a35144167f5269",
+      "thumbnail_width": 500,
+      "thumbnail_height": 403
     },
     {
       "id": "commons-22491623",
@@ -2840,7 +3250,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Haystacks",
-      "legacy_topic": "Haystacks"
+      "legacy_topic": "Haystacks",
+      "thumbnail_image": "thumbnails/commons-22491623.jpg",
+      "thumbnail_bytes": 95999,
+      "thumbnail_sha256": "141d453b563e762c7fb4a200ce2306bb688d54df2812c4b9186d1a61c3616827",
+      "thumbnail_width": 500,
+      "thumbnail_height": 400
     },
     {
       "id": "commons-136744285",
@@ -2876,7 +3291,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Marmottan",
-      "legacy_topic": "Marmottan"
+      "legacy_topic": "Marmottan",
+      "thumbnail_image": "thumbnails/commons-136744285.jpg",
+      "thumbnail_bytes": 95958,
+      "thumbnail_sha256": "20a75a8038705473d5f1b9e89e5ec632ec8e72bdd7b5375665eed1398b7b3c9b",
+      "thumbnail_width": 500,
+      "thumbnail_height": 420
     },
     {
       "id": "commons-80571736",
@@ -2909,7 +3329,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "seascape"
+      "legacy_topic": "seascape",
+      "thumbnail_image": "thumbnails/commons-80571736.jpg",
+      "thumbnail_bytes": 79706,
+      "thumbnail_sha256": "14e62051b30564d36d148e7d77e267797e2c3492c1c0524314d165653c2d359e",
+      "thumbnail_width": 500,
+      "thumbnail_height": 396
     },
     {
       "id": "commons-81058681",
@@ -2945,7 +3370,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Pola",
-      "legacy_topic": "Pola"
+      "legacy_topic": "Pola",
+      "thumbnail_image": "thumbnails/commons-81058681.jpg",
+      "thumbnail_bytes": 79027,
+      "thumbnail_sha256": "604614ad54da68d84e7b141d3421258d4496988a7da7d04b9e774e6d1ae2ed0f",
+      "thumbnail_width": 500,
+      "thumbnail_height": 397
     },
     {
       "id": "commons-80571685",
@@ -2978,7 +3408,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "seascape"
+      "legacy_topic": "seascape",
+      "thumbnail_image": "thumbnails/commons-80571685.jpg",
+      "thumbnail_bytes": 90777,
+      "thumbnail_sha256": "608bc50c557e5c29a29261a0726fde966dbe1f6f53449ef20b8352d8fd277763",
+      "thumbnail_width": 479,
+      "thumbnail_height": 500
     },
     {
       "id": "commons-26717616",
@@ -3012,7 +3447,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Marmottan",
-      "legacy_topic": "Marmottan"
+      "legacy_topic": "Marmottan",
+      "thumbnail_image": "thumbnails/commons-26717616.jpg",
+      "thumbnail_bytes": 60086,
+      "thumbnail_sha256": "dd8677175542884048360cf89230ddf439a1f61bd4d4d8149e8b2bf71eb29a89",
+      "thumbnail_width": 500,
+      "thumbnail_height": 329
     },
     {
       "id": "commons-98294309",
@@ -3048,7 +3488,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Norway",
-      "legacy_topic": "Norway"
+      "legacy_topic": "Norway",
+      "thumbnail_image": "thumbnails/commons-98294309.jpg",
+      "thumbnail_bytes": 47842,
+      "thumbnail_sha256": "0a504faa0686c89886d50ec00e9f99a146a60cd590c8dd3d321fd30491302b40",
+      "thumbnail_width": 500,
+      "thumbnail_height": 414
     },
     {
       "id": "commons-79433228",
@@ -3082,7 +3527,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Boston",
-      "legacy_topic": "Boston"
+      "legacy_topic": "Boston",
+      "thumbnail_image": "thumbnails/commons-79433228.jpg",
+      "thumbnail_bytes": 80144,
+      "thumbnail_sha256": "d4e283a33ef8f553260abec829d33451bc059dfb83d0219920bd96046061d2b9",
+      "thumbnail_width": 440,
+      "thumbnail_height": 500
     },
     {
       "id": "commons-5503807",
@@ -3116,7 +3566,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Hermitage",
-      "legacy_topic": "Hermitage"
+      "legacy_topic": "Hermitage",
+      "thumbnail_image": "thumbnails/commons-5503807.jpg",
+      "thumbnail_bytes": 68452,
+      "thumbnail_sha256": "8666487abcd4f2e270683c575735eba1e36eb41c1cd7ec5fa6f8a2ace3fd9116",
+      "thumbnail_width": 500,
+      "thumbnail_height": 370
     },
     {
       "id": "commons-15260695",
@@ -3150,7 +3605,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Marmottan",
-      "legacy_topic": "Marmottan"
+      "legacy_topic": "Marmottan",
+      "thumbnail_image": "thumbnails/commons-15260695.jpg",
+      "thumbnail_bytes": 69831,
+      "thumbnail_sha256": "905ec4226da0c1d75314e0d5cbde30707fc6f7d316ef34256c8b0bc1c3fe8f28",
+      "thumbnail_width": 353,
+      "thumbnail_height": 500
     },
     {
       "id": "commons-21897377",
@@ -3184,7 +3644,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Tokyo",
-      "legacy_topic": "Tokyo"
+      "legacy_topic": "Tokyo",
+      "thumbnail_image": "thumbnails/commons-21897377.jpg",
+      "thumbnail_bytes": 86860,
+      "thumbnail_sha256": "57448747e82933694c2c41dd436f2ce4cc10248b8ffddf0f0616b99d7e271ba4",
+      "thumbnail_width": 455,
+      "thumbnail_height": 500
     },
     {
       "id": "commons-7169557",
@@ -3218,7 +3683,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Orsay",
-      "legacy_topic": "Orsay"
+      "legacy_topic": "Orsay",
+      "thumbnail_image": "thumbnails/commons-7169557.jpg",
+      "thumbnail_bytes": 79874,
+      "thumbnail_sha256": "e32e321dc4a97db3276f6c0bc2abaf3c53774fd49d8a8f2f2497f3b1750f3a25",
+      "thumbnail_width": 500,
+      "thumbnail_height": 373
     },
     {
       "id": "commons-21897502",
@@ -3252,7 +3722,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Tokyo",
-      "legacy_topic": "Tokyo"
+      "legacy_topic": "Tokyo",
+      "thumbnail_image": "thumbnails/commons-21897502.jpg",
+      "thumbnail_bytes": 84313,
+      "thumbnail_sha256": "f6c88b37608a2c729d0bc1fe7156770f15ad66c03c759ffe0c96200ce26f89fb",
+      "thumbnail_width": 500,
+      "thumbnail_height": 324
     },
     {
       "id": "commons-34059704",
@@ -3286,7 +3761,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Hermitage",
-      "legacy_topic": "Hermitage"
+      "legacy_topic": "Hermitage",
+      "thumbnail_image": "thumbnails/commons-34059704.jpg",
+      "thumbnail_bytes": 61242,
+      "thumbnail_sha256": "3d66034f982732ebce7e97a989b5d3102bc5a81753497cccec7c5ae3021c82e4",
+      "thumbnail_width": 441,
+      "thumbnail_height": 500
     },
     {
       "id": "cma-1916-1044",
@@ -3319,7 +3799,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "garden"
+      "legacy_topic": "garden",
+      "thumbnail_image": "thumbnails/cma-1916-1044.jpg",
+      "thumbnail_bytes": 80296,
+      "thumbnail_sha256": "c44655dc6f026c96f4f5964789a23ae5f2953616cb200b639961fca9b5ef7fa9",
+      "thumbnail_width": 500,
+      "thumbnail_height": 355
     },
     {
       "id": "commons-81308977",
@@ -3355,7 +3840,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "atmosphere"
+      "legacy_topic": "atmosphere",
+      "thumbnail_image": "thumbnails/commons-81308977.jpg",
+      "thumbnail_bytes": 46493,
+      "thumbnail_sha256": "905c828e115de75d8467f5537e6371fff1571817f6c8c27b8bec62fb06dd1b65",
+      "thumbnail_width": 500,
+      "thumbnail_height": 397
     },
     {
       "id": "commons-22009532",
@@ -3391,7 +3881,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Boston",
-      "legacy_topic": "Boston"
+      "legacy_topic": "Boston",
+      "thumbnail_image": "thumbnails/commons-22009532.jpg",
+      "thumbnail_bytes": 97008,
+      "thumbnail_sha256": "7daa2be1980461bdfd1d0bfb0406efd4be3568e5d28fbd4ca6c6264bd687dc85",
+      "thumbnail_width": 500,
+      "thumbnail_height": 402
     },
     {
       "id": "commons-8859184",
@@ -3425,7 +3920,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "London",
-      "legacy_topic": "London"
+      "legacy_topic": "London",
+      "thumbnail_image": "thumbnails/commons-8859184.jpg",
+      "thumbnail_bytes": 74263,
+      "thumbnail_sha256": "bc3c7b4711f5126efa8c57bf46363e0144b9c2440eb419fa5ddc52474bd5cac5",
+      "thumbnail_width": 392,
+      "thumbnail_height": 500
     },
     {
       "id": "commons-80587981",
@@ -3458,7 +3958,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "haystacks"
+      "legacy_topic": "haystacks",
+      "thumbnail_image": "thumbnails/commons-80587981.jpg",
+      "thumbnail_bytes": 81034,
+      "thumbnail_sha256": "5d41715b97c262b7583dfa54b8710583585c8a5318a925cac6c2b6a6c87b37b0",
+      "thumbnail_width": 500,
+      "thumbnail_height": 352
     },
     {
       "id": "commons-80571703",
@@ -3493,7 +3998,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "haystacks"
+      "legacy_topic": "haystacks",
+      "thumbnail_image": "thumbnails/commons-80571703.jpg",
+      "thumbnail_bytes": 59240,
+      "thumbnail_sha256": "b6baa5420046e581e5e7a3a043d5c5c51cafa180481ffa1ae750262df261ca3f",
+      "thumbnail_width": 500,
+      "thumbnail_height": 348
     },
     {
       "id": "commons-80548066",
@@ -3526,7 +4036,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "haystacks"
+      "legacy_topic": "haystacks",
+      "thumbnail_image": "thumbnails/commons-80548066.jpg",
+      "thumbnail_bytes": 57121,
+      "thumbnail_sha256": "725e0a0fedf3e663a9ce9f70ad830ba233c42ac1e28d8f2a2c13b9639ba4a07d",
+      "thumbnail_width": 500,
+      "thumbnail_height": 296
     },
     {
       "id": "commons-80588060",
@@ -3562,7 +4077,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "haystacks"
+      "legacy_topic": "haystacks",
+      "thumbnail_image": "thumbnails/commons-80588060.jpg",
+      "thumbnail_bytes": 56881,
+      "thumbnail_sha256": "c163c42e4a1392d2b937fd8a3567f60e6c8ad2341fb754280632e858719c3ba0",
+      "thumbnail_width": 500,
+      "thumbnail_height": 321
     },
     {
       "id": "commons-79004036",
@@ -3598,7 +4118,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Haystacks",
-      "legacy_topic": "Haystacks"
+      "legacy_topic": "Haystacks",
+      "thumbnail_image": "thumbnails/commons-79004036.jpg",
+      "thumbnail_bytes": 80862,
+      "thumbnail_sha256": "feec8d6f6e60c39ca6573d9883539742b2252b834fc3548a5d1ff19f1f943cb3",
+      "thumbnail_width": 500,
+      "thumbnail_height": 367
     },
     {
       "id": "commons-919407",
@@ -3632,7 +4157,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Tokyo",
-      "legacy_topic": "Tokyo"
+      "legacy_topic": "Tokyo",
+      "thumbnail_image": "thumbnails/commons-919407.jpg",
+      "thumbnail_bytes": 81071,
+      "thumbnail_sha256": "beda3407550c532983c6f0d31712e4ce2eb51bc7deeec69dc59d78478efa8a9c",
+      "thumbnail_width": 392,
+      "thumbnail_height": 500
     },
     {
       "id": "commons-39094103",
@@ -3668,7 +4198,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Haystacks",
-      "legacy_topic": "Haystacks"
+      "legacy_topic": "Haystacks",
+      "thumbnail_image": "thumbnails/commons-39094103.jpg",
+      "thumbnail_bytes": 84543,
+      "thumbnail_sha256": "ed3f04742009227dfa645c434e0fe8869f65d6730ebac13960985aaccc54c9fb",
+      "thumbnail_width": 500,
+      "thumbnail_height": 366
     },
     {
       "id": "commons-2327225",
@@ -3705,7 +4240,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Marmottan",
-      "legacy_topic": "Marmottan"
+      "legacy_topic": "Marmottan",
+      "thumbnail_image": "thumbnails/commons-2327225.jpg",
+      "thumbnail_bytes": 64913,
+      "thumbnail_sha256": "2dd92190bf663a17a2581a0eccf7d4c235de348b1a8ad6d9203be72e8aed6dac",
+      "thumbnail_width": 320,
+      "thumbnail_height": 500
     },
     {
       "id": "commons-189209668",
@@ -3741,7 +4281,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Wales",
-      "legacy_topic": "Wales"
+      "legacy_topic": "Wales",
+      "thumbnail_image": "thumbnails/commons-189209668.jpg",
+      "thumbnail_bytes": 114743,
+      "thumbnail_sha256": "4026069f3bb38559c43f16f5174f37abc950fbeef6009d996bbda3a7963b12cb",
+      "thumbnail_width": 329,
+      "thumbnail_height": 500
     },
     {
       "id": "commons-87254454",
@@ -3775,7 +4320,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Haystacks",
-      "legacy_topic": "Haystacks"
+      "legacy_topic": "Haystacks",
+      "thumbnail_image": "thumbnails/commons-87254454.jpg",
+      "thumbnail_bytes": 67973,
+      "thumbnail_sha256": "6b0dbf8b47a8c39240c3bc93f39ed067c7c40bf5684da067afe4f506847cc90e",
+      "thumbnail_width": 500,
+      "thumbnail_height": 306
     },
     {
       "id": "commons-145604929",
@@ -3811,7 +4361,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "RouenSeries",
-      "legacy_topic": "RouenSeries"
+      "legacy_topic": "RouenSeries",
+      "thumbnail_image": "thumbnails/commons-145604929.jpg",
+      "thumbnail_bytes": 44707,
+      "thumbnail_sha256": "cd9dc02c744a02333152851d9c6e6f06f7d4457413bfd0ea1689cdaadc4f3c9c",
+      "thumbnail_width": 340,
+      "thumbnail_height": 500
     },
     {
       "id": "commons-16391290",
@@ -3845,7 +4400,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Boston",
-      "legacy_topic": "Boston"
+      "legacy_topic": "Boston",
+      "thumbnail_image": "thumbnails/commons-16391290.jpg",
+      "thumbnail_bytes": 48502,
+      "thumbnail_sha256": "27e442352e78d42469cf059bef09c23f87b0cd78aed8b11d01a910b5e58e48fb",
+      "thumbnail_width": 353,
+      "thumbnail_height": 500
     },
     {
       "id": "commons-49286782",
@@ -3879,7 +4439,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "RouenSeries",
-      "legacy_topic": "Boston"
+      "legacy_topic": "Boston",
+      "thumbnail_image": "thumbnails/commons-49286782.jpg",
+      "thumbnail_bytes": 111176,
+      "thumbnail_sha256": "fa98af1baff755f30497f27cff2aa5f122b34ed71fb94ecccafb6c4a33e3f57a",
+      "thumbnail_width": 342,
+      "thumbnail_height": 500
     },
     {
       "id": "commons-105015547",
@@ -3915,7 +4480,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "RouenSeries",
-      "legacy_topic": "RouenSeries"
+      "legacy_topic": "RouenSeries",
+      "thumbnail_image": "thumbnails/commons-105015547.jpg",
+      "thumbnail_bytes": 62608,
+      "thumbnail_sha256": "1c04797a789cd952cf84c348e0f538cd352c0afb4782558334d705c679a1730b",
+      "thumbnail_width": 325,
+      "thumbnail_height": 500
     },
     {
       "id": "commons-22009552",
@@ -3951,7 +4521,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Boston",
-      "legacy_topic": "Boston"
+      "legacy_topic": "Boston",
+      "thumbnail_image": "thumbnails/commons-22009552.jpg",
+      "thumbnail_bytes": 66946,
+      "thumbnail_sha256": "95197b35e5de7982fbd4707d9f866fb243867a04c12b66715be520a1baabdcff",
+      "thumbnail_width": 343,
+      "thumbnail_height": 500
     },
     {
       "id": "commons-21996897",
@@ -3984,7 +4559,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "cathedral"
+      "legacy_topic": "cathedral",
+      "thumbnail_image": "thumbnails/commons-21996897.jpg",
+      "thumbnail_bytes": 69260,
+      "thumbnail_sha256": "0aa4d489478c8aec090d67f1617043566981075dd262652b3fc31e202cdf5255",
+      "thumbnail_width": 321,
+      "thumbnail_height": 500
     },
     {
       "id": "commons-81309007",
@@ -4019,7 +4599,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "cathedral"
+      "legacy_topic": "cathedral",
+      "thumbnail_image": "thumbnails/commons-81309007.jpg",
+      "thumbnail_bytes": 72580,
+      "thumbnail_sha256": "87b74d678c97c2302fbb0bff40324f5b17a7e04a975f6186cd6924d4547d1678",
+      "thumbnail_width": 327,
+      "thumbnail_height": 500
     },
     {
       "id": "commons-57670836",
@@ -4055,7 +4640,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "RouenSeries",
-      "legacy_topic": "RouenSeries"
+      "legacy_topic": "RouenSeries",
+      "thumbnail_image": "thumbnails/commons-57670836.jpg",
+      "thumbnail_bytes": 69813,
+      "thumbnail_sha256": "782f898b756c8cc791634fbc688b41e4153788dfcb1838a6927304d07e374afd",
+      "thumbnail_width": 331,
+      "thumbnail_height": 500
     },
     {
       "id": "commons-100484414",
@@ -4089,7 +4679,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Marmottan",
-      "legacy_topic": "Marmottan"
+      "legacy_topic": "Marmottan",
+      "thumbnail_image": "thumbnails/commons-100484414.jpg",
+      "thumbnail_bytes": 46500,
+      "thumbnail_sha256": "d19dc80f2eb60b9a15f0793ec33a346cd93823b1e30f460c0ca79e61932c5fa5",
+      "thumbnail_width": 500,
+      "thumbnail_height": 367
     },
     {
       "id": "commons-15260794",
@@ -4123,7 +4718,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Marmottan",
-      "legacy_topic": "Marmottan"
+      "legacy_topic": "Marmottan",
+      "thumbnail_image": "thumbnails/commons-15260794.jpg",
+      "thumbnail_bytes": 57499,
+      "thumbnail_sha256": "935aea8fa3e7aafc15c78976646d232aa1abfef0ec55bb48ad61f81c168aa416",
+      "thumbnail_width": 500,
+      "thumbnail_height": 326
     },
     {
       "id": "commons-67077759",
@@ -4157,7 +4757,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Marmottan",
-      "legacy_topic": "Marmottan"
+      "legacy_topic": "Marmottan",
+      "thumbnail_image": "thumbnails/commons-67077759.jpg",
+      "thumbnail_bytes": 58776,
+      "thumbnail_sha256": "bd0ecdfed765911975ca2deb34c4ce94175530a96d4f1b3ac4ef0f3d23f17e74",
+      "thumbnail_width": 500,
+      "thumbnail_height": 375
     },
     {
       "id": "commons-127732447",
@@ -4191,7 +4796,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Norway",
-      "legacy_topic": "Norway"
+      "legacy_topic": "Norway",
+      "thumbnail_image": "thumbnails/commons-127732447.jpg",
+      "thumbnail_bytes": 50894,
+      "thumbnail_sha256": "d8ee34e49f697360fb6614967d45d0438ddf04e9929fcc5ddea1816fb6cead88",
+      "thumbnail_width": 500,
+      "thumbnail_height": 324
     },
     {
       "id": "commons-20298224",
@@ -4225,7 +4835,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Glyptotek",
-      "legacy_topic": "Glyptotek"
+      "legacy_topic": "Glyptotek",
+      "thumbnail_image": "thumbnails/commons-20298224.jpg",
+      "thumbnail_bytes": 54357,
+      "thumbnail_sha256": "e88636858f869576531fce3dff856d67edba0c6031d6d4b145e61efe7c397229",
+      "thumbnail_width": 500,
+      "thumbnail_height": 400
     },
     {
       "id": "commons-141151696",
@@ -4261,7 +4876,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Boston",
-      "legacy_topic": "Boston"
+      "legacy_topic": "Boston",
+      "thumbnail_image": "thumbnails/commons-141151696.jpg",
+      "thumbnail_bytes": 58584,
+      "thumbnail_sha256": "04cc4392beb834bad844009aa541faca8946507c4a619bec85c2fbaf067e9682",
+      "thumbnail_width": 500,
+      "thumbnail_height": 396
     },
     {
       "id": "commons-34059825",
@@ -4295,7 +4915,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Hermitage",
-      "legacy_topic": "Hermitage"
+      "legacy_topic": "Hermitage",
+      "thumbnail_image": "thumbnails/commons-34059825.jpg",
+      "thumbnail_bytes": 32134,
+      "thumbnail_sha256": "14d06f274042d887788913615a1f0a491c9e3fdf02e8fb8aa25733da5c0ec7c1",
+      "thumbnail_width": 500,
+      "thumbnail_height": 328
     },
     {
       "id": "commons-79059073",
@@ -4332,7 +4957,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Marmottan",
-      "legacy_topic": "Marmottan"
+      "legacy_topic": "Marmottan",
+      "thumbnail_image": "thumbnails/commons-79059073.jpg",
+      "thumbnail_bytes": 69336,
+      "thumbnail_sha256": "880195a016829437491eadc77a12d0539671f744a3e6c9ce380cc6c526481b90",
+      "thumbnail_width": 500,
+      "thumbnail_height": 487
     },
     {
       "id": "commons-81309086",
@@ -4365,7 +4995,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "river"
+      "legacy_topic": "river",
+      "thumbnail_image": "thumbnails/commons-81309086.jpg",
+      "thumbnail_bytes": 59753,
+      "thumbnail_sha256": "860a43a3a9100e4af424f93075a51bde33ff4eb7825b71aab11a77f51829750b",
+      "thumbnail_width": 500,
+      "thumbnail_height": 403
     },
     {
       "id": "commons-21897020",
@@ -4399,7 +5034,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Tokyo",
-      "legacy_topic": "Tokyo"
+      "legacy_topic": "Tokyo",
+      "thumbnail_image": "thumbnails/commons-21897020.jpg",
+      "thumbnail_bytes": 58960,
+      "thumbnail_sha256": "48ed8fdbc0cacce1dfda921a0b3298d65b0d87c7a2ff2e822d14f76e0abcf7a2",
+      "thumbnail_width": 500,
+      "thumbnail_height": 364
     },
     {
       "id": "commons-919391",
@@ -4435,7 +5075,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Tokyo",
-      "legacy_topic": "Tokyo"
+      "legacy_topic": "Tokyo",
+      "thumbnail_image": "thumbnails/commons-919391.jpg",
+      "thumbnail_bytes": 74281,
+      "thumbnail_sha256": "ba10ad165d574ffa6ba3cff30572891e1c39b909cf8978698cbcc8a9d7b54671",
+      "thumbnail_width": 500,
+      "thumbnail_height": 400
     },
     {
       "id": "commons-4394487",
@@ -4469,7 +5114,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Orsay",
-      "legacy_topic": "Orsay"
+      "legacy_topic": "Orsay",
+      "thumbnail_image": "thumbnails/commons-4394487.jpg",
+      "thumbnail_bytes": 114479,
+      "thumbnail_sha256": "0bbeb48cdda2b1a6b72f23ca7af7cd2d5c01e4bec200fd0763f74384d48084a0",
+      "thumbnail_width": 500,
+      "thumbnail_height": 477
     },
     {
       "id": "commons-12695724",
@@ -4503,7 +5153,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "London",
-      "legacy_topic": "London"
+      "legacy_topic": "London",
+      "thumbnail_image": "thumbnails/commons-12695724.jpg",
+      "thumbnail_bytes": 124266,
+      "thumbnail_sha256": "9bab442bca3fd85bf9f5d4d5769cfb22c38e8a052b7d5c6b1322bc0ae04a7bb8",
+      "thumbnail_width": 500,
+      "thumbnail_height": 485
     },
     {
       "id": "commons-81309069",
@@ -4536,7 +5191,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "garden"
+      "legacy_topic": "garden",
+      "thumbnail_image": "thumbnails/commons-81309069.jpg",
+      "thumbnail_bytes": 93997,
+      "thumbnail_sha256": "08b7d122aeacbd50428e9a0f2c72f24915a3e4b42f80de0a7849b78dc0da147c",
+      "thumbnail_width": 500,
+      "thumbnail_height": 403
     },
     {
       "id": "commons-36187633",
@@ -4570,7 +5230,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Pushkin",
-      "legacy_topic": "Pushkin"
+      "legacy_topic": "Pushkin",
+      "thumbnail_image": "thumbnails/commons-36187633.jpg",
+      "thumbnail_bytes": 121977,
+      "thumbnail_sha256": "5bbc7aa08360340ab3ece53700741a45254239ed9859ca735f11210f23f9b3d4",
+      "thumbnail_width": 500,
+      "thumbnail_height": 483
     },
     {
       "id": "commons-90512468",
@@ -4604,7 +5269,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Boston",
-      "legacy_topic": "Boston"
+      "legacy_topic": "Boston",
+      "thumbnail_image": "thumbnails/commons-90512468.jpg",
+      "thumbnail_bytes": 47950,
+      "thumbnail_sha256": "b990b851c5ecfe10c062ad46d02e3a39b1077252b154ee811e94a6d773a9b1e2",
+      "thumbnail_width": 500,
+      "thumbnail_height": 335
     },
     {
       "id": "commons-73909016",
@@ -4637,7 +5307,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "cityscape"
+      "legacy_topic": "cityscape",
+      "thumbnail_image": "thumbnails/commons-73909016.jpg",
+      "thumbnail_bytes": 61923,
+      "thumbnail_sha256": "a3ed29e5631acdb6a42e0111174b46a404c6864cd53d77a2f98d7a86366d0376",
+      "thumbnail_width": 500,
+      "thumbnail_height": 436
     },
     {
       "id": "commons-81032760",
@@ -4671,7 +5346,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Pola",
-      "legacy_topic": "Pola"
+      "legacy_topic": "Pola",
+      "thumbnail_image": "thumbnails/commons-81032760.jpg",
+      "thumbnail_bytes": 57982,
+      "thumbnail_sha256": "62372187ed34e9bc5c93255d6b2e08e31f8446dd91be777afe4d0bdbea07ad47",
+      "thumbnail_width": 500,
+      "thumbnail_height": 439
     },
     {
       "id": "commons-80587920",
@@ -4704,7 +5384,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "water-lilies"
+      "legacy_topic": "water-lilies",
+      "thumbnail_image": "thumbnails/commons-80587920.jpg",
+      "thumbnail_bytes": 116976,
+      "thumbnail_sha256": "8047f0c003537048050ba8a5221bc6d174c3c14b4fe68f000d508acdf2013016",
+      "thumbnail_width": 500,
+      "thumbnail_height": 443
     },
     {
       "id": "commons-80587911",
@@ -4737,7 +5422,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "landscape"
+      "legacy_topic": "landscape",
+      "thumbnail_image": "thumbnails/commons-80587911.jpg",
+      "thumbnail_bytes": 95521,
+      "thumbnail_sha256": "1272f6df89338bb3515809b8987d6cd016a2ea5fee96390e9c2b43bb83f4106d",
+      "thumbnail_width": 500,
+      "thumbnail_height": 485
     },
     {
       "id": "commons-189209657",
@@ -4771,7 +5461,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Wales",
-      "legacy_topic": "Wales"
+      "legacy_topic": "Wales",
+      "thumbnail_image": "thumbnails/commons-189209657.jpg",
+      "thumbnail_bytes": 104721,
+      "thumbnail_sha256": "dc099f8273b7af46c36b4b5d8663c3675def61e1a987243d13ac5d6a40250eb9",
+      "thumbnail_width": 500,
+      "thumbnail_height": 402
     },
     {
       "id": "commons-157426347",
@@ -4805,7 +5500,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Zurich",
-      "legacy_topic": "Zurich"
+      "legacy_topic": "Zurich",
+      "thumbnail_image": "thumbnails/commons-157426347.jpg",
+      "thumbnail_bytes": 38310,
+      "thumbnail_sha256": "e9dd422da4817bbfed537d4df06a597160012793fd81b1a9594d334e765cd571",
+      "thumbnail_width": 500,
+      "thumbnail_height": 322
     },
     {
       "id": "commons-21897660",
@@ -4839,7 +5539,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Tokyo",
-      "legacy_topic": "Tokyo"
+      "legacy_topic": "Tokyo",
+      "thumbnail_image": "thumbnails/commons-21897660.jpg",
+      "thumbnail_bytes": 86866,
+      "thumbnail_sha256": "40f65fb38626a418529c4909e3e9546ae681f3da2ab48946d6926dd2fdb6e0a6",
+      "thumbnail_width": 500,
+      "thumbnail_height": 485
     },
     {
       "id": "commons-81309044",
@@ -4874,7 +5579,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "cityscape"
+      "legacy_topic": "cityscape",
+      "thumbnail_image": "thumbnails/commons-81309044.jpg",
+      "thumbnail_bytes": 64826,
+      "thumbnail_sha256": "66bdaf6526c9f18dabab8126742fc695c288a719c4657c6f6a44b002286e5a00",
+      "thumbnail_width": 500,
+      "thumbnail_height": 441
     },
     {
       "id": "commons-81309112",
@@ -4909,7 +5619,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "london-bridges"
+      "legacy_topic": "london-bridges",
+      "thumbnail_image": "thumbnails/commons-81309112.jpg",
+      "thumbnail_bytes": 41510,
+      "thumbnail_sha256": "591387f595b1cf47df13591a174baacd921b1cf67515aee535342bfa7b1f6a38",
+      "thumbnail_width": 500,
+      "thumbnail_height": 322
     },
     {
       "id": "commons-157446031",
@@ -4946,7 +5661,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Zurich",
-      "legacy_topic": "Zurich"
+      "legacy_topic": "Zurich",
+      "thumbnail_image": "thumbnails/commons-157446031.jpg",
+      "thumbnail_bytes": 53085,
+      "thumbnail_sha256": "6563698355fd073c009776007022bd104a9e0ec444f7a1d1fb487f2398be9759",
+      "thumbnail_width": 500,
+      "thumbnail_height": 440
     },
     {
       "id": "commons-36197920",
@@ -4980,7 +5700,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Pushkin",
-      "legacy_topic": "Pushkin"
+      "legacy_topic": "Pushkin",
+      "thumbnail_image": "thumbnails/commons-36197920.jpg",
+      "thumbnail_bytes": 27510,
+      "thumbnail_sha256": "3330c170f40eda9a2f15d74d0eaea17ad387f0859c2ff2beaa3b8e1135d9dfbb",
+      "thumbnail_width": 500,
+      "thumbnail_height": 434
     },
     {
       "id": "commons-81309113",
@@ -5015,7 +5740,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "london-bridges"
+      "legacy_topic": "london-bridges",
+      "thumbnail_image": "thumbnails/commons-81309113.jpg",
+      "thumbnail_bytes": 34427,
+      "thumbnail_sha256": "d3c72cd3772a43a67e26902a739effe060325b17102570c908d8983ff9c6d7a9",
+      "thumbnail_width": 500,
+      "thumbnail_height": 321
     },
     {
       "id": "commons-81309116",
@@ -5050,7 +5780,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "london-bridges"
+      "legacy_topic": "london-bridges",
+      "thumbnail_image": "thumbnails/commons-81309116.jpg",
+      "thumbnail_bytes": 39590,
+      "thumbnail_sha256": "83919ca0f76d54cf5add2d9a0c695f97b706d34f787efb595256e1a482e8f3e4",
+      "thumbnail_width": 500,
+      "thumbnail_height": 352
     },
     {
       "id": "commons-30347430",
@@ -5084,7 +5819,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Marmottan",
-      "legacy_topic": "Marmottan"
+      "legacy_topic": "Marmottan",
+      "thumbnail_image": "thumbnails/commons-30347430.jpg",
+      "thumbnail_bytes": 83694,
+      "thumbnail_sha256": "6f47e5845a504dcf5eb17cf7d67aa615e15e0b26e7a34ee0178a7036d0539ede",
+      "thumbnail_width": 500,
+      "thumbnail_height": 437
     },
     {
       "id": "commons-26801642",
@@ -5118,7 +5858,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Boston",
-      "legacy_topic": "Boston"
+      "legacy_topic": "Boston",
+      "thumbnail_image": "thumbnails/commons-26801642.jpg",
+      "thumbnail_bytes": 77271,
+      "thumbnail_sha256": "369c6fe3b43ee42c2d23648ef020dc0984445d2839c14d79d229cbb24f73096a",
+      "thumbnail_width": 500,
+      "thumbnail_height": 445
     },
     {
       "id": "commons-189209450",
@@ -5152,7 +5897,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Wales",
-      "legacy_topic": "Wales"
+      "legacy_topic": "Wales",
+      "thumbnail_image": "thumbnails/commons-189209450.jpg",
+      "thumbnail_bytes": 124136,
+      "thumbnail_sha256": "e9be30513f34abc537bffa2ebf4684009739137d324423744f6e0d8a2c9a086b",
+      "thumbnail_width": 500,
+      "thumbnail_height": 403
     },
     {
       "id": "commons-157445972",
@@ -5186,7 +5936,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Zurich",
-      "legacy_topic": "Zurich"
+      "legacy_topic": "Zurich",
+      "thumbnail_image": "thumbnails/commons-157445972.jpg",
+      "thumbnail_bytes": 42699,
+      "thumbnail_sha256": "1f328e497b6d26647f2dd808ae31b07250675b84dfd5f42604e1d58849f33afd",
+      "thumbnail_width": 500,
+      "thumbnail_height": 320
     },
     {
       "id": "commons-74830282",
@@ -5219,7 +5974,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "cityscape"
+      "legacy_topic": "cityscape",
+      "thumbnail_image": "thumbnails/commons-74830282.jpg",
+      "thumbnail_bytes": 62689,
+      "thumbnail_sha256": "711461300333bed8a6b8cc52bf4c980cf05d00a35d92e6ba0e1c6930068d234c",
+      "thumbnail_width": 500,
+      "thumbnail_height": 379
     },
     {
       "id": "commons-189209705",
@@ -5253,7 +6013,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Wales",
-      "legacy_topic": "Wales"
+      "legacy_topic": "Wales",
+      "thumbnail_image": "thumbnails/commons-189209705.jpg",
+      "thumbnail_bytes": 105432,
+      "thumbnail_sha256": "ed1fdbacf4f1e1cc24f1e11441e281aa8e667782562bf69b46c1d77899e900a9",
+      "thumbnail_width": 500,
+      "thumbnail_height": 370
     },
     {
       "id": "commons-189209675",
@@ -5289,7 +6054,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Wales",
-      "legacy_topic": "Wales"
+      "legacy_topic": "Wales",
+      "thumbnail_image": "thumbnails/commons-189209675.jpg",
+      "thumbnail_bytes": 122408,
+      "thumbnail_sha256": "839d8309d23b910a12b653050cb059021bdcd53981daf96c4ebf272f9d870fa5",
+      "thumbnail_width": 500,
+      "thumbnail_height": 355
     },
     {
       "id": "commons-189209697",
@@ -5323,7 +6093,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Wales",
-      "legacy_topic": "Wales"
+      "legacy_topic": "Wales",
+      "thumbnail_image": "thumbnails/commons-189209697.jpg",
+      "thumbnail_bytes": 121338,
+      "thumbnail_sha256": "31bb4cea6f93d8d949c9623d7e0a1bcbdbc9306ca2370979c3b8aadd284ba94f",
+      "thumbnail_width": 394,
+      "thumbnail_height": 500
     },
     {
       "id": "commons-189209685",
@@ -5357,7 +6132,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Wales",
-      "legacy_topic": "Wales"
+      "legacy_topic": "Wales",
+      "thumbnail_image": "thumbnails/commons-189209685.jpg",
+      "thumbnail_bytes": 105762,
+      "thumbnail_sha256": "306c4efa454df7da4c2a61a8b1dccfd3c7107d63d65d82325df87cba417245db",
+      "thumbnail_width": 406,
+      "thumbnail_height": 500
     },
     {
       "id": "commons-8966199",
@@ -5391,7 +6171,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Marmottan",
-      "legacy_topic": "Marmottan"
+      "legacy_topic": "Marmottan",
+      "thumbnail_image": "thumbnails/commons-8966199.jpg",
+      "thumbnail_bytes": 82952,
+      "thumbnail_sha256": "11a524c366e51bebba619b6f63aa59bd58402118572fcd5dedb377ed3f0e74be",
+      "thumbnail_width": 500,
+      "thumbnail_height": 423
     },
     {
       "id": "cma-1960-81",
@@ -5424,7 +6209,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": null,
-      "legacy_topic": "water-lilies"
+      "legacy_topic": "water-lilies",
+      "thumbnail_image": "thumbnails/cma-1960-81.jpg",
+      "thumbnail_bytes": 39870,
+      "thumbnail_sha256": "94f2a5f0fbb3ff3da318120550f9fa39a25037d3af60088b87f4002d6ff8556b",
+      "thumbnail_width": 500,
+      "thumbnail_height": 232
     },
     {
       "id": "commons-145887104",
@@ -5458,7 +6248,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Tokyo",
-      "legacy_topic": "Tokyo"
+      "legacy_topic": "Tokyo",
+      "thumbnail_image": "thumbnails/commons-145887104.jpg",
+      "thumbnail_bytes": 37987,
+      "thumbnail_sha256": "24c9673cbf987a516ac019caf97ea45d66bcc2362bb72f4f50cc6dbbd59467b5",
+      "thumbnail_width": 500,
+      "thumbnail_height": 243
     },
     {
       "id": "commons-79058554",
@@ -5492,7 +6287,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Marmottan",
-      "legacy_topic": "Marmottan"
+      "legacy_topic": "Marmottan",
+      "thumbnail_image": "thumbnails/commons-79058554.jpg",
+      "thumbnail_bytes": 62489,
+      "thumbnail_sha256": "b978704223c67a9d0f3a21b6f33c3b2a0e9125cf8a86c1ff1cfa808f1ca32b45",
+      "thumbnail_width": 500,
+      "thumbnail_height": 247
     },
     {
       "id": "commons-80405208",
@@ -5526,7 +6326,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Basel",
-      "legacy_topic": "Basel"
+      "legacy_topic": "Basel",
+      "thumbnail_image": "thumbnails/commons-80405208.jpg",
+      "thumbnail_bytes": 70931,
+      "thumbnail_sha256": "659f2d0fe8a45683622e30f383f088d8283aed654ac05a4e8fe09b9d4067bb47",
+      "thumbnail_width": 500,
+      "thumbnail_height": 281
     },
     {
       "id": "commons-79058340",
@@ -5560,7 +6365,12 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Marmottan",
-      "legacy_topic": "Marmottan"
+      "legacy_topic": "Marmottan",
+      "thumbnail_image": "thumbnails/commons-79058340.jpg",
+      "thumbnail_bytes": 111234,
+      "thumbnail_sha256": "f1ce5233af7fefca3e9f55a1ff6926cc50a5c5920bf7e4b536e713bf74bbd84d",
+      "thumbnail_width": 500,
+      "thumbnail_height": 382
     },
     {
       "id": "commons-80362007",
@@ -5594,10 +6404,16 @@
       "classification_version": "0.2",
       "classification_scope": "research retrieval tags; not an image-derived style evaluation",
       "source_group": "Marmottan",
-      "legacy_topic": "Marmottan"
+      "legacy_topic": "Marmottan",
+      "thumbnail_image": "thumbnails/commons-80362007.jpg",
+      "thumbnail_bytes": 69538,
+      "thumbnail_sha256": "f9e779a930c62e25329e955e8c3d1a694e6aa2497500769004fe2de58a76ce4c",
+      "thumbnail_width": 500,
+      "thumbnail_height": 315
     }
   ],
   "classification_version": "0.2",
   "schema_note": "topic is legacy; category/series_group/title_based_conditions are research indices, not established art-historical style judgments. date_basis and institution_basis capture different verification levels.",
-  "classification_notes": "Categories are for retrieval and may change after source-level review; light/weather tags are extracted from titles only."
+  "classification_notes": "Categories are for retrieval and may change after source-level review; light/weather tags are extracted from titles only.",
+  "thumbnail_note": "Thumbnails are convenience images only; inspect linked 1600px previews or source images for brushwork study."
 }
