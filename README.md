@@ -35,6 +35,8 @@ python3 tools/package_skill.py --output dist/monet-style-0.3.0-alpha.1.zip
 
 ## Research documents
 
+- [Clean Remake Image Skill：纹理污染与清洁重绘方法研究](research/methods/2026-11-09-clean-remake-image-study.md)
+
 - [指定画风稳定生成：源码研究、契约检查与实验方案](research/methods/2026-11-09-style-content-control/README.zh.md)
 - [原作研究目录](research/artworks.md)
 - [初步画风观察和待验证假设](research/style-study.md)
