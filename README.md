@@ -6,6 +6,10 @@
 
 **Research before prompts.** 不将“印象派滤镜”、睡莲图案、油画噪声视作莫奈风格；也不把此前的未经实测的初版 Skill 直接作为正式实现。
 
+## 原作图像参考集
+
+- [莫奈原作学习参考集（图片、来源与授权）](research/reference-set/README.md)
+
 ## Research documents
 
 - [原作研究目录](research/artworks.md)
