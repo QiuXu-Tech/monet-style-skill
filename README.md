@@ -1,10 +1,27 @@
 # Monet Style Skill
 
-**Status: Research / 艺术研究阶段 — 尚未开发或验证生图 Skill。**
+**Status: Implemented alpha / 可安装工程初版 0.3.0-alpha.1。尚未完成真实生图端到端验证与画风稳定性基准。**
 
-本项目由 QiuXu-Tech 发起，以 Claude Monet 的原作为研究基础，最终探索可以跨题材、跨光照保持绘画语言一致性的开源图像生成 Agent Skill。
+本项目由 QiuXu-Tech 发起，以 Claude Monet 的原作为研究基础，探索跨题材、跨光照保持绘画语言一致性的开源图像生成 Agent Skill。
 
-**Research before prompts.** 不将“印象派滤镜”、睡莲图案、油画噪声视作莫奈风格；也不把此前的未经实测的初版 Skill 直接作为正式实现。
+**Research before claims.** 不将“印象派滤镜”、睡莲图案、油画噪声视作莫奈风格；不把单元测试通过等同于视觉质量通过。早先 `monet-stable` 草稿没有并入正式实现。
+
+## 可安装的 Skill
+
+入口：[skills/monet-style/SKILL.md](skills/monet-style/SKILL.md) · [中文安装与用法](skills/monet-style/README.zh.md) · [工程测试记录](docs/implementation-validation.json)
+
+将 `skills/monet-style/` 整个目录复制到 Codex 的 `~/.agents/skills/`，或 Claude Code 的 `~/.claude/skills/`。宿主必须已有支持真实图片参考的生图工具。安装 Skill 不会自动提供生图模型。
+
+```bash
+# 在仓库根目录验证与打包，无第三方 Python 依赖
+python3 -m unittest discover -s tests -v
+python3 skills/monet-style/scripts/monet.py check
+python3 tools/package_skill.py --output dist/monet-style-0.3.0-alpha.1.zip
+```
+
+实际使用：`使用 $monet-style，画一列驶入现代车站的高速列车，保留现代车头，3:2。`
+
+本版实现固定画法文本、两幅原作锚点按需下载与 SHA-256 校验、内容/风格角色分离、系列输入锁、宿主生图调用指令和逐图验收记录。默认 1880s 只是可修订的实验基线，非最终艺术风格定稿。没有 GPU 服务、模型权重、LoRA 或隐藏付费调用。
 
 ## 原作图像参考集
 
@@ -13,7 +30,6 @@
 ## Research documents
 
 - [指定画风稳定生成：源码研究、契约检查与实验方案](research/methods/2026-11-09-style-content-control/README.zh.md)
-
 - [原作研究目录](research/artworks.md)
 - [初步画风观察和待验证假设](research/style-study.md)
 - [研究和测试路线](research/roadmap.md)
@@ -21,11 +37,11 @@
 ## Principles
 
 1. 以权威馆藏原作为优先证据，保留逐件来源；分开标注事实、视觉解释和假设。
-2. 比较 1870s、1880s、1890s 系列画及晚期水景的异同；**不预先锁定风格时期**。
+2. 比较 1870s、1880s、1890s 系列画及晚期水景；实验预设可修订，不把不同时期混成统一滤镜。
 3. 画风可以迁移到新题材，不应复刻现有名作的具体内容与构图。
 4. 图片引用需逐件检查使用授权；已收录的研究副本保留逐件来源与授权标记，不因项目 MIT 许可而改变图片权利。
-5. 只有完成模型出图和对照评测后才发布真实的 SKILL.md，并报告评测结果与局限。
+5. 工程 alpha 可安装供测试；“稳定版”声明必须经过真实生图、跨题材对照和视觉评审。未运行的测试明确标为 NOT_RUN。
 
 ## License
 
-原创研究笔记和后续自编代码采用 MIT，第三方原作图片、网页内容、商标不属于本仓库 MIT 授权范围。
+原创研究笔记和自主代码采用 MIT。第三方原作图片、网页内容、商标不属于本仓库 MIT 授权范围；Skill 内见 [ASSET-LICENSE.md](skills/monet-style/ASSET-LICENSE.md)。用户原图和生图结果不自动提交到仓库。

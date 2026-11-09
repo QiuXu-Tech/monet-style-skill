@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "research_commit": "b65f3e6577d1ea5691d34de962670c7f4bbc74a4",
+  "policy": "Reference images retain CC0 markings from their source records. Files are fetched explicitly, pinned by SHA-256, and never republished as generated examples.",
+  "anchors": [
+    {
+      "id": "antibes-1888",
+      "filename": "cma-1916-1044.jpg",
+      "title": "Gardener's House at Antibes",
+      "artist": "Claude Monet",
+      "date": "1888",
+      "institution": "Cleveland Museum of Art",
+      "catalog_id": "cma-1916-1044",
+      "source_url": "https://www.clevelandart.org/art/1916.1044",
+      "license": "CC0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "download_url": "https://raw.githubusercontent.com/QiuXu-Tech/monet-style-skill/b65f3e6577d1ea5691d34de962670c7f4bbc74a4/research/reference-set/images/cma-1916-1044.jpg",
+      "sha256": "4c255eb653cbe1f0e19a53843cef8c57a8f1f4f4889f622f4a59acead7677f71",
+      "width": 1600,
+      "height": 1138,
+      "role": "style-only",
+      "observation": "Warm roof planes and cool-blue shadows remain readable through broken, directionally varied paint; foreground strokes are denser than the sky. A visual interpretation, not a pigment analysis.",
+      "do_not_copy": [
+        "red-tiled cottage",
+        "foreground tree arrangement",
+        "background sea and sailboats",
+        "artist signature",
+        "original composition"
+      ]
+    },
+    {
+      "id": "pourville-1882",
+      "filename": "commons-81308967.jpg",
+      "title": "Cliffs at Pourville",
+      "artist": "Claude Monet",
+      "date": "1882",
+      "institution": "National Gallery of Art",
+      "catalog_id": "commons-81308967",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Claude_Monet,_Cliffs_at_Pourville,_1882,_NGA_66425.jpg",
+      "license": "CC0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "download_url": "https://raw.githubusercontent.com/QiuXu-Tech/monet-style-skill/b65f3e6577d1ea5691d34de962670c7f4bbc74a4/research/reference-set/images/commons-81308967.jpg",
+      "sha256": "4a9f6d835e2e88fc359058f363886c5c4e89f1fdb0f0afc496d8f4be27a37490",
+      "width": 1600,
+      "height": 955,
+      "role": "style-only",
+      "observation": "The sea and sky use restrained, low-contrast transitions while the foreground vegetation has concentrated marks; softness is spatially selective, not a global blur.",
+      "do_not_copy": [
+        "two cliffside figures",
+        "sailboat fleet",
+        "diagonal green cliff",
+        "sea horizon placement",
+        "artist signature",
+        "original composition"
+      ]
+    }
+  ]
+}

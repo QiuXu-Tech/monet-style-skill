@@ -1,0 +1,5 @@
+__pycache__/
+*.py[cod]
+dist/
+# Private requests and generated results must stay local.
+monet-run-*/

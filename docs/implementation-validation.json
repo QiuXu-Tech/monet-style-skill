@@ -1,0 +1,50 @@
+{
+  "version": "0.3.0-alpha.1",
+  "date": "2026-11-09",
+  "base_repository_commit": "b65f3e6577d1ea5691d34de962670c7f4bbc74a4",
+  "local_python": "3.13.5",
+  "offline_unit_tests": {
+    "run": true,
+    "passed": 36,
+    "failed": 0,
+    "scope": "contract validation, request preservation, reference hashes, review bookkeeping and synthetic PNG fixtures; no artistic evaluation"
+  },
+  "packaging": {
+    "unpack_check": "PASS",
+    "unpacked_text_preview": "PASS",
+    "entries": 18,
+    "sha256": "62e56572268863537febe0dd1abd7f613e109709fd81405aa1503acd776ebd63",
+    "mac_linux_identical": true
+  },
+  "live_anchor_fetch": {
+    "status": "PASS",
+    "ids": [
+      "antibes-1888",
+      "pourville-1882"
+    ],
+    "sha256_verified": true,
+    "image_header_checks": "PASS"
+  },
+  "host_image_generation": "NOT_RUN",
+  "visual_benchmark": "NOT_RUN",
+  "privacy": "No user source photos, generated images, API keys or tokens in the committed files",
+  "limitations": [
+    "A Skill needs a real compatible host image tool",
+    "The included CLI does not execute inference",
+    "Reviewer-supplied evidence is not independently verified",
+    "Only PNG/JPEG header checks are performed; the host must decode and view output",
+    "The style lock governs reference and prompt inputs, not pixel determinism"
+  ],
+  "remote_python": "3.14.3",
+  "remote_offline_unit_tests": {
+    "passed": 36,
+    "failed": 0,
+    "scope": "same offline suite; not visual generation"
+  },
+  "reference_bearing_jobs": {
+    "train": "READY_FOR_HOST",
+    "cups": "READY_FOR_HOST",
+    "same_style_lock": true,
+    "generation_performed": false
+  }
+}
