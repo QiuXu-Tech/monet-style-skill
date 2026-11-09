@@ -1,12 +1,12 @@
 # 莫奈原作研究目录 · 第一批
 
-下列馆藏链接是研究入口，而非已下载、已分析完毕或获得再分发许可的图像文件。
+下列馆藏链接是研究入口。已经收集并核验开放许可的原作图片，请参见[莫奈原作学习参考集](reference-set/README.md)；并非本文所有作品都必然包含在首批图像中。
 
 | 作品 | 年代 | 权威馆藏 | 研究维度 |
 |---|---|---|---|
 | Woman with a Parasol—Madame Monet and Her Son / 撑阳伞的女人 | 1875 | [National Gallery of Art](https://www.nga.gov/artworks/61379-woman-parasol-madame-monet-and-her-son) | 户外瞬时光线、风、人物与天空 |
 | The Artist's Garden at Vétheuil / 韦特伊的画家花园 | 1881 | [National Gallery of Art](https://www.nga.gov/artworks/52189-artists-garden-vetheuil) | 鲜花、道路、绿植与近景笔触 |
-| Gardener's House at Antibes / 昂蒂布园丁之家 | 1888 | [Cleveland Museum of Art](https://www.clevelandart.org/art/95272) | 建筑结构与阳光中的树木 |
+| Gardener's House at Antibes / 昂蒂布园丁之家 | 1888 | [Cleveland Museum of Art](https://www.clevelandart.org/art/1916.1044) | 建筑结构与阳光中的树木 |
 | Rouen Cathedral, West Façade, Sunlight / 鲁昂大教堂：阳光 | 1894 | [National Gallery of Art](https://www.nga.gov/artworks/46654-rouen-cathedral-west-facade-sunlight) | 固定形体、变化的光色关系 |
 | Water Lilies / 睡莲系列晚期作品 | 1914–26 | [Museum of Modern Art](https://www.moma.org/collection/works/80220) | 水面反射、画面空间与趋于抽象的处理 |
 
