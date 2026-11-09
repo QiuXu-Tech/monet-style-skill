@@ -1,0 +1,42 @@
+{
+  "scope": "AST-extracted wrapper with symbolic shapes, NOT model inference or image validation",
+  "revision": "6b40588e263c958653353ec24eb7eb990cfa3da7",
+  "source_sha256": "e7ab0279938947ff162866dfb4e427f4925806438233878011d4d968980c5e1b",
+  "observations_confirmed": 5,
+  "upstream_behavior_risks_reproduced": 2,
+  "results": [
+    {
+      "case": "no_subtraction_batch2",
+      "ran": true,
+      "received_content_shape": null,
+      "forwarded_guidance_scale": null
+    },
+    {
+      "case": "text_subtraction_single",
+      "ran": true,
+      "received_content_shape": [
+        1,
+        1280
+      ],
+      "forwarded_guidance_scale": null
+    },
+    {
+      "case": "precomputed_subtraction_single",
+      "ran": true,
+      "received_content_shape": null,
+      "forwarded_guidance_scale": null
+    },
+    {
+      "case": "text_subtraction_batch2",
+      "ran": false,
+      "exception_type": "ValueError",
+      "message": "cat shape mismatch: [(2, 77, 2048), (4, 4, 2048)]"
+    },
+    {
+      "case": "guidance_forwarding",
+      "ran": true,
+      "received_content_shape": null,
+      "forwarded_guidance_scale": 5.0
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+[
+  {
+    "repository": "instantX-research/InstantStyle",
+    "revision": "6b40588e263c958653353ec24eb7eb990cfa3da7",
+    "path": "infer_style.py",
+    "url": "https://github.com/instantX-research/InstantStyle/blob/6b40588e263c958653353ec24eb7eb990cfa3da7/infer_style.py",
+    "sha256": "3f94425b21c813db491f7621b41abf3afac72cd11c7acc21df44ec8bed506b45",
+    "bytes": 1578,
+    "lines": 43
+  },
+  {
+    "repository": "instantX-research/InstantStyle",
+    "revision": "6b40588e263c958653353ec24eb7eb990cfa3da7",
+    "path": "infer_style_controlnet.py",
+    "url": "https://github.com/instantX-research/InstantStyle/blob/6b40588e263c958653353ec24eb7eb990cfa3da7/infer_style_controlnet.py",
+    "sha256": "99f3a1669a351d54b13bcd11a45570d9d52511f7b6de8ffeb12a8d3b78e8c915",
+    "bytes": 2035,
+    "lines": 55
+  },
+  {
+    "repository": "instantX-research/InstantStyle",
+    "revision": "6b40588e263c958653353ec24eb7eb990cfa3da7",
+    "path": "infer_style_plus.py",
+    "url": "https://github.com/instantX-research/InstantStyle/blob/6b40588e263c958653353ec24eb7eb990cfa3da7/infer_style_plus.py",
+    "sha256": "25002938cdc43f79d3d30742a7871900cbd2f7635534ea6bb2c45cca45aafa19",
+    "bytes": 1497,
+    "lines": 41
+  },
+  {
+    "repository": "instantX-research/InstantStyle",
+    "revision": "6b40588e263c958653353ec24eb7eb990cfa3da7",
+    "path": "ip_adapter/ip_adapter.py",
+    "url": "https://github.com/instantX-research/InstantStyle/blob/6b40588e263c958653353ec24eb7eb990cfa3da7/ip_adapter/ip_adapter.py",
+    "sha256": "e7ab0279938947ff162866dfb4e427f4925806438233878011d4d968980c5e1b",
+    "bytes": 18805,
+    "lines": 460
+  },
+  {
+    "repository": "instantX-research/InstantStyle",
+    "revision": "6b40588e263c958653353ec24eb7eb990cfa3da7",
+    "path": "ip_adapter/attention_processor.py",
+    "url": "https://github.com/instantX-research/InstantStyle/blob/6b40588e263c958653353ec24eb7eb990cfa3da7/ip_adapter/attention_processor.py",
+    "sha256": "36656642edce669b2d27150c56790810223abce4a958c6186cfbd5a0eae00d56",
+    "bytes": 21028,
+    "lines": 562
+  },
+  {
+    "repository": "instantX-research/InstantStyle",
+    "revision": "6b40588e263c958653353ec24eb7eb990cfa3da7",
+    "path": "gradio_demo/requirements.txt",
+    "url": "https://github.com/instantX-research/InstantStyle/blob/6b40588e263c958653353ec24eb7eb990cfa3da7/gradio_demo/requirements.txt",
+    "sha256": "5da8160ecdcacb4d3494c0ead7f02fdaf62cfb59a67f5b3c6905119d2fac07c6",
+    "bytes": 202,
+    "lines": 16
+  },
+  {
+    "repository": "tencent-ailab/IP-Adapter",
+    "revision": "62e4af9d0c1ac7d5f8dd386a0ccf2211346af1a2",
+    "path": "README.md",
+    "url": "https://github.com/tencent-ailab/IP-Adapter/blob/62e4af9d0c1ac7d5f8dd386a0ccf2211346af1a2/README.md",
+    "sha256": "037e938b36d35d819a6fbf5a701ccad9b76dab31648f0dff4322cf020c3b741a",
+    "bytes": 11250,
+    "lines": 182
+  },
+  {
+    "repository": "tencent-ailab/IP-Adapter",
+    "revision": "62e4af9d0c1ac7d5f8dd386a0ccf2211346af1a2",
+    "path": "ip_adapter/attention_processor.py",
+    "url": "https://github.com/tencent-ailab/IP-Adapter/blob/62e4af9d0c1ac7d5f8dd386a0ccf2211346af1a2/ip_adapter/attention_processor.py",
+    "sha256": "3c7fa095d8c1704dde0b0cd3cb68e18faba6aa45913da5dd779f2a54f7908501",
+    "bytes": 20981,
+    "lines": 568
+  },
+  {
+    "repository": "huggingface/diffusers",
+    "revision": "8c54b38fea3d624d23d0e43c0c96037f080a79f9",
+    "path": "docs/source/en/using-diffusers/ip_adapter.md",
+    "url": "https://github.com/huggingface/diffusers/blob/8c54b38fea3d624d23d0e43c0c96037f080a79f9/docs/source/en/using-diffusers/ip_adapter.md",
+    "sha256": "fa7e8c0c69cb9a2bfc7de799714ea8e40550102a686b8d1305118581dd0fbf28",
+    "bytes": 30150,
+    "lines": 751
+  },
+  {
+    "repository": "huggingface/diffusers",
+    "revision": "8c54b38fea3d624d23d0e43c0c96037f080a79f9",
+    "path": "src/diffusers/loaders/ip_adapter.py",
+    "url": "https://github.com/huggingface/diffusers/blob/8c54b38fea3d624d23d0e43c0c96037f080a79f9/src/diffusers/loaders/ip_adapter.py",
+    "sha256": "9a82ada84f497fbf50a150a68d486d3315726fa671b0356017b14e3d0731a8ee",
+    "bytes": 57762,
+    "lines": 1134
+  },
+  {
+    "repository": "huggingface/diffusers",
+    "revision": "8c54b38fea3d624d23d0e43c0c96037f080a79f9",
+    "path": "src/diffusers/loaders/unet_loader_utils.py",
+    "url": "https://github.com/huggingface/diffusers/blob/8c54b38fea3d624d23d0e43c0c96037f080a79f9/src/diffusers/loaders/unet_loader_utils.py",
+    "sha256": "32945d8c9180fa5800ba1b1c685b11517493efc3798671350ff60c53eca39640",
+    "bytes": 6228,
+    "lines": 164
+  },
+  {
+    "repository": "huggingface/diffusers",
+    "revision": "8c54b38fea3d624d23d0e43c0c96037f080a79f9",
+    "path": "src/diffusers/models/attention_processor.py",
+    "url": "https://github.com/huggingface/diffusers/blob/8c54b38fea3d624d23d0e43c0c96037f080a79f9/src/diffusers/models/attention_processor.py",
+    "sha256": "59871fd4e66fc14a26f0e0464706ab24680e13dcd93161c55123678a5e671772",
+    "bytes": 239359,
+    "lines": 5679
+  },
+  {
+    "repository": "huggingface/diffusers",
+    "revision": "8c54b38fea3d624d23d0e43c0c96037f080a79f9",
+    "path": "src/diffusers/pipelines/controlnet/pipeline_controlnet_sd_xl.py",
+    "url": "https://github.com/huggingface/diffusers/blob/8c54b38fea3d624d23d0e43c0c96037f080a79f9/src/diffusers/pipelines/controlnet/pipeline_controlnet_sd_xl.py",
+    "sha256": "918afbb586a568a0a724597e51b145c4b3139e87e0b35622cd93430b43381f5d",
+    "bytes": 82436,
+    "lines": 1607
+  },
+  {
+    "repository": "instantX-research/InstantStyle-Plus",
+    "revision": "11b2d96e0af6290b5ee503f8b85da3eeefe52732",
+    "path": "README.md",
+    "url": "https://github.com/instantX-research/InstantStyle-Plus/blob/11b2d96e0af6290b5ee503f8b85da3eeefe52732/README.md",
+    "sha256": "32118463a0b3aac31468f51395dfe5ad1af2a30b877a092a6d1c711e256f72fb",
+    "bytes": 3431,
+    "lines": 76
+  },
+  {
+    "repository": "instantX-research/InstantStyle-Plus",
+    "revision": "11b2d96e0af6290b5ee503f8b85da3eeefe52732",
+    "path": "infer_style.py",
+    "url": "https://github.com/instantX-research/InstantStyle-Plus/blob/11b2d96e0af6290b5ee503f8b85da3eeefe52732/infer_style.py",
+    "sha256": "4200be594546b8b45025edf43468f3f52288c2eaedb8a4557342f368a1a9567d",
+    "bytes": 10761,
+    "lines": 259
+  },
+  {
+    "repository": "instantX-research/InstantStyle-Plus",
+    "revision": "11b2d96e0af6290b5ee503f8b85da3eeefe52732",
+    "path": "inversion.py",
+    "url": "https://github.com/instantX-research/InstantStyle-Plus/blob/11b2d96e0af6290b5ee503f8b85da3eeefe52732/inversion.py",
+    "sha256": "99f6ab77b3d2476dcfd7a369b675996cb888a4e73b14f49bdd35ae18c72c4780",
+    "bytes": 2697,
+    "lines": 75
+  },
+  {
+    "repository": "instantX-research/CSGO",
+    "revision": "fefec09cf680d9796b92a64282ceb12501b9f977",
+    "path": "README.md",
+    "url": "https://github.com/instantX-research/CSGO/blob/fefec09cf680d9796b92a64282ceb12501b9f977/README.md",
+    "sha256": "f65b47c8fdd89b42c7157c6305a6170d8b80ee21dc3936d185e26212516dcffb",
+    "bytes": 12261,
+    "lines": 273
+  },
+  {
+    "repository": "instantX-research/CSGO",
+    "revision": "fefec09cf680d9796b92a64282ceb12501b9f977",
+    "path": "infer/infer_CSGO.py",
+    "url": "https://github.com/instantX-research/CSGO/blob/fefec09cf680d9796b92a64282ceb12501b9f977/infer/infer_CSGO.py",
+    "sha256": "7761b163a0ac3b620964f623c880b202f3ea65c0c1a39bbc1da48cced2a0061e",
+    "bytes": 3913,
+    "lines": 86
+  },
+  {
+    "repository": "threerocks/hand-drawn-styles",
+    "revision": "5a2f91fcbd32694a6caa9c7d09b2b3bad2666bc3",
+    "path": "SKILL.md",
+    "url": "https://github.com/threerocks/hand-drawn-styles/blob/5a2f91fcbd32694a6caa9c7d09b2b3bad2666bc3/SKILL.md",
+    "sha256": "39b2d6147e0b1bf183d14587d31e1c94ce47993ffeb2b70eb72ae2aa55d242f8",
+    "bytes": 3989,
+    "lines": 22
+  },
+  {
+    "repository": "threerocks/hand-drawn-styles",
+    "revision": "5a2f91fcbd32694a6caa9c7d09b2b3bad2666bc3",
+    "path": "scripts/render_prompt.py",
+    "url": "https://github.com/threerocks/hand-drawn-styles/blob/5a2f91fcbd32694a6caa9c7d09b2b3bad2666bc3/scripts/render_prompt.py",
+    "sha256": "56720706500ab62be2a4be045d182a47b83821bd2b6aa46c3414fd8c7fad5375",
+    "bytes": 52751,
+    "lines": 1160
+  },
+  {
+    "repository": "threerocks/hand-drawn-styles",
+    "revision": "5a2f91fcbd32694a6caa9c7d09b2b3bad2666bc3",
+    "path": "scripts/test_render_prompt.py",
+    "url": "https://github.com/threerocks/hand-drawn-styles/blob/5a2f91fcbd32694a6caa9c7d09b2b3bad2666bc3/scripts/test_render_prompt.py",
+    "sha256": "1830b65af436a9ab5c5b511019fe0596fb74803fefeb65f7693000a804096185",
+    "bytes": 42317,
+    "lines": 840
+  },
+  {
+    "repository": "threerocks/hand-drawn-styles",
+    "revision": "5a2f91fcbd32694a6caa9c7d09b2b3bad2666bc3",
+    "path": "benchmarks/README.md",
+    "url": "https://github.com/threerocks/hand-drawn-styles/blob/5a2f91fcbd32694a6caa9c7d09b2b3bad2666bc3/benchmarks/README.md",
+    "sha256": "bff5cf32f1e05b075f667a52f9675902e63c59b458240a3184e2cfc4220bc6fb",
+    "bytes": 1811,
+    "lines": 24
+  },
+  {
+    "repository": "yanliudesign/mono-color-skill",
+    "revision": "c8ff70597ddedcd65f21a0b528f6a70c35690b0a",
+    "path": "SKILL.md",
+    "url": "https://github.com/yanliudesign/mono-color-skill/blob/c8ff70597ddedcd65f21a0b528f6a70c35690b0a/SKILL.md",
+    "sha256": "8274bc1f30a92a9dc715c03c3fb9aeaa060fb5a12fd58dfe8d977ae98a26bd76",
+    "bytes": 34280,
+    "lines": 406
+  },
+  {
+    "repository": "yanliudesign/mono-color-skill",
+    "revision": "c8ff70597ddedcd65f21a0b528f6a70c35690b0a",
+    "path": "evals/evals.json",
+    "url": "https://github.com/yanliudesign/mono-color-skill/blob/c8ff70597ddedcd65f21a0b528f6a70c35690b0a/evals/evals.json",
+    "sha256": "8e1c1dbd6c475aedf9ba58c74c4f67990b11649313b075e44eda6123f9236596",
+    "bytes": 13770,
+    "lines": 278
+  },
+  {
+    "repository": "yanliudesign/mono-color-skill",
+    "revision": "c8ff70597ddedcd65f21a0b528f6a70c35690b0a",
+    "path": "ASSET-LICENSE.md",
+    "url": "https://github.com/yanliudesign/mono-color-skill/blob/c8ff70597ddedcd65f21a0b528f6a70c35690b0a/ASSET-LICENSE.md",
+    "sha256": "1a02a8b7a3bae6b21bb5182d6865a5d4db66777a8c5c064c64c84756eebf257f",
+    "bytes": 1108,
+    "lines": 22
+  }
+]

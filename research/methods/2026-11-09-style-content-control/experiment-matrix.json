@@ -1,0 +1,50 @@
+{
+  "status": "NOT_RUN",
+  "type": "proposed controlled study, not scheduled execution",
+  "seeds": [
+    11,
+    29,
+    47
+  ],
+  "stage_A": {
+    "content_tasks": 4,
+    "style_references": 2,
+    "seeds": 3,
+    "text_only_outputs": 12,
+    "reference_conditioned_arms": [
+      "I",
+      "S",
+      "D",
+      "SD"
+    ],
+    "reference_conditioned_outputs": 96,
+    "total": 108
+  },
+  "stage_B": {
+    "content_tasks": 2,
+    "style_references": 2,
+    "seeds": 3,
+    "arms": [
+      "none",
+      "canny_full",
+      "canny_end_0.6",
+      "depth_full"
+    ],
+    "total": 48
+  },
+  "held_out": {
+    "content_tasks": 2,
+    "unseen_style_references": 2,
+    "seeds": 3,
+    "frozen_configs": 2,
+    "total": 24
+  },
+  "planned_total": 180,
+  "generated_images": 0,
+  "cost_incurred_for_generation": 0,
+  "notes": [
+    "Smoke tests and future tuning rounds are excluded.",
+    "Reference artists/period selection and backend setup are not frozen.",
+    "Same original artwork must not cross dev/held-out split through alternate scans."
+  ]
+}

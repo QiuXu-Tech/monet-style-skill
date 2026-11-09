@@ -1,0 +1,95 @@
+[
+  {
+    "repo": "instantX-research/InstantStyle",
+    "sha": "6b40588e263c958653353ec24eb7eb990cfa3da7",
+    "branch": "main",
+    "archived": false,
+    "license": null,
+    "license_paths": [],
+    "reviewed_on": "2026-11-09",
+    "tree_sha": "4aae34154f551cbbdc52ab67161fafc51ed9a942",
+    "revision_kind": "commit",
+    "commit_endpoint_verified": true
+  },
+  {
+    "repo": "tencent-ailab/IP-Adapter",
+    "sha": "62e4af9d0c1ac7d5f8dd386a0ccf2211346af1a2",
+    "branch": "main",
+    "archived": false,
+    "license": "Apache-2.0",
+    "license_paths": [
+      "LICENSE"
+    ],
+    "reviewed_on": "2026-11-09",
+    "tree_sha": "bd98b225f30f186ecc15b213758409d51af9601b",
+    "revision_kind": "commit",
+    "commit_endpoint_verified": true
+  },
+  {
+    "repo": "huggingface/diffusers",
+    "sha": "8c54b38fea3d624d23d0e43c0c96037f080a79f9",
+    "branch": "main",
+    "archived": false,
+    "license": "Apache-2.0",
+    "license_paths": [
+      "LICENSE"
+    ],
+    "reviewed_on": "2026-11-09",
+    "tree_sha": "b34b5b67443e9d7b5760632dd838699a25403784",
+    "revision_kind": "commit",
+    "commit_endpoint_verified": true
+  },
+  {
+    "repo": "instantX-research/InstantStyle-Plus",
+    "sha": "11b2d96e0af6290b5ee503f8b85da3eeefe52732",
+    "branch": "main",
+    "archived": false,
+    "license": null,
+    "license_paths": [],
+    "reviewed_on": "2026-11-09",
+    "tree_sha": "a4e53c962f57c70db17b3af72aea8d69f8dafbc2",
+    "revision_kind": "commit",
+    "commit_endpoint_verified": true
+  },
+  {
+    "repo": "instantX-research/CSGO",
+    "sha": "fefec09cf680d9796b92a64282ceb12501b9f977",
+    "branch": "main",
+    "archived": false,
+    "license": null,
+    "license_paths": [],
+    "reviewed_on": "2026-11-09",
+    "tree_sha": "4582bd606076dfa244942610280d1b22e02bd3cc",
+    "revision_kind": "commit",
+    "commit_endpoint_verified": true
+  },
+  {
+    "repo": "threerocks/hand-drawn-styles",
+    "sha": "5a2f91fcbd32694a6caa9c7d09b2b3bad2666bc3",
+    "branch": "main",
+    "archived": false,
+    "license": "MIT",
+    "license_paths": [
+      "LICENSE"
+    ],
+    "reviewed_on": "2026-11-09",
+    "tree_sha": "d4d97120fac4b9748dbb4eb8061b744398a9a59a",
+    "revision_kind": "commit",
+    "commit_endpoint_verified": true
+  },
+  {
+    "repo": "yanliudesign/mono-color-skill",
+    "sha": "c8ff70597ddedcd65f21a0b528f6a70c35690b0a",
+    "branch": "main",
+    "archived": false,
+    "license": "MIT",
+    "license_paths": [
+      "ASSET-LICENSE.md",
+      "LICENSE"
+    ],
+    "reviewed_on": "2026-11-09",
+    "tree_sha": "d8a32fb9944d0328304d11088f01d9d1f05be640",
+    "revision_kind": "commit",
+    "commit_endpoint_verified": true
+  }
+]
