@@ -1,44 +1,37 @@
-# Claude Monet · 原作学习参考集
+# 莫奈原作学习参考集 · v0.2
 
-**研究图像参考集 v0.1 | 2026-11-09 | 41 件作品**
+**共 163 件（较 v0.1 的 41 件新增 122 件）｜2026-11-09**
 
-这是 QiuXu-Tech 莫奈风格 Skill 项目的第一批原作学习资料，供视觉观察、同一题材的光照比较和未来一致性评测使用。**不是已训练的图像模型，也不是已验证的生图 Skill。**
+面向 QiuXu-Tech 的开源 Monet Style Skill 研究，本集搜集莫奈原作的可追溯开放图像，以便比较题材、年代和光照变化。**这是图像参考集，不是已经训练或验证的图像生成 Skill。**
 
-## 快速访问
+## 四种浏览方式
 
-- [打开全部作品可视化图集](gallery.md)
-- [机器可读目录（JSON）](catalog.json)
-- [原图版权和许可说明](RIGHTS.md)
-- 图片副本：images/ 文件夹
+- **[打开图集入口](gallery.md)**
+- [按年代](collections/by-decade.md) · [按题材](collections/by-subject.md) · [按系列／重复母题](collections/by-series.md) · [按标题光照与天气](collections/by-light.md)
+- [分类原则](TAXONOMY.md) · [完整 JSON](catalog.json) · [表格 CSV](catalog.csv) · [统计](stats.json) · [版权来源](RIGHTS.md)
 
-每张图片保留原始来源网页、原始高清图 URL、版权/公有领域标识、馆藏与年份，并保存下载后副本的尺寸和 SHA-256 校验和。研究副本保持原画比例，最长边为 1600px，JPEG 品质 90。需要对笔触作细节研究，请在 JSON 中打开 original_image_url 的高分辨率图像。
+## 按题材统计
 
-## 藏品来源
+- 人物与肖像：13 件
+- 静物：2 件
+- 花园与植物：12 件
+- 睡莲、水池与水上花园：13 件
+- 河流、湖泊与水岸：19 件
+- 海岸、海景与海上活动：22 件
+- 乡村、山野与一般风景：38 件
+- 建筑、城市与桥梁：37 件
+- 火车、运输与工业场景：6 件
+- 动物：1 件
 
-- National Gallery of Art: 22 件
-- Art Institute of Chicago: 13 件
-- Cleveland Museum of Art: 5 件
-- Musée Marmottan Monet: 1 件
+## 按时代统计
 
-只纳入各自图像页标为 CC0 或 Public domain 的副本；本批排除了 Commons 上带 CC BY-SA 的候选图片。不同标记并非完全相同的许可，请参考 RIGHTS.md。
+- 1860–1879：54 件
+- 1880–1889：45 件
+- 1890–1899：34 件
+- 1900–1926：30 件
 
-## 研究重点
+## 来源、质量与研究边界
 
-1. 画法与题材分开：人物、植被、海面、城市、火车站都要覆盖。
-2. 固定主体、变化光照：《干草堆》《鲁昂大教堂》及 Waterloo Bridge 的系列对照。
-3. 跨年代：从 1860 年代作品到 1915—1926 年的水面绘画，理解风格如何变化。
-4. 区分原作观察、艺术史资料和未来工程假设，不把“印象派柔焦滤镜”当成答案。
+所有图片都保留作品来源地址与每份预览图的 SHA-256 校验和。预览图最长边 1600px，可在 JSON 找到原始高分辨率图地址。图像授权标记分布：{'Public domain': 131, 'CC0': 32}；每份图片许可仍按其上游文件页判断，并不因仓库代码采用 MIT 而改变。
 
-## 方法与局限
-
-- 本批是精选参考，而非莫奈全集，作品标题、年代与馆藏仍可随学术研究修正。
-- 预览图片未经显示设备色彩校准，不适合作为原作颜料色值的精确测量。
-- 图像的版权归属与使用条款按逐件来源判断；仓库 MIT 许可不适用于第三方图片。
-- 不自动采集网上所有莫奈图像，避免引入授权混乱、翻拍照片和错误归属。
-
-## 权威开放渠道
-
-- [美国国家美术馆 Open Access](https://www.nga.gov/artworks/free-images-and-open-access)
-- [克利夫兰美术馆 Open Access](https://www.clevelandart.org/open-access)
-- [芝加哥艺术博物馆 API](https://api.artic.edu/docs/)
-- [Wikimedia Commons 莫奈作品分类](https://commons.wikimedia.org/wiki/Category:Paintings_by_Claude_Monet)
+有些馆藏字段是 Commons 作品分类的暂定归属，仍需与机构原始馆藏逐一交叉核对；这是检索型学习集，**不是经过艺术史完整鉴定、数字色彩校准或模型风格一致性评测的数据集**。

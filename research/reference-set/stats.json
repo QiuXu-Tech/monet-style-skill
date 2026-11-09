@@ -1,0 +1,80 @@
+{
+  "version": "0.2",
+  "total": 163,
+  "original_baseline": 41,
+  "new_count": 122,
+  "by_category": {
+    "rural_landscape": 38,
+    "coast_sea": 22,
+    "architecture_city": 37,
+    "still_life": 2,
+    "people": 13,
+    "rivers_water": 19,
+    "transport_industry": 6,
+    "gardens_flora": 12,
+    "animals": 1,
+    "water_gardens": 13
+  },
+  "by_period": {
+    "1860–1879": 54,
+    "1880–1889": 45,
+    "1890–1899": 34,
+    "1900–1926": 30
+  },
+  "by_decade": {
+    "1860s": 13,
+    "1870s": 41,
+    "1880s": 45,
+    "1890s": 34,
+    "1900s": 23,
+    "1910s": 5,
+    "1920s": 2
+  },
+  "by_series_group": {
+    "saint-lazare-station": 3,
+    "haystacks-motif": 4,
+    "poplars-motif": 2,
+    "grainstacks-1890s": 6,
+    "rouen-cathedral": 9,
+    "mornings-on-seine": 2,
+    "water-lilies-and-garden": 11,
+    "charing-cross-bridge": 2,
+    "houses-of-parliament": 6,
+    "waterloo-bridge": 4
+  },
+  "by_title_condition": {
+    "morning_or_dawn": 8,
+    "sunlight": 8,
+    "rain": 5,
+    "snow_frost_or_winter": 9,
+    "overcast": 3,
+    "mist_or_fog": 3,
+    "sunset_or_dusk": 13
+  },
+  "by_institution": {
+    "Museum of Fine Arts, Boston": 16,
+    "Van Gogh Museum": 3,
+    "Kunsthaus Zürich": 7,
+    "Musée d'Orsay": 14,
+    "The National Gallery, London": 9,
+    "Cleveland Museum of Art": 5,
+    "National Museum of Western Art, Tokyo": 10,
+    "National Gallery of Art": 22,
+    "Musée Marmottan Monet": 22,
+    "Amgueddfa Cymru – Museum Wales": 8,
+    "Ny Carlsberg Glyptotek": 3,
+    "State Hermitage Museum": 8,
+    "Pola Museum of Art": 6,
+    "Pushkin State Museum of Fine Arts": 4,
+    "Art Institute of Chicago": 13,
+    "National Museum, Norway": 3,
+    "Kunstmuseum Basel": 2,
+    "Rijksmuseum": 1,
+    "馆藏待核实": 7
+  },
+  "by_license": {
+    "Public domain": 131,
+    "CC0": 32
+  },
+  "total_preview_bytes": 151644074
+}
