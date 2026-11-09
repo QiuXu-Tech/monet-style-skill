@@ -23,6 +23,12 @@ python3 tools/package_skill.py --output dist/monet-style-0.3.0-alpha.1.zip
 
 本版实现固定画法文本、两幅原作锚点按需下载与 SHA-256 校验、内容/风格角色分离、系列输入锁、宿主生图调用指令和逐图验收记录。默认 1880s 只是可修订的实验基线，非最终艺术风格定稿。没有 GPU 服务、模型权重、LoRA 或隐藏付费调用。
 
+## 可复用优化循环
+
+[优化计划 V1.0](docs/optimization/README.zh.md) · [单轮执行指令](docs/optimization/EXECUTE_ONE_ROUND.zh.md) · [已复核的工程基线](docs/optimization/rounds/R000-baseline.json)
+
+每轮依据真实失败做最小修改，分阶段出图、评审与回归；计划不自动启动后台任务或付费生图，视觉基准仍待执行。
+
 ## 原作图像参考集
 
 - [莫奈原作学习参考集（图片、来源与授权）](research/reference-set/README.md)

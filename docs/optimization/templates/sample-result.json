@@ -1,0 +1,74 @@
+{
+  "result_schema_version": "1.0",
+  "status": "NOT_RUN",
+  "round_id": null,
+  "case_id": null,
+  "sample_id": null,
+  "arm": null,
+  "repeat_index": null,
+  "attempt": 1,
+  "attempt_kind": "first_generation",
+  "parent_sample_id": null,
+  "job_sha256": null,
+  "style_lock_sha256": null,
+  "style_reference_sha256": [],
+  "content_reference_sha256": null,
+  "execution": {
+    "tool_name": null,
+    "model_identifier": null,
+    "call_id": null,
+    "timestamp": null,
+    "seed": null,
+    "technical_status": "NOT_RUN",
+    "output_sha256": null,
+    "output_decoded": false,
+    "output_viewed": false,
+    "elapsed_seconds": null,
+    "cost": null,
+    "currency": null,
+    "billing_status": "unknown"
+  },
+  "assessment": {
+    "reviewer_id": null,
+    "reviewer_kind": null,
+    "independence": "unknown",
+    "variant_label_blinded": false,
+    "review_receipt_sha256": null,
+    "hard_checks": [],
+    "style_scores": {
+      "style_colour": {
+        "score": null,
+        "evidence": null
+      },
+      "style_brushwork": {
+        "score": null,
+        "evidence": null
+      },
+      "style_edges": {
+        "score": null,
+        "evidence": null
+      },
+      "style_space": {
+        "score": null,
+        "evidence": null
+      },
+      "style_medium": {
+        "score": null,
+        "evidence": null
+      }
+    },
+    "reference_leakage": {
+      "status": "unknown",
+      "severity": null,
+      "reference_specific_element": null,
+      "evidence": null
+    },
+    "first_attempt_joint_pass": null,
+    "pairwise_preference": null,
+    "uncertainty_notes": null
+  },
+  "defect_tags": [],
+  "image_evidence_private_path": null,
+  "public_safe_summary": null,
+  "adapter_note": "Additional experiment record; do not pass this object as the existing monet.py review assessment. Keep the existing review-template.json and checks intact."
+}

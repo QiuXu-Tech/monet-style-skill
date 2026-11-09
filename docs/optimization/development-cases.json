@@ -1,0 +1,234 @@
+{
+  "case_set_version": "1.0",
+  "scope": "public_development_only",
+  "not_a_holdout_set": true,
+  "request_object_path": "cases[].request",
+  "cases": [
+    {
+      "id": "D01",
+      "name": "现代列车",
+      "split": "development",
+      "focus": [
+        "modern_identity",
+        "reference_leakage"
+      ],
+      "request": {
+        "request": "用莫奈式油画画一列现代高速列车驶入现代车站，只有一列列车，能看清流线型车头。",
+        "must_keep": [
+          "只有一列列车",
+          "现代高速列车与流线型车头",
+          "现代车站"
+        ],
+        "must_avoid": [
+          "蒸汽机车",
+          "额外列车",
+          "参考画中的乡间红瓦房"
+        ],
+        "aspect_ratio": "3:2",
+        "mode": "generate",
+        "anchor_id": "antibes-1888"
+      }
+    },
+    {
+      "id": "D02",
+      "name": "杯子数量与颜色",
+      "split": "development",
+      "focus": [
+        "count",
+        "colour",
+        "relations"
+      ],
+      "request": {
+        "request": "用莫奈式油画画桌面上恰好三只陶瓷杯：左边一只红色，中间和右边各一只白色，没有人物。",
+        "must_keep": [
+          "恰好三只陶瓷杯",
+          "左边红杯，中间和右边白杯",
+          "三个杯口可以辨认"
+        ],
+        "must_avoid": [
+          "人物",
+          "花瓶",
+          "第四只杯子"
+        ],
+        "aspect_ratio": "3:2",
+        "mode": "generate",
+        "anchor_id": "antibes-1888"
+      }
+    },
+    {
+      "id": "D03",
+      "name": "人物左右关系",
+      "split": "development",
+      "focus": [
+        "people",
+        "left_right"
+      ],
+      "request": {
+        "request": "用莫奈式油画画小径上的两名成年人：画面左侧人物拿红伞，画面右侧人物穿灰外套。",
+        "must_keep": [
+          "恰好两名成年人",
+          "画面左侧人物拿红伞",
+          "画面右侧人物穿灰外套"
+        ],
+        "must_avoid": [
+          "第三个人物",
+          "把红伞移到右侧",
+          "复制原作人物造型"
+        ],
+        "aspect_ratio": "4:5",
+        "mode": "generate",
+        "anchor_id": "antibes-1888"
+      }
+    },
+    {
+      "id": "D04",
+      "name": "夜景保真",
+      "split": "development",
+      "focus": [
+        "reference_lighting_leakage",
+        "dark_palette"
+      ],
+      "request": {
+        "request": "用莫奈式油画画夜间的现代城市阶梯，只有一盏路灯照亮湿润石阶，远处是暗色楼房。",
+        "must_keep": [
+          "保持夜晚",
+          "一盏可见的路灯",
+          "潮湿石阶",
+          "现代城市楼房"
+        ],
+        "must_avoid": [
+          "白昼",
+          "夕阳",
+          "乡村红瓦屋"
+        ],
+        "aspect_ratio": "3:2",
+        "mode": "generate",
+        "anchor_id": "antibes-1888"
+      }
+    },
+    {
+      "id": "D05",
+      "name": "现代滨水建筑",
+      "split": "development",
+      "focus": [
+        "architecture",
+        "geometry",
+        "reference_leakage"
+      ],
+      "request": {
+        "request": "用莫奈式油画画三栋现代滨水高楼，楼前一条沿河步道，河岸保持清楚，不画教堂和拱桥。",
+        "must_keep": [
+          "恰好三栋主要高楼",
+          "现代建筑形态",
+          "高楼前的沿河步道与河岸"
+        ],
+        "must_avoid": [
+          "教堂",
+          "花园拱桥",
+          "睡莲池"
+        ],
+        "aspect_ratio": "16:9",
+        "mode": "generate",
+        "anchor_id": "antibes-1888"
+      }
+    },
+    {
+      "id": "D06",
+      "name": "冬季雪原",
+      "split": "development",
+      "focus": [
+        "season",
+        "palette_flexibility"
+      ],
+      "request": {
+        "request": "用莫奈式油画画阴天的雪原，一条小径通向远处树林，地面明显积雪，画面没有人物与房屋。",
+        "must_keep": [
+          "阴天",
+          "明显积雪",
+          "一条通向远方树林的小径"
+        ],
+        "must_avoid": [
+          "人物",
+          "房屋",
+          "夕阳",
+          "绿色夏季草坪"
+        ],
+        "aspect_ratio": "3:2",
+        "mode": "generate",
+        "anchor_id": "antibes-1888"
+      }
+    },
+    {
+      "id": "D07",
+      "name": "室内单只猫",
+      "split": "development",
+      "focus": [
+        "unseen_subject",
+        "indoor_light"
+      ],
+      "request": {
+        "request": "用莫奈式油画画室内窗边椅子上坐着的一只灰猫，窗外是雨天，猫和椅子关系清楚。",
+        "must_keep": [
+          "一只灰猫",
+          "猫坐在室内椅子上",
+          "窗外是雨天"
+        ],
+        "must_avoid": [
+          "第二只猫",
+          "把场景改成室外",
+          "引入参考画的帆船"
+        ],
+        "aspect_ratio": "1:1",
+        "mode": "generate",
+        "anchor_id": "antibes-1888"
+      }
+    },
+    {
+      "id": "D08",
+      "name": "河岸与近景",
+      "split": "development",
+      "focus": [
+        "water",
+        "selective_edges",
+        "forbidden_motif"
+      ],
+      "request": {
+        "request": "用莫奈式油画画清晨的河岸，近景是一株芦苇，平静河面向远处延伸，不画船与睡莲。",
+        "must_keep": [
+          "清晨",
+          "近景芦苇",
+          "平静河面",
+          "可辨认的近远层次"
+        ],
+        "must_avoid": [
+          "船",
+          "睡莲",
+          "花园拱桥"
+        ],
+        "aspect_ratio": "3:2",
+        "mode": "generate",
+        "anchor_id": "antibes-1888"
+      }
+    }
+  ],
+  "workflow_tests_not_counted_in_text_matrix": [
+    {
+      "id": "W01",
+      "type": "restyle",
+      "status": "BLOCKED_FIXTURE",
+      "requirement": "Authorized content image distinct from style image; preserve major composition."
+    },
+    {
+      "id": "W02",
+      "type": "local_edit",
+      "status": "BLOCKED_FIXTURE",
+      "requirement": "Real previously inspected output; change one feature, verify unchanged constraints."
+    },
+    {
+      "id": "W03",
+      "type": "series",
+      "status": "NOT_RUN",
+      "requirement": "Three time/weather variants with same style lock; register separate budget."
+    }
+  ]
+}

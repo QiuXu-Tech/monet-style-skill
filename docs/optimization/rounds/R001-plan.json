@@ -1,0 +1,132 @@
+{
+  "plan_schema_version": "1.0",
+  "round_id": "R001",
+  "status": "DRAFT_NOT_RUN",
+  "round_type": "bootstrap_workflow_comparison",
+  "scope": "monet-1880s-study-v1",
+  "baseline": {
+    "kind": "direct_prompt_no_skill",
+    "commit": null,
+    "package_sha256": null,
+    "style_lock_sha256": null,
+    "definition": "Use each complete original case brief including constraints; no structured skill rules and no style reference image."
+  },
+  "candidate": {
+    "kind": "full_current_skill",
+    "commit": "a8af9d273f2bcd06670003f5ef027b121489394b",
+    "package_sha256": "62e56572268863537febe0dd1abd7f613e109709fd81405aa1503acd776ebd63",
+    "style_lock_sha256": null,
+    "definition": "Unmodified 0.3.0-alpha.1 workflow, fixed painting contract and verified antibes-1888 style reference."
+  },
+  "hypothesis": {
+    "failure_evidence_ids": [],
+    "statement": "The existing complete skill may improve style fidelity compared with a plain Monet request without sacrificing exact content or night lighting.",
+    "one_changed_factor": "whole_workflow_enabled",
+    "mechanism_claim_scope": "Exploratory bundle comparison only; cannot attribute improvement to any individual rule or reference.",
+    "protected_factors": [
+      "complete_original_user_brief",
+      "host_and_model",
+      "aspect_ratio",
+      "output_size",
+      "first_attempt_only",
+      "same_evaluation_rubric"
+    ]
+  },
+  "host": {
+    "tool": null,
+    "model_identifier": null,
+    "revision": null,
+    "revision_visibility": "unknown",
+    "reference_pixels_supported": null,
+    "actual_image_viewing_supported": null,
+    "seed_supported": null,
+    "seed_list": [],
+    "settings": {},
+    "execution_window": null,
+    "must_end_after_generation": null
+  },
+  "references": {
+    "style_anchor_ids": [
+      "antibes-1888"
+    ],
+    "style_image_sha256": [
+      "4c255eb653cbe1f0e19a53843cef8c57a8f1f4f4889f622f4a59acead7677f71"
+    ],
+    "artwork_group_ids": [
+      "cma:1916.1044"
+    ],
+    "content_images": []
+  },
+  "cases": {
+    "split": "development",
+    "ids": [
+      "D02",
+      "D04"
+    ],
+    "case_set_sha256": "fbea4de3e84c8217b6e72085beeae0f987c6f40fc120929b0eec0eb42e760aed",
+    "repeats_per_arm": 2,
+    "arms": [
+      "baseline",
+      "candidate"
+    ],
+    "images_per_call": 1
+  },
+  "stages": [
+    {
+      "name": "smoke",
+      "tasks": 2,
+      "arms": 2,
+      "repeats": 2,
+      "planned_outputs": 8,
+      "authorized": false
+    }
+  ],
+  "budget": {
+    "max_total_outputs": 8,
+    "max_total_calls": 8,
+    "max_extra_attempts_per_sample": 0,
+    "currency": null,
+    "max_additional_paid_amount": 0,
+    "host_quota_use_authorized": false,
+    "additional_paid_use_authorized": false,
+    "budget_basis": null,
+    "authorization_record": null,
+    "on_exhaustion": "BUDGET_STOP"
+  },
+  "evaluation": {
+    "rubric_version": "optimization-v1",
+    "rubric_frozen": false,
+    "primary_metric": "joint_first_attempt_success_and_five_separate_style_dimensions",
+    "promotion_rule": "No stable release decision from eight images; establish baseline, identify failures and decide whether to enter a focused round.",
+    "guardrails": [
+      "no_new_critical_content_failure",
+      "no_clear_reference_content_leakage",
+      "all_required_reviews_complete"
+    ],
+    "reviewers": [],
+    "pair_order_randomized": true,
+    "variant_names_hidden": true,
+    "unknown_is_pass": false,
+    "first_attempts_separate_from_repairs": true,
+    "statistics_unit": "task_and_artwork_group_not_individual_images"
+  },
+  "exit_rules": [
+    "BLOCKED_CAPABILITY_when_reference_pixels_or_viewing_unavailable",
+    "GENERATED_PENDING_REVIEW_when_host_must_end_after_generation",
+    "INCONCLUSIVE_when_evidence_missing_or_conflicting",
+    "KEEP_BASELINE_when_target_gain_absent",
+    "REVERT_when_guardrail_violated",
+    "stop_after_one_round"
+  ],
+  "privacy": {
+    "publish_user_images": false,
+    "publish_raw_call_logs": false,
+    "publish_redacted_report_only": true
+  },
+  "notes": [
+    "No generation, charging or model installation has been performed.",
+    "Fill host/capability/reviewer/budget fields and freeze the rubric before dispatch.",
+    "Preserve identical complete brief in both arms; host limitations must be reported.",
+    "If host requires immediate termination after generation, resume inspection only in a later permitted interaction."
+  ]
+}

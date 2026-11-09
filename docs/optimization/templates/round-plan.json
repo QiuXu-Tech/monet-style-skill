@@ -1,0 +1,110 @@
+{
+  "plan_schema_version": "1.0",
+  "round_id": "R___",
+  "status": "DRAFT",
+  "round_type": "single_hypothesis",
+  "scope": "monet-1880s-study-v1",
+  "baseline": {
+    "commit": null,
+    "package_sha256": null,
+    "style_lock_sha256": null
+  },
+  "candidate": {
+    "commit": null,
+    "package_sha256": null,
+    "style_lock_sha256": null
+  },
+  "hypothesis": {
+    "failure_evidence_ids": [],
+    "statement": null,
+    "one_changed_factor": null,
+    "mechanism_claim_scope": null,
+    "protected_factors": []
+  },
+  "host": {
+    "tool": null,
+    "model_identifier": null,
+    "revision": null,
+    "revision_visibility": "unknown",
+    "reference_pixels_supported": null,
+    "actual_image_viewing_supported": null,
+    "seed_supported": null,
+    "seed_list": [],
+    "settings": {},
+    "execution_window": null,
+    "must_end_after_generation": null
+  },
+  "references": {
+    "style_anchor_ids": [],
+    "style_image_sha256": [],
+    "artwork_group_ids": [],
+    "content_images": []
+  },
+  "cases": {
+    "split": "development",
+    "ids": [],
+    "case_set_sha256": null,
+    "repeats_per_arm": 2,
+    "arms": [
+      "baseline",
+      "candidate"
+    ],
+    "images_per_call": 1
+  },
+  "stages": [
+    {
+      "name": "smoke",
+      "tasks": 2,
+      "arms": 2,
+      "repeats": 2,
+      "planned_outputs": 8,
+      "authorized": false
+    }
+  ],
+  "budget": {
+    "max_total_outputs": 8,
+    "max_total_calls": 8,
+    "max_extra_attempts_per_sample": 0,
+    "currency": null,
+    "max_additional_paid_amount": 0,
+    "host_quota_use_authorized": false,
+    "additional_paid_use_authorized": false,
+    "budget_basis": null,
+    "authorization_record": null,
+    "on_exhaustion": "BUDGET_STOP"
+  },
+  "evaluation": {
+    "rubric_version": "optimization-v1",
+    "rubric_frozen": false,
+    "primary_metric": null,
+    "promotion_rule": null,
+    "guardrails": [
+      "no_new_critical_content_failure",
+      "no_clear_reference_content_leakage",
+      "all_required_reviews_complete"
+    ],
+    "reviewers": [],
+    "pair_order_randomized": true,
+    "variant_names_hidden": true,
+    "unknown_is_pass": false,
+    "first_attempts_separate_from_repairs": true,
+    "statistics_unit": "task_and_artwork_group_not_individual_images"
+  },
+  "exit_rules": [
+    "BLOCKED_CAPABILITY_when_reference_pixels_or_viewing_unavailable",
+    "GENERATED_PENDING_REVIEW_when_host_must_end_after_generation",
+    "INCONCLUSIVE_when_evidence_missing_or_conflicting",
+    "KEEP_BASELINE_when_target_gain_absent",
+    "REVERT_when_guardrail_violated",
+    "stop_after_one_round"
+  ],
+  "privacy": {
+    "publish_user_images": false,
+    "publish_raw_call_logs": false,
+    "publish_redacted_report_only": true
+  },
+  "notes": [
+    "Template only; must fill, freeze and authorize before running.",
+    "This file does not trigger a job or schedule."
+  ]
+}

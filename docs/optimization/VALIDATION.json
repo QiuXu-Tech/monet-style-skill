@@ -1,0 +1,86 @@
+{
+  "date": "2026-11-09",
+  "plan_version": "1.0",
+  "scope": "plan/template consistency and compatibility with existing request compiler, not visual evaluation",
+  "json_files_parsed": 5,
+  "development_cases_checked": 8,
+  "case_results": [
+    {
+      "id": "D01",
+      "request_contract": "PASS",
+      "literal_requirements_preserved": true,
+      "deterministic_text_prepare": true,
+      "generated_images": 0
+    },
+    {
+      "id": "D02",
+      "request_contract": "PASS",
+      "literal_requirements_preserved": true,
+      "deterministic_text_prepare": true,
+      "generated_images": 0
+    },
+    {
+      "id": "D03",
+      "request_contract": "PASS",
+      "literal_requirements_preserved": true,
+      "deterministic_text_prepare": true,
+      "generated_images": 0
+    },
+    {
+      "id": "D04",
+      "request_contract": "PASS",
+      "literal_requirements_preserved": true,
+      "deterministic_text_prepare": true,
+      "generated_images": 0
+    },
+    {
+      "id": "D05",
+      "request_contract": "PASS",
+      "literal_requirements_preserved": true,
+      "deterministic_text_prepare": true,
+      "generated_images": 0
+    },
+    {
+      "id": "D06",
+      "request_contract": "PASS",
+      "literal_requirements_preserved": true,
+      "deterministic_text_prepare": true,
+      "generated_images": 0
+    },
+    {
+      "id": "D07",
+      "request_contract": "PASS",
+      "literal_requirements_preserved": true,
+      "deterministic_text_prepare": true,
+      "generated_images": 0
+    },
+    {
+      "id": "D08",
+      "request_contract": "PASS",
+      "literal_requirements_preserved": true,
+      "deterministic_text_prepare": true,
+      "generated_images": 0
+    }
+  ],
+  "internal_markdown_links_checked": 9,
+  "stage_output_counts": {
+    "smoke": 8,
+    "focused": 24,
+    "regression": 48,
+    "holdout": 48,
+    "full_resampling_total_excluding_extra_workflows": 128
+  },
+  "authorization_defaults": "no_dispatch_no_new_paid_use",
+  "generation_calls": 0,
+  "visual_benchmark": "NOT_RUN",
+  "runtime_modified": false,
+  "existing_remote_unit_suite": {
+    "passed": 36,
+    "failed": 0,
+    "actually_rerun": true
+  },
+  "notes": [
+    "A local attempt to fetch the test file over the container network failed; zero tests there was not reported as a pass. The existing suite was actually rerun on the authorized Mac instead.",
+    "The eight request checks are text-only compatibility checks and not image generation."
+  ]
+}
