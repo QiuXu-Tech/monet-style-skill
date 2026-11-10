@@ -29,7 +29,7 @@ python3 tools/package_skill.py --output dist/monet-style-0.4.0-alpha.3.zip
 
 每轮依据真实失败做最小修改，分阶段出图、评审与回归；计划不自动启动后台任务或付费生图，视觉基准仍待执行。
 
-[P0 区域笔触候选与操作说明](skills/monet-style/references/regional-brushwork-p0.md) · [待执行的对照计划](benchmarks/original-paintings-v1/rounds/P0-regional-brushwork-plan.json) · [Alpha.2 真实失败记录](docs/optimization/rounds/R001-results-2026-11-10.md)
+[P0 后端资格检查与第二次路由失败记录](benchmarks/original-paintings-v1/rounds/P0-2026-11-10-second-blocker.md) · [P0 区域笔触候选与操作说明](skills/monet-style/references/regional-brushwork-p0.md) · [待执行的对照计划](benchmarks/original-paintings-v1/rounds/P0-regional-brushwork-plan.json) · [Alpha.2 真实失败记录](docs/optimization/rounds/R001-results-2026-11-10.md)
 
 **本轮 21 项离线测试通过，真实生图与画风改进仍未获验证。**
 
