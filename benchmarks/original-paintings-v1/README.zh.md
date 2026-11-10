@@ -111,3 +111,10 @@ python3 benchmarks/original-paintings-v1/generation_preflight.py prepare --case 
 ## 8. 原作构图复现与疑似署名（视觉门禁）
 
 即使生成图片通过单幅/题材/光照门禁，还需额外检查是否出现**不应有的签名或名画特征构图复现**。查看四角局部与完整布局，记录原作与生成图的主体布置、主要光源、倒影、前景元素等具体对应关系；证据不清时标记 `UNKNOWN`，不要猜出签名内容。若存在明确的复现，标记为 `REFERENCE_LEAKAGE` 并排除“风格可迁移成功”样本。构图相似不是已证明的像素复制，更不是自动法律判断。此门禁不修改四维 30/30/30/10 评分权重；分数可以记录用于诊断，但不能抵消泄漏或宿主不合格。
+
+
+## 9. ChatGPT 上下文路由失败后的隔离流程
+
+针对“请求 MOR-02 阳伞女子，实际连续返回 MOR-01 港口”的失败，优先检查 **会话级提示词污染风险** 而不是不断补充禁止港口的否定词。执行前使用 `generation_preflight.py prepare --case MOR-02 --prompt-variant compact-v1 --delivery-profile chatgpt-inferred --conversation-state reused --output /tmp/monet-mor02-clean`。输出仍会生成可单独复制的 `image-only-prompt.txt`，但状态为 `BLOCKED_CONTEXT_REUSE`，**不得在这个旧会话中调用生图**。在独立的新会话中仅提交该文件的正文，不携带历史图、评测表或其他场景；即使实际成功，仍只有 `FRESH_CHAT_EXPLORATORY_ONLY` 资格，不是正式参考锚点受控 A/B。
+
+首次图片回来后人工填写单幅、题材、天气与画幅门禁，`generation_preflight.py diagnose` 可以把三项真值门禁中任何失败和画幅失败记录为 `CONTENT_GATE_REJECTED`，但**无法自行从像素判定题材**，也不会自行评分。缺少视觉审看时保持 `GENERATED_PENDING_VISUAL_REVIEW`。错误图留存证据后立即停止，不继续同会话的下一臂测试。不调用外部收费 API、不伪造模型版本或 seed、不将未受控探索称为正式 A/B。

@@ -17,6 +17,23 @@ Skill 是宿主执行的工作流；本包不是独立生图模型，也不自�
 
 若启用 cleanup 路线，需要确认工具是否真的允许多张参考图各自发挥不同作用。若不能把“style anchor / structure map / gaussian support / content image”清晰区分，应停止或降级，而不是口头假设模型会自己理解。
 
+## ChatGPT 内置图像工具：上下文推断隔离路线
+
+部分会话中的内置生图工具只从对话历史推断图片任务，无法提供可核验的独立 `prompt` 字段、模型快照或种子。在本项目中，曾连续要求生成阳伞女子而返回旧港口场景。**这是实际内容路由失败，不足以证明具体后端内部根因。**
+
+如果本次会话已有旧题材、生图、评分或实验报告，不要在本会话反复要求换题材，也不要把实验计划/先前结果写进图片提示。仓库仅提供可审计的隔离包，不能通过 CLI 控制 ChatGPT 会话或后台模型：
+
+```bash
+python3 benchmarks/original-paintings-v1/generation_preflight.py prepare \
+  --case MOR-02 --variant baseline --prompt-variant compact-v1 \
+  --delivery-profile chatgpt-inferred --conversation-state reused \
+  --output /tmp/monet-mor02-clean
+```
+
+返回 `BLOCKED_CONTEXT_REUSE`：这不是调用失败，表示**不要在旧聊天中执行图片工具**。打开一段全新 ChatGPT 对话，仅粘贴 `image-only-prompt.txt` 的正文，直接请求一幅画；不要附上 GitHub 研究记录、历史生成图、评分、实验说明或第二个场景。只有在**实际**新会话中，才将 `--conversation-state` 改为 `fresh`；返回 `FRESH_CHAT_EXPLORATORY_ONLY`，仍非严格受控 A/B。此状态基于操作者声明，不是系统认证。每幅图必须先单独通过题材、天气、画幅和单幅画门禁，再做视觉评分。错误题材应保存回执、记 `CONTENT_GATE_REJECTED` 并停止该会话，不跨臂复用错误结果。
+
+`image-only-prompt.txt` 只是完整提示词文本，**并不能把它自动送入 ChatGPT 生图工具**。本路线是人工隔离缓解办法，不能保证消除所有内容路由错误，也不能证明原作 style anchor 像素已被正确送达。需要严格 A/B 时按 [宿主资格门禁](../../../benchmarks/original-paintings-v1/host_qualification.py) 另行核查；不符合前置条件就不得宣称受控实验。
+
 ## Claude Code
 
 按 Agent Skills 格式可安装本包，但是否能生图取决于该会话实际连接的工具。不能把“Claude Code 可读取 SKILL.md”解释为“Claude Code 原生具备本包需要的生图能力”。已有的图片 MCP/工具只在 schema 和权限允许时调用；本包不自动安装、连接或付费订阅任何服务。

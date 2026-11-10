@@ -61,6 +61,25 @@ def build_prompt(case_id: str, variant: str = 'baseline', prompt_variant: str = 
     }
 
 
+def classify_context_route(delivery_profile: str, conversation_state: str = 'unknown') -> dict:
+    """Preflight for prompt-from-conversation tools; cannot control their internals."""
+    if delivery_profile not in ('generic', 'chatgpt-inferred'):
+        raise ValueError('Unknown delivery profile')
+    if conversation_state not in ('fresh', 'reused', 'unknown'):
+        raise ValueError('Unknown conversation state')
+    if delivery_profile == 'generic':
+        if conversation_state != 'unknown':
+            raise ValueError('Conversation state applies only to chatgpt-inferred delivery')
+        return {'status': 'READY_NOT_GENERATED', 'controlled_ab_qualified': False,
+                'isolation_provenance': 'not_applicable'}
+    status = {'fresh': 'FRESH_CHAT_EXPLORATORY_ONLY',
+              'reused': 'BLOCKED_CONTEXT_REUSE',
+              'unknown': 'BLOCKED_CONTEXT_UNVERIFIED'}[conversation_state]
+    return {'status': status, 'controlled_ab_qualified': False,
+            'isolation_provenance': 'operator_reported',
+            'instruction': 'Paste image-only-prompt.txt alone into a new chat; do not paste metadata or history.'}
+
+
 def diagnose_attempt(record: dict) -> str:
     """Classify reported tool evidence, never infer provider refusals from assistant prose."""
     invoked = record.get("tool_invoked")
@@ -73,7 +92,21 @@ def diagnose_attempt(record: dict) -> str:
 
     outcome = record.get("outcome")
     if outcome == "image_returned":
-        return "GENERATED_PENDING_VISUAL_REVIEW"
+        ratio = record.get('aspect_ratio_pass')
+        if ratio is not None and type(ratio) is not bool:
+            raise ValueError('aspect_ratio_pass must be boolean or null')
+        gates = record.get('hard_gates')
+        if gates is None:
+            return "CONTENT_GATE_REJECTED" if ratio is False else "GENERATED_PENDING_VISUAL_REVIEW"
+        expected = {'single_painting', 'subject_class', 'time_and_weather'}
+        if not isinstance(gates, dict) or set(gates) != expected or any(
+                type(v) not in (bool, type(None)) for v in gates.values()):
+            raise ValueError('hard_gates must contain three inspected visual outcomes')
+        if False in gates.values() or ratio is False:
+            return "CONTENT_GATE_REJECTED"
+        if any(v is None for v in gates.values()) or ratio is None:
+            return "GENERATED_PENDING_VISUAL_REVIEW"
+        return "GENERATED_PENDING_STYLE_REVIEW"
     if outcome == "invalid_arguments":
         return "TOOL_ARGUMENT_ERROR"
     if outcome == "error":
@@ -93,6 +126,8 @@ def main() -> int:
     prepare.add_argument("--case", required=True)
     prepare.add_argument("--variant", choices=("baseline", "regional-p0"), default="baseline")
     prepare.add_argument("--prompt-variant", choices=("full", "compact-v1"), default="full")
+    prepare.add_argument("--delivery-profile", choices=("generic", "chatgpt-inferred"), default="generic")
+    prepare.add_argument("--conversation-state", choices=("fresh", "reused", "unknown"), default="unknown")
     prepare.add_argument("--output", type=Path, required=True)
     diagnose = sub.add_parser("diagnose")
     diagnose.add_argument("--record", type=Path, required=True)
@@ -102,13 +137,15 @@ def main() -> int:
         print(json.dumps({"status": diagnose_attempt(record)}, ensure_ascii=False))
         return 0
     job = build_prompt(args.case, args.variant, args.prompt_variant)
+    gate = classify_context_route(args.delivery_profile, args.conversation_state)
     if args.output.exists():
         raise ValueError("Output directory already exists; refusing overwrite")
     args.output.mkdir(parents=True)
     (args.output / "image-only-prompt.txt").write_text(job["prompt"] + "\n", encoding="utf-8")
     meta = {key: val for key, val in job.items() if key != "prompt"}
+    meta['launch_gate'] = gate
     (args.output / "generation-metadata.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps({"status": job["status"], "case_id": args.case,
+    print(json.dumps({"status": gate["status"], "case_id": args.case,
                       "prompt_file": str(args.output / "image-only-prompt.txt")}, ensure_ascii=False))
     return 0
 
