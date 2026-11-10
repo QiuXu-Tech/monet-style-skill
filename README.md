@@ -39,6 +39,8 @@ python3 tools/package_skill.py --output dist/monet-style-0.4.0-alpha.3.zip
 
 ## Research documents
 
+- [生图输出错误路由：OpenAI ImageGen / ComfyUI / Diffusers / Promptfoo 源码研究](research/methods/2026-11-10-image-generation-execution-isolation.md)
+
 - [莫奈原作对照评测协议 V1：笔触、色彩与氛围](benchmarks/original-paintings-v1/README.zh.md)
 
 - [Clean Remake Image Skill：纹理污染与清洁重绘方法研究](research/methods/2026-11-09-clean-remake-image-study.md)
