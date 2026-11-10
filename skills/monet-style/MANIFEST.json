@@ -1,10 +1,10 @@
 {
-  "version": "0.4.0-alpha.3",
+  "version": "0.4.0-alpha.4",
   "files": {
     "ASSET-LICENSE.md": "86b88fb6b25a09649bd97786f359451b0f730a017ba4842c925ab13a30b5d0ca",
     "LICENSE": "4c6dff365fe4c2bf71530d8140bf2c6c778de85413ec12bfab6f8a60d4626086",
-    "README.zh.md": "53c3c1864757598ee36c849004ae67f57d317c09c0d478958aec8f02417c670d",
-    "SKILL.md": "f2bd8271f1f2f9733eed5fed84c3570a4dfd2639ee0d96bfded7bf617ced2614",
+    "README.zh.md": "947ef8dba031b646c6dc9f931fa5f7f9f9b7b2f53df63c0e9925e8f79b696522",
+    "SKILL.md": "7b1ae32be6e6cbff49bc1a94818da4cd49d8cc562766282b10200785709fa736",
     "agents/openai.yaml": "428facb1bc8beb8123ebd4782d553da7cf59055aafe490171ba1e4ae8d048e07",
     "assets/anchors.json": "82012cf30455badf3543c36beef90bfb0258da6dd3958b426ece09b3ab9de842",
     "docs/R001-validation.json": "c6ca2e2be452d1d66a1d5503dddd7436df39eeee88f8b81ffb09c2596a088bfd",
@@ -16,7 +16,8 @@
     "examples/portrait.json": "d5288ab628fc3819ee3a4027726fa8c792024577981b35d3da1b343508f6d91c",
     "examples/train.json": "07f56616e89db0155768d2b2b0215616303d8f0f4a103c37125fe4522bdbe82b",
     "references/clean-remake.md": "15c96ecf64d3a4cae6dc74cb86582eff9361c93be872c9d29971eda4bcb8b426",
-    "references/host-tools.md": "c385d76a06edc153f19c76216a7cdd1bc9138d26062b145e97e61d2dcb54cc07",
+    "references/explicit-comfyui.md": "3a8426e5a622aa2527e9a8e6a836b4c92679b924878df18fa341878e5b05930e",
+    "references/host-tools.md": "7e56df0ceb708cbcce9268da1003023ed7e3bf932e692d1fe970aad39bd004a6",
     "references/painting-language.md": "85b0e190b87ae5152ad27408f6862dfd4ffef863a0f30b930e0a79a8ecf2f981",
     "references/regional-brushwork-p0.md": "e8f1f6ead2830dec78088992f685c8107a164c8d088da3a3eb3f019e64145e18",
     "references/regional-brushwork-p0.txt": "1649139c8ad7e924c52fb08ee0fca926c88fe58beea817babb0d4a47d8f00943",
@@ -24,8 +25,10 @@
     "references/sources.md": "226f14dbccc75fc596bb5dd52e5137424ebb736b04e6adcd4f85233a37a618e0",
     "references/style-contract.json": "00a85414ff7129d280cdf913bc2e917bcdff6482ee808725869a7e8f8c8c9afb",
     "requirements.txt": "0ab6355e6428c99d17c368a00dd750701e18244a90ab65234da72566317da72a",
-    "scripts/monet.py": "11c36f590b7e860e9c9b78c420039d6c986ba8a5dc58a8f0cdb8ad7e85497a62",
+    "scripts/execute_comfyui.py": "8bfdb5f41a5312d3099dcb27d7319fbe0b214d3245f8bcaff1c4dd90661a2572",
+    "scripts/monet.py": "038fa1b9c9cd11ddf1dd9835a0d09f813d5484ae00728bae67880d9cf909a4b5",
     "tests/test_cleanup.py": "5c777858e5faa4e6e9fed63fee73c6b2d4346e30a290185e6313e3dee16882d1",
+    "tests/test_execute_comfyui.py": "a153458d742ab37dd9987e77f02fce7f2e3357a7ed507375b85ab1a776c40bf2",
     "tests/test_regional_brushwork.py": "4c959f82b53546450e91068497e5b677235cc79206e42ecdc8f4a1c93de3ee42"
   }
 }

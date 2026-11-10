@@ -21,7 +21,7 @@ import urllib.parse
 import urllib.request
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = '0.4.0-alpha.3'
+VERSION = '0.4.0-alpha.4'
 LIMIT = 32 * 1024 * 1024
 
 try:

@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import re
 from pathlib import Path
 import zipfile
 
@@ -15,9 +16,12 @@ def build(output: Path) -> dict:
     for path in sorted(SOURCE.rglob('*')):
         if path.is_symlink():
             raise ValueError('No symlinks allowed in package: ' + str(path))
-        if path.is_file() and '__pycache__' not in path.parts and path.suffix != '.pyc':
+        if path.is_file() and path.name != 'MANIFEST.json' and '__pycache__' not in path.parts and path.suffix != '.pyc':
             files[path.relative_to(SOURCE).as_posix()] = path.read_bytes()
-    manifest = {'version': '0.3.0-alpha.1', 'files': {n: hashlib.sha256(b).hexdigest() for n, b in files.items()}}
+    match = re.search(r"^VERSION = ['\"]([^'\"]+)['\"]", (SOURCE / 'scripts' / 'monet.py').read_text(), re.M)
+    if not match:
+        raise ValueError('Cannot detect the current Skill version')
+    manifest = {'version': match.group(1), 'files': {n: hashlib.sha256(b).hexdigest() for n, b in files.items()}}
     files['MANIFEST.json'] = (json.dumps(manifest, indent=2) + '\n').encode()
     output.parent.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(output, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:

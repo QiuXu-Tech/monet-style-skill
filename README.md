@@ -1,6 +1,6 @@
 # Monet Style Skill
 
-**Status: 工程实验版 0.4.0-alpha.3（默认基线不变，P0 区域笔触为可选实验）。真实 A/B 画风增益仍未验证。**
+**Status: 工程实验版 0.4.0-alpha.4（默认基线不变，P0 区域笔触为可选实验）。真实 A/B 画风增益仍未验证。**
 
 本项目由 QiuXu-Tech 发起，以 Claude Monet 的原作为研究基础，探索跨题材、跨光照保持绘画语言一致性的开源图像生成 Agent Skill。
 
@@ -14,14 +14,21 @@
 
 ```bash
 # 在仓库根目录验证与打包，普通规则检查无第三方依赖，cleanup 预处理需要 Pillow
-python3 -m unittest discover -s tests -v
+python3 -m unittest discover -s skills/monet-style/tests -p test_execute_comfyui.py -v
+python3 -m unittest discover -s skills/monet-style/tests -p test_regional_brushwork.py -v
 python3 skills/monet-style/scripts/monet.py check
-python3 tools/package_skill.py --output dist/monet-style-0.4.0-alpha.3.zip
+python3 tools/package_skill.py --output dist/monet-style-0.4.0-alpha.4.zip
 ```
 
 实际使用：`使用 $monet-style，画一列驶入现代车站的高速列车，保留现代车头，3:2。`
 
 本版实现固定画法文本、两幅原作锚点按需下载与 SHA-256 校验、内容/风格角色分离、系列输入锁、宿主生图调用指令和逐图验收记录。默认 1880s 只是可修订的实验基线，非最终艺术风格定稿。没有 GPU 服务、模型权重、LoRA 或隐藏付费调用。
+
+## 可选的显式 ComfyUI 执行器（实验功能）
+
+[执行器说明](skills/monet-style/references/explicit-comfyui.md) · [源码](skills/monet-style/scripts/execute_comfyui.py) · [Mock 后端测试](skills/monet-style/tests/test_execute_comfyui.py)
+
+现在可以在用户已运行且配置好风格控制工作流的**本地 ComfyUI** 上，明确传入提示词、原作参考、宽高和种子并按任务 ID 取图。默认 dry-run，不自动下载模型、调用收费 API 或重试未知结果。模拟服务端 11 项验证通过，尚未完成真实 GPU 模型生图和莫奈画风 A/B 评测。
 
 ## 可复用优化循环
 

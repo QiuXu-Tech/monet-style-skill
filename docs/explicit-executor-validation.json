@@ -1,0 +1,36 @@
+{
+  "version": "0.4.0-alpha.4",
+  "date": "2026-11-10",
+  "scope": "optional local-only ComfyUI explicit executor and deterministic packaging fix",
+  "tests": {
+    "mock_comfyui_adapter": {
+      "passed": 12,
+      "failed": 0,
+      "environment": "macOS Python 3.14 localhost mock server; no model"
+    },
+    "regional_p0_regression": {
+      "passed": 7,
+      "failed": 0,
+      "environment": "macOS Python 3.14 offline"
+    },
+    "package_validation": {
+      "status": "PASS",
+      "entries": 30,
+      "sha256": "3d5cd04f7c689d20ae47abcb6a77808d6fbf0921ae4477c869e755a856b136f8"
+    },
+    "legacy_cleanup_tests": {
+      "status": "NOT_RUN",
+      "reason": "Pillow not installed in Mac Python environment"
+    }
+  },
+  "real_comfyui_inference": "NOT_RUN_NO_LOCAL_SERVER_ON_127.0.0.1_8188",
+  "real_artworks_generated": 0,
+  "monet_style_quality": "NOT_EVALUATED",
+  "paid_api_calls": 0,
+  "notes": [
+    "Mock server verifies prompt field, uploaded style reference filename, seed, prompt_id and returned image SHA; it is not evidence of a working GPU model.",
+    "The graph reachability requirement prevents a disconnected style reference, but not a semantic failure to apply style; all outputs still require visual review.",
+    "Unknown submission outcomes are not auto-retried.",
+    "The default brushwork remains baseline and no P0 promotion has occurred."
+  ]
+}

@@ -5,7 +5,7 @@ license: MIT; reference images have separate CC0 provenance in assets/anchors.js
 compatibility: Python 3.10+ for local checks; Pillow is additionally required for cleanup preprocessing; an actual image-generation tool with image-reference input is required for reference-controlled output. First anchor fetch needs HTTPS access to the pinned public GitHub asset.
 metadata:
   author: QiuXu-Tech
-  version: "0.4.0-alpha.3"
+  version: "0.4.0-alpha.4"
 ---
 # Monet Style
 
@@ -47,6 +47,10 @@ These are helper references for a clean redraw. They are not output art and they
 ### P0 regional brushwork trial (opt-in)
 
 When evaluating repeated fish-scale marks across sky, water, vegetation, fabric, and grainstacks, use `--brushwork-variant regional-p0` on `prepare`; compare against `--brushwork-variant baseline` with the same request/model/reference. The option adds only the [regional brushwork overlay](references/regional-brushwork-p0.txt). Both choices have distinct style locks. **Do not make it the default or claim improvement without real A/B image review.** See [trial plan](references/regional-brushwork-p0.md).
+
+### Optional explicit ComfyUI local runner
+
+For **controlled visual experiments** with a user-controlled local ComfyUI instance, read [explicit-comfyui.md](references/explicit-comfyui.md). The independent `scripts/execute_comfyui.py` adapter reads only the prepared job and a verified API-format workflow; it never reads experiment reports or past chat text. It is **dry-run by default**, with `--execute` required for a real local request. It uploads the actual pinned style anchor and requires that the LoadImage node feeds the sampler; output remains **REQUIRES_VISUAL_REVIEW** until a reviewer inspects the painting. It does not install models, enable paid APIs, automatically handle cleanup/editing, or promise the style adapter is effective. If ComfyUI or the necessary style control nodes are missing, report `NOT_SUPPORTED`, not a completed run.
 
 ## 3. Inspect and generate
 

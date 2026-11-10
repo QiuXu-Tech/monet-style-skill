@@ -1,4 +1,4 @@
-# Monet Style · 0.4.0-alpha.3
+# Monet Style · 0.4.0-alpha.4
 
 可安装的莫奈画风 Agent Skill 工程升级版。新增 **clean-remake 集成路线**：当已有图片的大体氛围正确、但出现细碎鳞纹、脏渐变、重复微纹理或反复编辑劣化时，可在保持莫奈画法和原任务约束的同时，为宿主自动准备**构图量化图**与**低频光色辅助图**，用来指导干净重绘。
 
@@ -80,6 +80,12 @@ python3 scripts/monet.py prepare --request examples/modern-city.json --out /tmp/
 ```
 
 生成前须按常规 `fetch` 获取相同原作参考图，或仅作 `--text-only` 规则检查（不能据此证明画风效果）。详细协议见 [P0 实验说明](references/regional-brushwork-p0.md)。
+
+## 显式本机执行器（新增，可选）
+
+此前的纯宿主生图路径多次把油画请求误画成评分报告。现新增 [ComfyUI 本地显式执行说明](references/explicit-comfyui.md) 和 `scripts/execute_comfyui.py`：从准备好的 `job.json` 显式传递完整 Prompt、参考图文件、实际宽高和固定种子，按 `prompt_id` 取回图片与回执。只支持文字生图 + 一张 style-only 锚点，需用户已有可信的 ComfyUI API 工作流和风格参考控制节点。
+
+执行器**默认只进行本地 dry-run**，真实运行必须显式带 `--execute`；不启动 GPU、不下载模型、不调用付费 API。即便返回符合尺寸的图片，也只标为 `REQUIRES_VISUAL_REVIEW`，需独立验收。该功能已通过模拟 HTTP 服务测试，**尚未在真实 ComfyUI 模型上运行，也未验证画风分数。**
 
 ## 验收
 

@@ -26,3 +26,6 @@ Skill 是宿主执行的工作流；本包不是独立生图模型，也不自�
 某些宿主要求生成后停止，不允许紧接着视觉验收；此时保留候选状态，不违规调用工具。支持审看时再完成 review。不得忽略系统安全规则、偷偷转用模型/API、伪造种子或模型快照。文件路径、私有照片、完整提示和任务记录默认留在用户本地；不得因为项目是开源而自动提交用户图片。
 
 官方规范核查日期：2026-11-09。参见 [sources.md](sources.md)。
+## 显式本机 ComfyUI（可选、独立于宿主默认生图路径）
+
+见 [explicit-comfyui.md](explicit-comfyui.md)。用户需自行提供已经验证的 API workflow 与 style-image 条件节点；默认 dry-run，`--execute` 才提交本地 `/prompt`。仅从 `job.json` 获得绘画指令，不从聊天和评测文档推断提示词。此路径不改变此前的 Codex / Claude Code 内置工具调用行为；没有 ComfyUI 服务时应报告不可运行。
