@@ -90,10 +90,11 @@
 执行前运行：
 
 ```bash
-python3 benchmarks/original-paintings-v1/generation_preflight.py prepare --case MOR-01 --output /tmp/monet-mor01-prompt
+python3 benchmarks/original-paintings-v1/generation_preflight.py prepare --case MOR-01 --variant baseline --output /tmp/monet-mor01-baseline
+python3 benchmarks/original-paintings-v1/generation_preflight.py prepare --case MOR-01 --variant regional-p0 --output /tmp/monet-mor01-p0
 ```
 
-只把输出的 `image-only-prompt.txt` 交给生图工具；`generation-metadata.json`、原作名称、馆藏 URL、评分量表和前一轮失败报告留在评测器一侧。原作只用于生成**之后**的风格对照，不把目标画的像素作为生成参考，也不要求原作级构图复刻。生成内容仍必须属于用户指定题材并符合真实服务政策，不能以改写提示的方式规避真正的安全拒绝。
+预处理器现在调用安装版 Skill 的 `monet.py` 编译器，生成真实的两种文字提示与各自风格锁；写入 `prompt_file_sha256` 供校验，而非维护第三份简化画法。该预处理是明确的 **text-only / no style-anchor-attached** 路线，不能据此声称图像锚点、模型版本或实际提示词已在宿主中绑定，也不将它当作严格受控 A/B。只把输出的 `image-only-prompt.txt` 交给生图工具；`generation-metadata.json`、原作名称、馆藏 URL、评分量表和前一轮失败报告留在评测器一侧。原作只用于生成**之后**的风格对照，不把目标画的像素作为生成参考，也不要求原作级构图复刻。生成内容仍必须属于用户指定题材并符合真实服务政策，不能以改写提示的方式规避真正的安全拒绝。
 
 如调用失败，先保留原始工具证据，再分类：
 
@@ -106,3 +107,7 @@ python3 benchmarks/original-paintings-v1/generation_preflight.py prepare --case 
 可用 `generation_preflight.py diagnose --record attempt.json` 校验手动记录的尝试状态。此脚本没有生图能力，也**不可能**直接改变平台审核规则；它只避免输入混淆、错误归因和不实结果报告。
 
 测试：`python3 -m unittest discover -s benchmarks/original-paintings-v1 -p 'test_*.py' -v`。
+
+## 8. 原作构图复现与疑似署名（视觉门禁）
+
+即使生成图片通过单幅/题材/光照门禁，还需额外检查是否出现**不应有的签名或名画特征构图复现**。查看四角局部与完整布局，记录原作与生成图的主体布置、主要光源、倒影、前景元素等具体对应关系；证据不清时标记 `UNKNOWN`，不要猜出签名内容。若存在明确的复现，标记为 `REFERENCE_LEAKAGE` 并排除“风格可迁移成功”样本。构图相似不是已证明的像素复制，更不是自动法律判断。此门禁不修改四维 30/30/30/10 评分权重；分数可以记录用于诊断，但不能抵消泄漏或宿主不合格。

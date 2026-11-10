@@ -62,7 +62,7 @@ Require a SINGLE full-canvas original painting when one painting was requested: 
 
 ## 4. Review, retry and stop
 
-Read [review.md](references/review.md). If the host allows inspection, review the actual image and complete `review-template.json`. Run:
+Read [review.md](references/review.md). Specifically inspect for unrequested signature-like marks and a recognisable original-painting composition; record `reference_leakage` as fail or unknown with image-local evidence, rather than assuming a famous painting was pixel-copied. If the host allows inspection, review the actual image and complete `review-template.json`. Run:
 
 ```bash
 python3 "$SKILL_ROOT/scripts/monet.py" inspect --image candidate.png
