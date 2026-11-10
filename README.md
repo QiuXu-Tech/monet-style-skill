@@ -1,6 +1,6 @@
 # Monet Style Skill
 
-**Status: Implemented alpha / 可安装工程初版 0.3.0-alpha.1。尚未完成真实生图端到端验证与画风稳定性基准。**
+**Status: 工程实验版 0.4.0-alpha.3（默认基线不变，P0 区域笔触为可选实验）。真实 A/B 画风增益仍未验证。**
 
 本项目由 QiuXu-Tech 发起，以 Claude Monet 的原作为研究基础，探索跨题材、跨光照保持绘画语言一致性的开源图像生成 Agent Skill。
 
@@ -13,10 +13,10 @@
 将 `skills/monet-style/` 整个目录复制到 Codex 的 `~/.agents/skills/`，或 Claude Code 的 `~/.claude/skills/`。宿主必须已有支持真实图片参考的生图工具。安装 Skill 不会自动提供生图模型。
 
 ```bash
-# 在仓库根目录验证与打包，无第三方 Python 依赖
+# 在仓库根目录验证与打包，普通规则检查无第三方依赖，cleanup 预处理需要 Pillow
 python3 -m unittest discover -s tests -v
 python3 skills/monet-style/scripts/monet.py check
-python3 tools/package_skill.py --output dist/monet-style-0.3.0-alpha.1.zip
+python3 tools/package_skill.py --output dist/monet-style-0.4.0-alpha.3.zip
 ```
 
 实际使用：`使用 $monet-style，画一列驶入现代车站的高速列车，保留现代车头，3:2。`
@@ -28,6 +28,10 @@ python3 tools/package_skill.py --output dist/monet-style-0.3.0-alpha.1.zip
 [优化计划 V1.0](docs/optimization/README.zh.md) · [单轮执行指令](docs/optimization/EXECUTE_ONE_ROUND.zh.md) · [已复核的工程基线](docs/optimization/rounds/R000-baseline.json)
 
 每轮依据真实失败做最小修改，分阶段出图、评审与回归；计划不自动启动后台任务或付费生图，视觉基准仍待执行。
+
+[P0 区域笔触候选与操作说明](skills/monet-style/references/regional-brushwork-p0.md) · [待执行的对照计划](benchmarks/original-paintings-v1/rounds/P0-regional-brushwork-plan.json) · [Alpha.2 真实失败记录](docs/optimization/rounds/R001-results-2026-11-10.md)
+
+**本轮 21 项离线测试通过，真实生图与画风改进仍未获验证。**
 
 ## 原作图像参考集
 

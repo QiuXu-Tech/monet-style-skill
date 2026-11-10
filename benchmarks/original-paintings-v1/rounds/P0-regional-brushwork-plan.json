@@ -1,0 +1,22 @@
+{
+  "round_id": "P0-regional-brushwork",
+  "status": "NOT_RUN",
+  "created_date": "2026-11-10",
+  "hypothesis": "Adding one region-specific brushwork overlay may reduce repeated fish-scale microtextures without worsening color, atmosphere or subject correctness.",
+  "baseline": "Monet Style v0.4.0-alpha.3 --brushwork-variant baseline",
+  "candidate": "Monet Style v0.4.0-alpha.3 --brushwork-variant regional-p0",
+  "only_changed_factor": "references/regional-brushwork-p0.txt is appended to the painting language when the candidate is selected",
+  "reference_originals": ["MOR-01", "MOR-02", "MOR-03"],
+  "split": "PUBLIC_DEVELOPMENT_OUT_OF_PROFILE_EXPLORATORY",
+  "model_backend": null,
+  "generated_images": 0,
+  "planned_initial_outputs": 6,
+  "sampling": "3 case prompts x 2 variants x 1 first attempt; save all attempts without best-of selection",
+  "fixed_requirements": ["content prompt", "host model", "actual style anchor", "aspect ratio", "time window", "resolution", "original painting as evaluation-only reference", "review rubric"],
+  "evaluation_weights": {"brushwork": 0.3, "color": 0.3, "atmosphere": 0.3, "artifact_control": 0.1},
+  "content_hard_gates": ["single_painting", "subject_class", "time_and_weather"],
+  "candidate_scores": null,
+  "baseline_scores": null,
+  "decision": "INCONCLUSIVE_NOT_RUN",
+  "constraints": ["No invented scores", "No promotional quality claims", "No new paid API without authorization", "Existing 1880s style anchor is outside the periods of these original artworks", "No default-preset promotion until real review and regression"]
+}

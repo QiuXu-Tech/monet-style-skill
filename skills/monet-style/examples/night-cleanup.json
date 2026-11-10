@@ -1,0 +1,27 @@
+{
+  "request": "把这张已有夜景阶梯图转为更干净的莫奈画法：保持夜晚、只有一盏路灯、潮湿石阶和远处暗色楼房，减少细碎鳞纹与脏渐变。",
+  "mode": "restyle",
+  "anchor_id": "antibes-1888",
+  "content_image": "night-source.png",
+  "must_keep": [
+    "保持夜晚",
+    "只有一盏路灯",
+    "潮湿石阶",
+    "远处暗色楼房"
+  ],
+  "must_avoid": [
+    "白天",
+    "夕阳",
+    "睡莲",
+    "额外路灯"
+  ],
+  "aspect_ratio": "2:3",
+  "cleanup": {
+    "enabled": true,
+    "route": "quantized+gaussian",
+    "colors": 30,
+    "max_side": 1536,
+    "map_blur_long_edge_ratio": 0.0008,
+    "gaussian_blur_long_edge_ratio": 0.005
+  }
+}

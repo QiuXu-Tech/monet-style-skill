@@ -1,10 +1,14 @@
 {
-  "id": "monet-1880s-study-v1",
-  "version": "0.1.0",
+  "id": "monet-1880s-study-v2",
+  "version": "0.2.0",
   "status": "EXPERIMENTAL_NOT_VISUALLY_BENCHMARKED",
-  "scope": "Reversible first implementation baseline: selected 1882/1888 paintings. Not a claim that all Monet periods are interchangeable.",
-  "prompt": "Interpret the requested subject through the painting language of the selected Claude Monet 1880s reference, not by reproducing its scene. Construct recognisable forms through relationships of adjacent colour patches and selective broken brushwork. Use varied, material-sensitive strokes: comparatively open strokes in sky, directional marks for planar structures, and concentrated touches only where the actual subject needs them. Keep broad light-and-shadow masses coherent at a distance. Modulate edges: retain essential silhouettes and spatial relations while letting some secondary boundaries dissolve into surrounding colour. Let light influence local colour and introduce chromatic variation within shadows without forcing every shadow to violet. Preserve the requested lighting and weather, including darkness when requested. Use plausible painted oil-surface variation rather than a uniform canvas-noise overlay, photographic detail with a blur filter, or an identical stipple pattern everywhere. Avoid importing another painter's dominant spiral/swirling motif. Keep the scene intelligible; abstraction must not erase hard content requirements. Vary palette with the scene; never tint everything blue, purple or green merely to signal Monet.",
+  "scope": "Reversible first implementation baseline: selected 1882/1888 paintings. Includes an experimental cleanup-aware route for repetitive artifact suppression, not a claim that all Monet periods are interchangeable.",
+  "prompt": "Interpret the requested subject through the painting language of the selected Claude Monet 1880s reference, not by reproducing its scene. Construct recognisable forms through relationships of adjacent colour patches and selective broken brushwork. Use varied, material-sensitive strokes: comparatively open strokes in sky, directional marks for planar structures, and concentrated touches only where the actual subject needs them. Keep broad light-and-shadow masses coherent at a distance. Modulate edges: retain essential silhouettes and spatial relations while letting some secondary boundaries dissolve into surrounding colour. Let light influence local colour and introduce chromatic variation within shadows without forcing every shadow to violet. Preserve the requested lighting and weather, including darkness when requested. Maintain atmospheric haze and optical softness through coherent colour relationships rather than global blur. Use plausible painted oil-surface variation rather than a uniform canvas-noise overlay, photographic detail with a blur filter, or an identical stipple pattern everywhere. Avoid repetitive fish-scale micro-texture, gummy texture, dirty gradients, over-sharpened halos and other false detail patterns. Avoid importing another painter's dominant spiral/swirling motif. Keep the scene intelligible; abstraction must not erase hard content requirements. Vary palette with the scene; never tint everything blue, purple or green merely to signal Monet.",
   "review_checks": [
+    {
+      "id": "single_painting_canvas",
+      "question": "Is this a single requested painting with no report layout, charts, tables, labels, split panels or multiple independent compositions?"
+    },
     {
       "id": "brief_content",
       "question": "Does the image satisfy the complete original brief, including objects, count, actions and spatial relations?"
@@ -30,6 +34,10 @@
       "question": "Are essential forms readable, with selective rather than global softness at edges?"
     },
     {
+      "id": "style_atmosphere",
+      "question": "Does the image keep a convincing atmospheric haze or optical softness without collapsing into featureless blur?"
+    },
+    {
       "id": "style_space",
       "question": "Are foreground/background scale, contrast and atmosphere coherent with the requested scene?"
     },
@@ -44,6 +52,10 @@
     {
       "id": "artifacts",
       "question": "Is the image visually decodable and free of unintended text, malformed key objects, framing and other disruptive artifacts?"
+    },
+    {
+      "id": "artifact_microtexture",
+      "question": "Is the image free of repeated fish-scale / false micro-texture, gummy patterning, dirty gradients and over-sharpened halos?"
     }
   ]
 }

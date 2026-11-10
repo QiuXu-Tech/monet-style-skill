@@ -1,0 +1,31 @@
+{
+  "version": "0.4.0-alpha.3",
+  "files": {
+    "ASSET-LICENSE.md": "86b88fb6b25a09649bd97786f359451b0f730a017ba4842c925ab13a30b5d0ca",
+    "LICENSE": "4c6dff365fe4c2bf71530d8140bf2c6c778de85413ec12bfab6f8a60d4626086",
+    "README.zh.md": "53c3c1864757598ee36c849004ae67f57d317c09c0d478958aec8f02417c670d",
+    "SKILL.md": "f2bd8271f1f2f9733eed5fed84c3570a4dfd2639ee0d96bfded7bf617ced2614",
+    "agents/openai.yaml": "428facb1bc8beb8123ebd4782d553da7cf59055aafe490171ba1e4ae8d048e07",
+    "assets/anchors.json": "82012cf30455badf3543c36beef90bfb0258da6dd3958b426ece09b3ab9de842",
+    "docs/R001-validation.json": "c6ca2e2be452d1d66a1d5503dddd7436df39eeee88f8b81ffb09c2596a088bfd",
+    "docs/R001-validation.zh.md": "f6b9cc15855d0eae6ce06e11300d278b6822b9c7993b0586ebdf0d5ffd0d207c",
+    "examples/cups.json": "06516a1f47b789a4e951a9f6dbdd41c79061d5e15c0113b2daaeeebfb9054700",
+    "examples/modern-city.json": "1ab7cc1b971f414ec09356ebe05e82f53466a7e26da03b153f179395a2304595",
+    "examples/night-cleanup.json": "c171bd0800fcc4d272f6a0d21a7a09581e224c9fe873209e61491e20dac9b63b",
+    "examples/night.json": "05e44ce9a8feed15aeac413f3698d931fe85a2923f9917404c13ec442c3e61af",
+    "examples/portrait.json": "d5288ab628fc3819ee3a4027726fa8c792024577981b35d3da1b343508f6d91c",
+    "examples/train.json": "07f56616e89db0155768d2b2b0215616303d8f0f4a103c37125fe4522bdbe82b",
+    "references/clean-remake.md": "15c96ecf64d3a4cae6dc74cb86582eff9361c93be872c9d29971eda4bcb8b426",
+    "references/host-tools.md": "c385d76a06edc153f19c76216a7cdd1bc9138d26062b145e97e61d2dcb54cc07",
+    "references/painting-language.md": "85b0e190b87ae5152ad27408f6862dfd4ffef863a0f30b930e0a79a8ecf2f981",
+    "references/regional-brushwork-p0.md": "e8f1f6ead2830dec78088992f685c8107a164c8d088da3a3eb3f019e64145e18",
+    "references/regional-brushwork-p0.txt": "1649139c8ad7e924c52fb08ee0fca926c88fe58beea817babb0d4a47d8f00943",
+    "references/review.md": "0b7722bbe0e2a758267ef8febe09d0bde9a20333041e8a8bdda02699b12cda1b",
+    "references/sources.md": "226f14dbccc75fc596bb5dd52e5137424ebb736b04e6adcd4f85233a37a618e0",
+    "references/style-contract.json": "00a85414ff7129d280cdf913bc2e917bcdff6482ee808725869a7e8f8c8c9afb",
+    "requirements.txt": "0ab6355e6428c99d17c368a00dd750701e18244a90ab65234da72566317da72a",
+    "scripts/monet.py": "11c36f590b7e860e9c9b78c420039d6c986ba8a5dc58a8f0cdb8ad7e85497a62",
+    "tests/test_cleanup.py": "5c777858e5faa4e6e9fed63fee73c6b2d4346e30a290185e6313e3dee16882d1",
+    "tests/test_regional_brushwork.py": "4c959f82b53546450e91068497e5b677235cc79206e42ecdc8f4a1c93de3ee42"
+  }
+}

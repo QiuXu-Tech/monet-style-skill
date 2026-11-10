@@ -1,0 +1,60 @@
+{
+  "schema": "monet-r001-exploratory-1",
+  "date": "2026-11-10",
+  "alpha_tested": "0.4.0-alpha.1",
+  "candidate_engineering_revision": "0.4.0-alpha.2",
+  "scope": "host response routing smoke test, not controlled A/B visual benchmark",
+  "requested_output": "One standalone 2:3 Monet-style night stairs painting, single visible lamp, hazy nocturnal light, cleaned repetitive microtextures",
+  "attempts": [
+    {
+      "gen_id": "92f90467-a417-42c8-aa82-1dc57da9d37d",
+      "format": ".png",
+      "sha256": "4e4745cc3b73620694446c72aa54531ceaa2f96dcd3af9bf63e6d377f61ad709",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "expected_aspect": "2:3",
+      "actual_aspect": 1.5,
+      "image_decoded": true,
+      "single_painting_canvas": "FAIL",
+      "content_preserved": "FAIL",
+      "failure_evidence": "Generated an infographic/report grid with invented experiment results, not a full-canvas night staircase painting; aspect ratio landscape instead of source portrait.",
+      "source_reference_and_role_isolation": "UNVERIFIED",
+      "status": "REJECTED"
+    },
+    {
+      "gen_id": "6895a547-b397-40e5-a9f5-294b95577dd9",
+      "format": ".png",
+      "sha256": "cc98409cab3021297fa313cacd247d6fd3495864b6800ae3172e4604a737fcb0",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "expected_aspect": "2:3",
+      "actual_aspect": 1.5,
+      "image_decoded": true,
+      "single_painting_canvas": "FAIL",
+      "content_preserved": "FAIL",
+      "failure_evidence": "Generated an infographic/report grid with invented experiment results, not a full-canvas night staircase painting; aspect ratio landscape instead of source portrait.",
+      "source_reference_and_role_isolation": "UNVERIFIED",
+      "status": "REJECTED"
+    }
+  ],
+  "attempt_count": 2,
+  "valid_painting_outputs": 0,
+  "a_b_test_completed": false,
+  "visual_style_score": null,
+  "claimed_monet_style_gain": false,
+  "result": "BLOCKED_HOST_OUTPUT_ROUTING",
+  "offline_tests": {
+    "new_cleanup_integration_tests": 14,
+    "passed": 14,
+    "failed": 0
+  },
+  "protected_assets": {
+    "reference_set_modified": false,
+    "user_artwork_uploaded_to_public_github": false
+  },
+  "next_action": "Use a controllable host image editing pipeline that exposes actual reference attachment and permits independently inspectable output, then perform genuine A/B comparisons. Do not publish invented style scores."
+}
