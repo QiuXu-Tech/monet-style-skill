@@ -1,0 +1,166 @@
+{
+  "schema_note": "exploratory evidence only; source PNGs preserved separately in the conversation artifact, not in this repository",
+  "date_utc": "2026-11-10",
+  "skill_version": "0.4.0-alpha.4",
+  "repository": "QiuXu-Tech/monet-style-skill",
+  "source_commit": "e194dfcb927aed96b1282982f74596a1830b3a6e",
+  "protocol": "benchmarks/original-paintings-v1/README.zh.md",
+  "scenario_source": "benchmarks/original-paintings-v1/cases.json",
+  "baseline_prompt_source": "skills/monet-style/references/style-contract.json",
+  "regional_overlay_source": "skills/monet-style/references/regional-brushwork-p0.txt",
+  "original_reference": "research/reference-set/images/commons-132134.jpg",
+  "original_used_as_generator_input": false,
+  "style_anchor_payload_delivery_verified": false,
+  "exact_prompt_delivery_verified": false,
+  "model_revision_known": false,
+  "generation_seed_known": false,
+  "aspect_ratio_control_verified": false,
+  "original_sha256_verified_in_generation_session": false,
+  "image_tool": "ChatGPT built-in image_gen",
+  "status": "PARTIAL_EXPLORATORY_CONTROLLED_AB_NOT_QUALIFIED",
+  "reviewer": {
+    "type": "model",
+    "identifier": "GPT-6",
+    "blinded": false,
+    "outputs_inspected": true
+  },
+  "weights": {
+    "brushwork": 0.3,
+    "color": 0.3,
+    "atmosphere": 0.3,
+    "artifact_control": 0.1
+  },
+  "attempts": [
+    {
+      "sequence": 1,
+      "case_id": "MOR-01",
+      "intended_arm": "baseline",
+      "gen_id": "884c9457-a6fe-4870-a692-91f1de0b3bad",
+      "sha256": "7d26526c6b7722df043b19a8c813bbef760658f5036c2737daf6af86052265fb",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "hard_gates": {
+        "single_painting": true,
+        "subject_class": true,
+        "time_and_weather": true
+      },
+      "scores": {
+        "brushwork": 5.5,
+        "color": 6,
+        "atmosphere": 6,
+        "artifact_control": 6
+      },
+      "signature_review": "POSSIBLE_SIGNATURE_LIKE_MARK_NOT_LEGIBLE",
+      "arm_binding_verified": false,
+      "model_id": null,
+      "model_revision": "undisclosed",
+      "receipt_prompt": "",
+      "receipt_seed": null,
+      "weighted_score": 5.85
+    },
+    {
+      "sequence": 2,
+      "case_id": "MOR-01",
+      "intended_arm": "regional-p0",
+      "gen_id": "03de00ad-570f-4518-8749-428da1780c52",
+      "sha256": "e7f0b990c9e613797ba680cbd3986ce7b1a956bf2523689775c3348056df4ee8",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "hard_gates": {
+        "single_painting": true,
+        "subject_class": true,
+        "time_and_weather": true
+      },
+      "scores": {
+        "brushwork": 5,
+        "color": 6,
+        "atmosphere": 5.5,
+        "artifact_control": 5.5
+      },
+      "signature_review": "NOT_A_SUBJECT_OF_THE_USER_SIGNING_CONCERN",
+      "arm_binding_verified": false,
+      "model_id": null,
+      "model_revision": "undisclosed",
+      "receipt_prompt": "",
+      "receipt_seed": null,
+      "weighted_score": 5.5
+    },
+    {
+      "sequence": 3,
+      "case_id": "MOR-02",
+      "intended_arm": "baseline",
+      "gen_id": "212fa5e8-696a-4186-9f28-c509ff2923fe",
+      "sha256": "ea9b90ac41e6fe23aa47f82fa25efd34ea5e25bfe136845ab79201b7b858571f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "hard_gates": {
+        "single_painting": true,
+        "subject_class": false,
+        "time_and_weather": false
+      },
+      "scores": null,
+      "signature_review": null,
+      "arm_binding_verified": false,
+      "model_id": null,
+      "model_revision": "undisclosed",
+      "receipt_prompt": "",
+      "receipt_seed": null,
+      "weighted_score": null
+    },
+    {
+      "sequence": 4,
+      "case_id": "MOR-02",
+      "intended_arm": null,
+      "gen_id": "75a2bd50-a743-4ec3-8aba-44b261383216",
+      "sha256": "5d09fcb17c419c4fa1a4a5b02b0cd6a8c5a52f45ee0eb3eb1004e106128418bc",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "hard_gates": {
+        "single_painting": true,
+        "subject_class": false,
+        "time_and_weather": false
+      },
+      "scores": null,
+      "signature_review": "NO_LEGIBLE_SIGNATURE_OBSERVED",
+      "arm_binding_verified": false,
+      "model_id": null,
+      "model_revision": "undisclosed",
+      "receipt_prompt": "",
+      "receipt_seed": null,
+      "weighted_score": null
+    }
+  ],
+  "not_run": [
+    {
+      "case_id": "MOR-02",
+      "arm": "regional-p0"
+    },
+    {
+      "case_id": "MOR-03",
+      "arm": "baseline"
+    },
+    {
+      "case_id": "MOR-03",
+      "arm": "regional-p0"
+    }
+  ],
+  "notes": [
+    "Original Impression Sunrise museum record states signed lower-left Claude Monet, later dated 72.",
+    "Generated sample #1 has signature-like strokes but no legible matching inscription; #4 has no confirmed legible signature.",
+    "Famous painting composition motifs recur; pixel-level duplication was not established.",
+    "Sample #3 and #4 were intended for woman-with-parasol but returned another harbor.",
+    "Descriptive weighted scores are non-blind visual opinion, not causal estimates of P0."
+  ],
+  "controlled_ab_valid_pairs": 0,
+  "decision": "INCONCLUSIVE_NO_PROMOTION",
+  "source_images_committed": false,
+  "defaults_modified": false
+}
