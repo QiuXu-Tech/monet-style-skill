@@ -82,3 +82,27 @@
 **禁止再次发生**：用信息图代替实际画作、从虚构比较表中产生评分、将尚未测试的结果写成“通过”、把内容与风格相似度混在同一个总分中。
 
 本协议与上层 [优化循环](../../docs/optimization/README.zh.md) 配合使用。本轮只建立真实可执行的评测标准，不修改生成器、锚点、模型或已经保存的原作资料。
+
+## 7. 生图请求隔离与真实错误归因（2026-11-10 修订）
+
+近期发生过两类被错误报告为“第三方相似性限制”的情况：一类是生图工具参数校验失败（包括把无效动画参数送进静态图请求），另一类在会话中根本没有可核实的实际工具拒绝记录。**这不能用来断定莫奈风格被禁止，也不能把未知错误称作真实的提供方审核拒绝。**
+
+执行前运行：
+
+```bash
+python3 benchmarks/original-paintings-v1/generation_preflight.py prepare --case MOR-01 --output /tmp/monet-mor01-prompt
+```
+
+只把输出的 `image-only-prompt.txt` 交给生图工具；`generation-metadata.json`、原作名称、馆藏 URL、评分量表和前一轮失败报告留在评测器一侧。原作只用于生成**之后**的风格对照，不把目标画的像素作为生成参考，也不要求原作级构图复刻。生成内容仍必须属于用户指定题材并符合真实服务政策，不能以改写提示的方式规避真正的安全拒绝。
+
+如调用失败，先保留原始工具证据，再分类：
+
+- **NO_TOOL_CALL_EVIDENCE**：没有对应的生图工具调用；不能宣称是版权或模型审核拒绝。
+- **TOOL_ARGUMENT_ERROR**：工具参数或输入验证失败；纠正 API/模式/画布等参数，不改成“版权原因”。
+- **PROVIDER_REFUSAL_RECORDED**：只有工具实际返回提供方策略拒绝记录时才使用，须保留脱敏的原始错误信息；不猜测具体策略规则。
+- **GENERATED_PENDING_VISUAL_REVIEW**：确有图片输出，但尚未按画面内容和风格评审，不能假装质量通过。
+- **TOOL_ERROR_UNCLASSIFIED**：其他/来源未明的真实工具错误，应如实记录。
+
+可用 `generation_preflight.py diagnose --record attempt.json` 校验手动记录的尝试状态。此脚本没有生图能力，也**不可能**直接改变平台审核规则；它只避免输入混淆、错误归因和不实结果报告。
+
+测试：`python3 -m unittest discover -s benchmarks/original-paintings-v1 -p 'test_*.py' -v`。
