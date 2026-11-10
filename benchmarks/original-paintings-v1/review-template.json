@@ -1,0 +1,44 @@
+{
+  "protocol_version": "1.0.0",
+  "case_id": null,
+  "arm": "unassigned",
+  "candidate_id": null,
+  "output_image_path": null,
+  "output_sha256": null,
+  "actual_dimensions": null,
+  "tool_name": null,
+  "model_id": null,
+  "model_revision": "undisclosed",
+  "generation_settings": {},
+  "prompt_sha256": null,
+  "reference_anchor_ids": [],
+  "reviewer": {
+    "kind": null,
+    "id": null,
+    "inspected_output": false,
+    "inspected_original": false,
+    "blind_to_arm": false
+  },
+  "hard_gates": {
+    "single_painting": null,
+    "subject_class": null,
+    "time_and_weather": null
+  },
+  "scores": {
+    "brushwork": null,
+    "color": null,
+    "atmosphere": null,
+    "artifact_control": null
+  },
+  "evidence_by_dimension": {
+    "brushwork": null,
+    "color": null,
+    "atmosphere": null,
+    "artifact_control": null
+  },
+  "artifact_locations": [],
+  "target_specific_issues": [],
+  "generation_performed": false,
+  "status": "NOT_RUN",
+  "notes": "Do not replace null with invented estimates. Scores are reviewer observations, not automatic measurements."
+}

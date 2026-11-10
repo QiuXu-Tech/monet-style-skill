@@ -1,0 +1,136 @@
+{
+  "suite_id": "monet-original-style-v1",
+  "version": "1.0.0",
+  "status": "NOT_RUN",
+  "created_date": "2026-11-10",
+  "goal": "Compare transferable brushwork, chromatic relationships, atmosphere, and repetitive fake texture against verified Monet paintings; exact subject/layout similarity is not scored.",
+  "reference_policy": {
+    "original_artwork_role": "EVALUATION_ONLY",
+    "target_original_as_generation_input": false,
+    "painting_images_not_redistributed": true,
+    "candidate_model_reference_role": "independent_style_anchor_if_supported",
+    "content_prompt_identical_across_arms": true
+  },
+  "weights": {
+    "brushwork": 0.3,
+    "color": 0.3,
+    "atmosphere": 0.3,
+    "artifact_control": 0.1
+  },
+  "scoring": {
+    "scale": "0-10",
+    "step": 0.5,
+    "missing_is_null": true,
+    "hard_gates": [
+      "single_painting",
+      "subject_class",
+      "time_and_weather"
+    ],
+    "report_raw_dimensions": true,
+    "overall_rule": "weighted_average_only_if_all_four_scores_exist_and_hard_gates_pass",
+    "no_auto_quality_certification": true
+  },
+  "split": "PUBLIC_DEVELOPMENT",
+  "models_or_apis_tested": [],
+  "cases": [
+    {
+      "id": "MOR-01",
+      "title_cn": "印象·日出",
+      "title_original": "Impression, soleil levant",
+      "creation_year": "1872",
+      "institution": "Musée Marmottan Monet",
+      "institution_inventory": "4014",
+      "museum_url": "https://www.marmottan.fr/notice/4014/",
+      "catalog_id": "commons-132134",
+      "catalog_relative_image": "research/reference-set/images/commons-132134.jpg",
+      "catalog_preview_sha256": "c0bbf9f419a10ce27e103bac37de03791878a830035d224f9f0434676a3121d5",
+      "catalog_source_page": "https://commons.wikimedia.org/wiki/File:Claude_Monet,_Impression,_soleil_levant,_1872.jpg",
+      "reference_artwork_period": "1870s",
+      "skill_1880s_profile_match": false,
+      "study_focus": [
+        "low-contrast mist and selective silhouettes",
+        "restrained blue-green field with localized orange accents",
+        "sea-surface brushwork distinct from sky"
+      ],
+      "content_prompt": "清晨有薄雾的工业港口，水面上几艘小船，远处有桅杆、烟囱和港口吊装设施的轮廓，低空的太阳在水上留下暖色反光。请画成单幅横向油画，不添加标题、画框、拼图或分栏。",
+      "aspect_ratio": "4:3",
+      "content_gates": {
+        "subject_class": "harbor scene with water and boats",
+        "time_and_weather": "misty sunrise or early morning",
+        "single_painting": "one standalone painting, no panels or text"
+      },
+      "review_questions": {
+        "brushwork": "Are marks organized differently across mist, water, vessels, and silhouettes rather than equal-sized repeated scales?",
+        "color": "Do cool low-contrast masses support localized warm focal accents without uniformly tinting the frame?",
+        "atmosphere": "Do contours dissolve selectively into mist while retaining coherent depth and a readable port?",
+        "artifact_control": "Are fish-scale repeated microtextures, gridded dabs, dirty gradients, and posterized edges absent?"
+      }
+    },
+    {
+      "id": "MOR-02",
+      "title_cn": "撑阳伞的女人",
+      "title_original": "Woman with a Parasol—Madame Monet and Her Son",
+      "creation_year": "1875",
+      "institution": "National Gallery of Art, Washington",
+      "institution_inventory": "1983.1.29",
+      "museum_url": "https://www.nga.gov/artworks/61379-woman-parasol-madame-monet-and-her-son",
+      "catalog_id": "commons-81309412",
+      "catalog_relative_image": "research/reference-set/images/commons-81309412.jpg",
+      "catalog_preview_sha256": "45759fa53c2d9e0558637dd7f1a42cbcbeb04f698b675bccc5fa7cdd2497d347",
+      "catalog_source_page": "https://commons.wikimedia.org/wiki/File:Claude_Monet,_Woman_with_a_Parasol_-_Madame_Monet_and_Her_Son,_1875,_NGA_61379.jpg",
+      "reference_artwork_period": "1870s",
+      "skill_1880s_profile_match": false,
+      "study_focus": [
+        "different stroke gestures for sky/cloth/grass",
+        "sunlit pale fabric modulated without pure white fill",
+        "wind and backlighting without over-sharpened edges"
+      ],
+      "content_prompt": "初夏的草坡上有一位撑着洋伞的女子，微风吹动她的浅色裙摆，天空中有明亮的云，草地随风轻轻起伏，采用略低的观察视角。请画成单幅竖向油画，不添加标题、画框、拼图或分栏。",
+      "aspect_ratio": "4:5",
+      "content_gates": {
+        "subject_class": "woman with a parasol on grassy slope",
+        "time_and_weather": "bright breezy daytime",
+        "single_painting": "one standalone painting, no panels or text"
+      },
+      "review_questions": {
+        "brushwork": "Do sky, clothing and grass show different mark orientation/density rather than uniform strokes?",
+        "color": "Are whites chromatically modulated by light and shadows rather than being uniformly pastel or washed out?",
+        "atmosphere": "Is there convincing windy open-air light without dissolving the subject identity?",
+        "artifact_control": "Are regular micro-scales and identical patterned strokes on dress, grass and clouds absent?"
+      }
+    },
+    {
+      "id": "MOR-03",
+      "title_cn": "干草堆",
+      "title_original": "Stack of Wheat",
+      "creation_year": "1890–1891",
+      "institution": "Art Institute of Chicago",
+      "institution_inventory": "1983.29",
+      "museum_url": "https://publications.artic.edu/node/135605",
+      "catalog_id": "commons-80587981",
+      "catalog_relative_image": "research/reference-set/images/commons-80587981.jpg",
+      "catalog_preview_sha256": "6ff21147869117b0fc70829d494126455115b1b61cb9aa3908c9f829e67db116",
+      "catalog_source_page": "https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Stack_of_Wheat_-_1983.29_-_Art_Institute_of_Chicago.jpg",
+      "reference_artwork_period": "1890s",
+      "skill_1880s_profile_match": false,
+      "study_focus": [
+        "large coherent shadow/light masses on a simple rural object",
+        "paint build-up and varied stroke length",
+        "cool/warm changes without blanket saturation"
+      ],
+      "content_prompt": "秋冬交替的乡村田野中有一座麦垛，草地向远处的低矮树林延伸，天空微有云层，斜向自然光在麦垛及地面形成冷暖变化。请画成单幅横向油画，不添加标题、画框、拼图或分栏。",
+      "aspect_ratio": "3:2",
+      "content_gates": {
+        "subject_class": "grainstack in an open rural field",
+        "time_and_weather": "outdoor natural light with plausible sky",
+        "single_painting": "one standalone painting, no panels or text"
+      },
+      "review_questions": {
+        "brushwork": "Are strokes directional and layered where needed, rather than a mechanically uniform surface texture?",
+        "color": "Are warm and cool changes tied to lighting and shadow instead of a global color filter?",
+        "atmosphere": "Does the main mass stay readable while landscape edges merge into distance?",
+        "artifact_control": "Does the painting avoid repeated fish-scale patterns and synthetic high-frequency grit?"
+      }
+    }
+  ]
+}
