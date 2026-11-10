@@ -94,7 +94,7 @@ python3 benchmarks/original-paintings-v1/generation_preflight.py prepare --case 
 python3 benchmarks/original-paintings-v1/generation_preflight.py prepare --case MOR-01 --variant regional-p0 --output /tmp/monet-mor01-p0
 ```
 
-预处理器现在调用安装版 Skill 的 `monet.py` 编译器，生成真实的两种文字提示与各自风格锁；写入 `prompt_file_sha256` 供校验，而非维护第三份简化画法。该预处理是明确的 **text-only / no style-anchor-attached** 路线，不能据此声称图像锚点、模型版本或实际提示词已在宿主中绑定，也不将它当作严格受控 A/B。只把输出的 `image-only-prompt.txt` 交给生图工具；`generation-metadata.json`、原作名称、馆藏 URL、评分量表和前一轮失败报告留在评测器一侧。原作只用于生成**之后**的风格对照，不把目标画的像素作为生成参考，也不要求原作级构图复刻。生成内容仍必须属于用户指定题材并符合真实服务政策，不能以改写提示的方式规避真正的安全拒绝。
+预处理器现在调用安装版 Skill 的 `monet.py` 编译器，生成真实的两种文字提示与各自风格锁；写入 `prompt_file_sha256` 供校验，而非维护第三份简化画法。该预处理是明确的 **text-only / no style-anchor-attached** 路线，不能据此声称图像锚点、模型版本或实际提示词已在宿主中绑定，也不将它当作严格受控 A/B。独立测试精简画法时，可添加 `--prompt-variant compact-v1`，从同一 Skill 编译精简版提示词；默认 `full` 仍保留原始预注册的 P0 实验条件。文字变短不等于画风改善，须重新配对验证，不混合旧版评分。只把输出的 `image-only-prompt.txt` 交给生图工具；`generation-metadata.json`、原作名称、馆藏 URL、评分量表和前一轮失败报告留在评测器一侧。原作只用于生成**之后**的风格对照，不把目标画的像素作为生成参考，也不要求原作级构图复刻。生成内容仍必须属于用户指定题材并符合真实服务政策，不能以改写提示的方式规避真正的安全拒绝。
 
 如调用失败，先保留原始工具证据，再分类：
 

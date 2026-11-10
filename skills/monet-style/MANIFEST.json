@@ -3,8 +3,8 @@
   "files": {
     "ASSET-LICENSE.md": "86b88fb6b25a09649bd97786f359451b0f730a017ba4842c925ab13a30b5d0ca",
     "LICENSE": "4c6dff365fe4c2bf71530d8140bf2c6c778de85413ec12bfab6f8a60d4626086",
-    "README.zh.md": "947ef8dba031b646c6dc9f931fa5f7f9f9b7b2f53df63c0e9925e8f79b696522",
-    "SKILL.md": "8e524f5efb3989b125477ce5af186ed7f20c9100a699009bb225b1e543842ff4",
+    "README.zh.md": "bcf3dd9dba619e73f45aee8e8eb5d9b1cec498b833d9816fcf2ad576672b72ec",
+    "SKILL.md": "61d1fd68d817c3f7633c20dbd85ba2f0d9ae39526ebceee6cdc268924ff9b83a",
     "agents/openai.yaml": "428facb1bc8beb8123ebd4782d553da7cf59055aafe490171ba1e4ae8d048e07",
     "assets/anchors.json": "82012cf30455badf3543c36beef90bfb0258da6dd3958b426ece09b3ab9de842",
     "docs/R001-validation.json": "c6ca2e2be452d1d66a1d5503dddd7436df39eeee88f8b81ffb09c2596a088bfd",
@@ -16,6 +16,8 @@
     "examples/portrait.json": "d5288ab628fc3819ee3a4027726fa8c792024577981b35d3da1b343508f6d91c",
     "examples/train.json": "07f56616e89db0155768d2b2b0215616303d8f0f4a103c37125fe4522bdbe82b",
     "references/clean-remake.md": "15c96ecf64d3a4cae6dc74cb86582eff9361c93be872c9d29971eda4bcb8b426",
+    "references/compact-prompt-v1.txt": "49d6991074444587a283cdfaf33b658d33de9d681e6c86192ad0c830706973e8",
+    "references/compact-regional-p0.txt": "63846f07a6db1bcadde8d02763513b82fb36399fff2ff97ee0f650db2721a1ec",
     "references/explicit-comfyui.md": "3a8426e5a622aa2527e9a8e6a836b4c92679b924878df18fa341878e5b05930e",
     "references/host-tools.md": "7e56df0ceb708cbcce9268da1003023ed7e3bf932e692d1fe970aad39bd004a6",
     "references/painting-language.md": "85b0e190b87ae5152ad27408f6862dfd4ffef863a0f30b930e0a79a8ecf2f981",
@@ -26,8 +28,9 @@
     "references/style-contract.json": "00a85414ff7129d280cdf913bc2e917bcdff6482ee808725869a7e8f8c8c9afb",
     "requirements.txt": "0ab6355e6428c99d17c368a00dd750701e18244a90ab65234da72566317da72a",
     "scripts/execute_comfyui.py": "8bfdb5f41a5312d3099dcb27d7319fbe0b214d3245f8bcaff1c4dd90661a2572",
-    "scripts/monet.py": "038fa1b9c9cd11ddf1dd9835a0d09f813d5484ae00728bae67880d9cf909a4b5",
+    "scripts/monet.py": "e4cf2e18bce0cd2f63ced3bddedd6ce5210fd5e95dcbdaaa5dc90b8cd42d57f3",
     "tests/test_cleanup.py": "e5d685904a8e290210ffff0222beb2d74eb98ab06fd0b682f246b20834d12ab4",
+    "tests/test_compact_prompt.py": "62be21a6121bf5cea644874443cde2d21e85945f4653328d8b2313185aa3bb1c",
     "tests/test_execute_comfyui.py": "a153458d742ab37dd9987e77f02fce7f2e3357a7ed507375b85ab1a776c40bf2",
     "tests/test_regional_brushwork.py": "4c959f82b53546450e91068497e5b677235cc79206e42ecdc8f4a1c93de3ee42"
   }

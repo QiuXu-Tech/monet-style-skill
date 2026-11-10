@@ -81,6 +81,17 @@ python3 scripts/monet.py prepare --request examples/modern-city.json --out /tmp/
 
 生成前须按常规 `fetch` 获取相同原作参考图，或仅作 `--text-only` 规则检查（不能据此证明画风效果）。详细协议见 [P0 实验说明](references/regional-brushwork-p0.md)。
 
+## 精简提示词候选 compact-v1（默认关闭）
+
+`compact-v1` 保留用户原始画面要求、可辨识主体、光色关系、材质/空间笔触和空气感，删去重复的 JSON 包装、反复的否定列表、未附加参考图的状态播报和锚点对象名称；这些信息仍由 `job.json`、风格锁和审查流程维护。它只是**新的独立提示词候选**，不应与历史 P0 唯一变量实验混在一起计算增益。
+
+```bash
+python3 scripts/monet.py prepare --request examples/modern-city.json --out /tmp/monet-compact --text-only --prompt-variant compact-v1
+python3 scripts/monet.py prepare --request examples/modern-city.json --out /tmp/monet-compact-p0 --text-only --prompt-variant compact-v1 --brushwork-variant regional-p0
+```
+
+不指定时继续使用原 `full` 提示词，P0 原文也不变。仓库只验证编译与输入哈希，不声称宿主图像工具真的接收了提示词/风格锚点，也不声称画风更好。正式出图前仍必须验证真实上传锚点与模型参数。
+
 ## 显式本机执行器（新增，可选）
 
 此前的纯宿主生图路径多次把油画请求误画成评分报告。现新增 [ComfyUI 本地显式执行说明](references/explicit-comfyui.md) 和 `scripts/execute_comfyui.py`：从准备好的 `job.json` 显式传递完整 Prompt、参考图文件、实际宽高和固定种子，按 `prompt_id` 取回图片与回执。只支持文字生图 + 一张 style-only 锚点，需用户已有可信的 ComfyUI API 工作流和风格参考控制节点。

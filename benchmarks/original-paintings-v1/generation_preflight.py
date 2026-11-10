@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parent
 METADATA_LEAKS = ("评测报告", "评分表", "MOR-01", "MOR-02", "MOR-03", "baseline", "R001", "对照结果")
 
 
-def build_prompt(case_id: str, variant: str = 'baseline') -> dict:
+def build_prompt(case_id: str, variant: str = 'baseline', prompt_variant: str = 'full') -> dict:
     if variant not in ('baseline', 'regional-p0'):
         raise ValueError('Unknown brushwork variant')
     suite = json.loads((ROOT / 'cases.json').read_text(encoding='utf-8'))
@@ -40,13 +40,14 @@ def build_prompt(case_id: str, variant: str = 'baseline') -> dict:
     spec.loader.exec_module(module)
     request = {'request': content, 'mode': 'generate', 'aspect_ratio': case['aspect_ratio']}
     job = module.prepare(request, ROOT, ROOT / 'not-used-cache', ROOT,
-                         text_only=True, brushwork_variant=variant)
+                         text_only=True, brushwork_variant=variant, prompt_variant=prompt_variant)
     prompt = job['prompt']
     if any(token.lower() in prompt.lower() for token in METADATA_LEAKS):
         raise ValueError('Evaluation metadata leaked into generation prompt')
     return {
         'case_id': case_id,
         'variant': variant,
+        'prompt_variant': prompt_variant,
         'prompt': prompt,
         'prompt_file_sha256': hashlib.sha256((prompt + '\n').encode('utf-8')).hexdigest(),
         'style_lock': job['style_lock'],
@@ -91,6 +92,7 @@ def main() -> int:
     prepare = sub.add_parser("prepare")
     prepare.add_argument("--case", required=True)
     prepare.add_argument("--variant", choices=("baseline", "regional-p0"), default="baseline")
+    prepare.add_argument("--prompt-variant", choices=("full", "compact-v1"), default="full")
     prepare.add_argument("--output", type=Path, required=True)
     diagnose = sub.add_parser("diagnose")
     diagnose.add_argument("--record", type=Path, required=True)
@@ -99,7 +101,7 @@ def main() -> int:
         record = json.loads(args.record.read_text(encoding="utf-8"))
         print(json.dumps({"status": diagnose_attempt(record)}, ensure_ascii=False))
         return 0
-    job = build_prompt(args.case, args.variant)
+    job = build_prompt(args.case, args.variant, args.prompt_variant)
     if args.output.exists():
         raise ValueError("Output directory already exists; refusing overwrite")
     args.output.mkdir(parents=True)

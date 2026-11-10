@@ -48,6 +48,10 @@ These are helper references for a clean redraw. They are not output art and they
 
 When evaluating repeated fish-scale marks across sky, water, vegetation, fabric, and grainstacks, use `--brushwork-variant regional-p0` on `prepare`; compare against `--brushwork-variant baseline` with the same request/model/reference. The option adds only the [regional brushwork overlay](references/regional-brushwork-p0.txt). Both choices have distinct style locks. **Do not make it the default or claim improvement without real A/B image review.** See [trial plan](references/regional-brushwork-p0.md).
 
+### Compact prompt trial (opt-in, unverified)
+
+Use `--prompt-variant compact-v1` with `prepare` to compile a shorter, image-only prompt from [compact-prompt-v1.txt](references/compact-prompt-v1.txt). When `--brushwork-variant regional-p0` is also selected, the compact-specific [regional overlay](references/compact-regional-p0.txt) is used. The default `full` prompt and original P0 overlay are unchanged. Compact and full runs have different style locks; do not merge their results or declare a shorter prompt visually better before actual paired-image review. An exported text-only prompt still does not mean a style image or model version was bound to ImageGen.
+
 ### Optional explicit ComfyUI local runner
 
 For **controlled visual experiments** with a user-controlled local ComfyUI instance, read [explicit-comfyui.md](references/explicit-comfyui.md). The independent `scripts/execute_comfyui.py` adapter reads only the prepared job and a verified API-format workflow; it never reads experiment reports or past chat text. It is **dry-run by default**, with `--execute` required for a real local request. It uploads the actual pinned style anchor and requires that the LoadImage node feeds the sampler; output remains **REQUIRES_VISUAL_REVIEW** until a reviewer inspects the painting. It does not install models, enable paid APIs, automatically handle cleanup/editing, or promise the style adapter is effective. If ComfyUI or the necessary style control nodes are missing, report `NOT_SUPPORTED`, not a completed run.

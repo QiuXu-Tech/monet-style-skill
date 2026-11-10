@@ -71,6 +71,24 @@ class ImagePromptPreflightTests(unittest.TestCase):
             self.assertFalse(metadata['controlled_ab_qualified'])
             self.assertNotIn('prompt', metadata)
 
+    def test_compact_uses_same_canonical_compiler(self):
+        import importlib.util
+        script = ROOT.parents[1] / 'skills/monet-style/scripts/monet.py'
+        spec = importlib.util.spec_from_file_location('monet_compact_preflight_test', script)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        for case in json.loads((ROOT / 'cases.json').read_text())['cases']:
+            for arm in ('baseline', 'regional-p0'):
+                with self.subTest(case=case['id'], arm=arm):
+                    job = build_prompt(case['id'], arm, 'compact-v1')
+                    expected = module.prepare({'request': case['content_prompt'],
+                        'mode': 'generate', 'aspect_ratio': case['aspect_ratio']},
+                        ROOT, ROOT/'unused', ROOT, True, arm, 'compact-v1')
+                    self.assertEqual(job['prompt'], expected['prompt'])
+                    self.assertEqual(job['style_lock'], expected['style_lock'])
+                    self.assertNotIn('NO STYLE REFERENCE IS ATTACHED', job['prompt'])
+                    self.assertFalse(job['controlled_ab_qualified'])
+
     def test_unknown_case(self):
         with self.assertRaisesRegex(ValueError, 'Unknown case'):
             build_prompt('MOR-99')
