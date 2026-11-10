@@ -14,8 +14,8 @@
 
 ```bash
 # 在仓库根目录验证与打包，普通规则检查无第三方依赖，cleanup 预处理需要 Pillow
-python3 -m unittest discover -s skills/monet-style/tests -p test_execute_comfyui.py -v
-python3 -m unittest discover -s skills/monet-style/tests -p test_regional_brushwork.py -v
+python3 -m unittest discover -s tests -p test_monet.py -v
+python3 -m unittest discover -s skills/monet-style/tests -p 'test_*.py' -v
 python3 skills/monet-style/scripts/monet.py check
 python3 tools/package_skill.py --output dist/monet-style-0.4.0-alpha.4.zip
 ```
@@ -28,9 +28,9 @@ python3 tools/package_skill.py --output dist/monet-style-0.4.0-alpha.4.zip
 
 [执行器说明](skills/monet-style/references/explicit-comfyui.md) · [源码](skills/monet-style/scripts/execute_comfyui.py) · [Mock 后端测试](skills/monet-style/tests/test_execute_comfyui.py)
 
-现在可以在用户已运行且配置好风格控制工作流的**本地 ComfyUI** 上，明确传入提示词、原作参考、宽高和种子并按任务 ID 取图。默认 dry-run，不自动下载模型、调用收费 API 或重试未知结果。模拟服务端 11 项验证通过，尚未完成真实 GPU 模型生图和莫奈画风 A/B 评测。
+现在可以在用户已运行且配置好风格控制工作流的**本地 ComfyUI** 上，明确传入提示词、原作参考、宽高和种子并按任务 ID 取图。默认 dry-run，不自动下载模型、调用收费 API 或重试未知结果。模拟服务端 12 项验证通过，尚未完成真实 GPU 模型生图和莫奈画风 A/B 评测。
 
-## 可复用优化循环
+**[Alpha.4 双设备测试报告](docs/alpha4-regression-2026-11-10.json)**：Mac 55 项通过、14 项因 Pillow 缺失跳过；Windows 69/69 项通过。真实 ComfyUI 推理仍未执行。\n\n## 可复用优化循环
 
 [优化计划 V1.0](docs/optimization/README.zh.md) · [单轮执行指令](docs/optimization/EXECUTE_ONE_ROUND.zh.md) · [已复核的工程基线](docs/optimization/rounds/R000-baseline.json)
 

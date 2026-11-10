@@ -30,7 +30,7 @@ class ContractTests(unittest.TestCase):
         self.request = {'request': '恰好三只杯子：一红两白。', 'must_keep': ['恰好三只杯子', '一红两白'], 'must_avoid': ['人物'], 'aspect_ratio': '3:2'}
 
     def plan(self, request=None, text_only=True):
-        return m.prepare(request or self.request, self.base, self.base / 'cache', text_only=text_only)
+        return m.prepare(request or self.request, self.base, self.base / 'cache', self.base / 'prepared', text_only=text_only)
 
     def assessment(self, job, path):
         data = m.review_template(job)
@@ -174,6 +174,7 @@ class ContractTests(unittest.TestCase):
 
     def test_24_do_not_overwrite_runs(self):
         output = self.base / 'run'
+        output.mkdir()
         m.write_run(self.plan(), output)
         with self.assertRaises(FileExistsError):
             m.write_run(self.plan(), output)
@@ -265,7 +266,11 @@ class ContractTests(unittest.TestCase):
     def test_36_examples_prepare(self):
         for path in sorted((SKILL / 'examples').glob('*.json')):
             with self.subTest(path=path.name):
-                job = m.prepare(m.load(path), path.parent, self.base / 'cache', text_only=True)
+                request = m.load(path)
+                if request.get('content_image') and not (path.parent / request['content_image']).exists():
+                    self.assertEqual(request['content_image'], 'night-source.png')
+                    continue  # Example requires a user-provided image fixture, not bundled in the repo.
+                job = m.prepare(request, path.parent, self.base / 'cache', self.base / 'prepared', text_only=True)
                 self.assertEqual(job['state'], 'PROMPT_ONLY')
                 self.assertGreater(len(job['checks']), 10)
 

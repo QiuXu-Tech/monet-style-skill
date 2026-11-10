@@ -27,7 +27,7 @@
     "requirements.txt": "0ab6355e6428c99d17c368a00dd750701e18244a90ab65234da72566317da72a",
     "scripts/execute_comfyui.py": "8bfdb5f41a5312d3099dcb27d7319fbe0b214d3245f8bcaff1c4dd90661a2572",
     "scripts/monet.py": "038fa1b9c9cd11ddf1dd9835a0d09f813d5484ae00728bae67880d9cf909a4b5",
-    "tests/test_cleanup.py": "5c777858e5faa4e6e9fed63fee73c6b2d4346e30a290185e6313e3dee16882d1",
+    "tests/test_cleanup.py": "e5d685904a8e290210ffff0222beb2d74eb98ab06fd0b682f246b20834d12ab4",
     "tests/test_execute_comfyui.py": "a153458d742ab37dd9987e77f02fce7f2e3357a7ed507375b85ab1a776c40bf2",
     "tests/test_regional_brushwork.py": "4c959f82b53546450e91068497e5b677235cc79206e42ecdc8f4a1c93de3ee42"
   }

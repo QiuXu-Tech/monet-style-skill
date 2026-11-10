@@ -1,0 +1,83 @@
+{
+  "report_id": "monet-alpha4-2026-11-10-regression",
+  "date": "2026-11-10",
+  "tested_commit": "3db5f839440786108fd8c10cbb17756920aeb74b",
+  "skill_version": "0.4.0-alpha.4",
+  "status": "ENGINEERING_REGRESSION_PASS_VISUAL_NOT_RUN",
+  "hardware_backend": {
+    "mac": {
+      "device": "MK-QMacBook-Air.local",
+      "python": "3.14.3",
+      "comfyui_127_0_0_1_8188": "NOT_RESPONDING",
+      "other_default_local_7860": "NOT_RESPONDING",
+      "pillow_installed": false,
+      "contract_tests": {
+        "passed": 36,
+        "failed": 0
+      },
+      "skill_tests": {
+        "passed": 19,
+        "skipped": 14,
+        "failed": 0
+      },
+      "package_check": "PASS",
+      "archive_rebuilt": {
+        "sha256": "0571ec200315e4e86307f5a2d2d1fa98cff3123002bda57c382f5973e2c68770",
+        "entries": 30
+      }
+    },
+    "windows": {
+      "device": "LAPTOP-ESLMHSHR",
+      "python": "3.15.2",
+      "comfyui_127_0_0_1_8188": "NOT_RESPONDING",
+      "other_default_local_7860": "NOT_RESPONDING",
+      "pillow_installed": true,
+      "torch_installed": false,
+      "contract_tests": {
+        "passed": 36,
+        "failed": 0
+      },
+      "skill_tests": {
+        "passed": 33,
+        "skipped": 0,
+        "failed": 0
+      },
+      "package_check": "PASS",
+      "note": "Tests run on immutable pinned source with only the same three test-file compatibility fixes; Windows staging deleted after run."
+    }
+  },
+  "verified_reference": {
+    "id": "antibes-1888",
+    "source": "skills/monet-style/assets/anchors.json",
+    "sha256": "4c255eb653cbe1f0e19a53843cef8c57a8f1f4f4889f622f4a59acead7677f71",
+    "source_download": "PASS",
+    "sha256_verified": true
+  },
+  "mor_01_job_contract": {
+    "case_id": "MOR-01",
+    "prompt_source": "benchmarks/original-paintings-v1/cases.json",
+    "aspect_ratio_requested": "4:3",
+    "baseline_state": "READY_FOR_HOST",
+    "regional_p0_state": "READY_FOR_HOST",
+    "same_input_content_and_anchor": true,
+    "only_additional_rule": "references/regional-brushwork-p0.txt",
+    "baseline_job_sha256": "aaa746a1218409e4ae38e34a1e0e721cdaf1b4c33aba1eecb878b17d02f49cfc",
+    "regional_p0_job_sha256": "428f7c6f9b7e47380148f138ea9a5336c60f4fc61389870225b8171486447b9b"
+  },
+  "test_repairs": [
+    "Updated legacy test calls for prepare(..., out_dir, ...).",
+    "Legacy write_run test now creates the expected output directory.",
+    "Non-bundled user night-source.png fixture is not treated as an automatically available built-in example.",
+    "Optional cleanup tests skip on missing Pillow instead of causing import failure; Windows executed them with Pillow installed."
+  ],
+  "actual_gpu_inference_performed": false,
+  "actual_generated_paintings": 0,
+  "visual_scores": null,
+  "model_quality_claim": "NOT_EVALUATED",
+  "notes": [
+    "Unit tests use a mock ComfyUI HTTP endpoint; these results do not confirm real style-control node functionality or generation quality.",
+    "ComfyUI was not responding on either device, so the desired real A/B comparison could not run.",
+    "No paid APIs or GPU installations were triggered.",
+    "The baseline style and the regional-p0 overlay were left unchanged."
+  ]
+}

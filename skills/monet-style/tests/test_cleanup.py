@@ -9,7 +9,10 @@ import sys
 import tempfile
 import unittest
 
-from PIL import Image
+try:
+    from PIL import Image
+except ImportError:
+    Image = None  # Optional cleanup dependency is checked by dedicated CI jobs.
 
 SKILL = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location('monet', SKILL / 'scripts' / 'monet.py')
@@ -17,6 +20,7 @@ monet = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(monet)
 
 
+@unittest.skipUnless(Image is not None, "Pillow is optional; cleanup tests need Pillow")
 class CleanupTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
