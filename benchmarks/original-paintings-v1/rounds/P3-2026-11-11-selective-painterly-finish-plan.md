@@ -35,7 +35,7 @@ Scene: 初夏的草坡上有一位撑着洋伞的女子，微风吹动她的浅�
 
 Style: Render the requested scene as an original Monet-inspired 1880s oil painting, not a famous composition. Build readable forms from adjacent colour patches and broad light/shadow masses. Vary stroke direction, length and density with material and distance. Keep essential silhouettes; let secondary edges soften through atmospheric colour, not blur. Let actual illumination shift local hues and shadow colours without a uniform tint. Preserve subjects, counts, positions, weather and time. Avoid repeated fish-scale dabs, fake grain, photographic smoothing, hard halos, invented objects, labels and signatures.
 
-Painterly focus: Let light and wind decide where detail appears. Treat the face and hands with the same loose paint as nearby clothing: suggest gaze and grasp through uneven warm/cool marks, not clean outlines or separate fingers; keep gesture and anatomy readable. Leave open colour passages between irregular sky strokes, cluster short grass marks at varied angles and densities, and carry fabric with broader strokes following wind and light. Let secondary edges stay less resolved than the main light-and-shadow masses.
+Painterly hierarchy: Let light and wind, not anatomy, decide the level of detail. Keep faces and hands at the stroke scale of nearby sleeves; suggest gaze and grasp with uneven warm/cool touches while preserving readable anatomy. Leave quiet gaps amid irregular sky strokes; use varied, clustered short marks in grass and broader directional marks on windblown fabric. Keep secondary passages unresolved rather than polishing every outline.
 ```
 
 ## Review and stop conditions
