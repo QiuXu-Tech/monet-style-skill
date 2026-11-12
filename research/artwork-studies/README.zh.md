@@ -8,6 +8,7 @@
 |---|---|---|---|---|
 | 01 | 《印象·日出》 / *Impression, soleil levant* | 1872 | Musée Marmottan Monet · 4014 | [研究 01](01-impression-sunrise-1872.zh.md) |
 | 02 | 《普尔维尔的悬崖》 / *Cliffs at Pourville* | 1882 | National Gallery of Art · **1985.64.27** | [研究 02](02-cliffs-at-pourville-1882-nga.zh.md) |
+| 03 | 《昂蒂布的园丁之家》 / *Gardener's House at Antibes* | 1888 | Cleveland Museum of Art · **1916.1044** | [研究 03](03-gardeners-house-antibes-1888-cma.zh.md) |
 
 **历史专题补录：** [1875《撑阳伞的女人》原作研究](woman-with-parasol-1875-reference.zh.md)；其先前 P1/P2 试验记录仍在各自的实验日志里。
 
