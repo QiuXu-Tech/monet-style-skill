@@ -10,6 +10,11 @@
 | Rouen Cathedral, West Façade, Sunlight / 鲁昂大教堂：阳光 | 1894 | [National Gallery of Art](https://www.nga.gov/artworks/46654-rouen-cathedral-west-facade-sunlight) | 固定形体、变化的光色关系 |
 | Water Lilies / 睡莲系列晚期作品 | 1914–26 | [Museum of Modern Art](https://www.moma.org/collection/works/80220) | 水面反射、画面空间与趋于抽象的处理 |
 
+## 逐幅原作分析报告
+
+已将每幅作品的馆藏事实、笔触观察与待验证工程启发分开存档：
+[莫奈原作逐幅研究档案索引](artwork-studies/README.zh.md)。
+
 ## 下一轮
 
 补充《干草堆》《鲁昂大教堂》系列的多幅馆藏，以便同一主体、不同日照的比较。逐件记录笔触尺寸/方向、色彩并置、冷暖阴影、边缘与空间、可辨认的媒介肌理。元数据尚需逐项核验，**目录不等于风格结论**。
