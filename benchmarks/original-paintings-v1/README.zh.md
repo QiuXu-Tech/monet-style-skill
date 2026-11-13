@@ -90,10 +90,11 @@
 执行前运行：
 
 ```bash
-python3 benchmarks/original-paintings-v1/generation_preflight.py prepare --case MOR-01 --output /tmp/monet-mor01-prompt
+python3 benchmarks/original-paintings-v1/generation_preflight.py prepare --case MOR-01 --variant baseline --output /tmp/monet-mor01-baseline
+python3 benchmarks/original-paintings-v1/generation_preflight.py prepare --case MOR-01 --variant regional-p0 --output /tmp/monet-mor01-p0
 ```
 
-只把输出的 `image-only-prompt.txt` 交给生图工具；`generation-metadata.json`、原作名称、馆藏 URL、评分量表和前一轮失败报告留在评测器一侧。原作只用于生成**之后**的风格对照，不把目标画的像素作为生成参考，也不要求原作级构图复刻。生成内容仍必须属于用户指定题材并符合真实服务政策，不能以改写提示的方式规避真正的安全拒绝。
+预处理器现在调用安装版 Skill 的 `monet.py` 编译器，生成真实的两种文字提示与各自风格锁；写入 `prompt_file_sha256` 供校验，而非维护第三份简化画法。该预处理是明确的 **text-only / no style-anchor-attached** 路线，不能据此声称图像锚点、模型版本或实际提示词已在宿主中绑定，也不将它当作严格受控 A/B。独立测试精简画法时，可添加 `--prompt-variant compact-v1`，从同一 Skill 编译精简版提示词；默认 `full` 仍保留原始预注册的 P0 实验条件。文字变短不等于画风改善，须重新配对验证，不混合旧版评分。只把输出的 `image-only-prompt.txt` 交给生图工具；`generation-metadata.json`、原作名称、馆藏 URL、评分量表和前一轮失败报告留在评测器一侧。原作只用于生成**之后**的风格对照，不把目标画的像素作为生成参考，也不要求原作级构图复刻。生成内容仍必须属于用户指定题材并符合真实服务政策，不能以改写提示的方式规避真正的安全拒绝。
 
 如调用失败，先保留原始工具证据，再分类：
 
@@ -106,3 +107,14 @@ python3 benchmarks/original-paintings-v1/generation_preflight.py prepare --case 
 可用 `generation_preflight.py diagnose --record attempt.json` 校验手动记录的尝试状态。此脚本没有生图能力，也**不可能**直接改变平台审核规则；它只避免输入混淆、错误归因和不实结果报告。
 
 测试：`python3 -m unittest discover -s benchmarks/original-paintings-v1 -p 'test_*.py' -v`。
+
+## 8. 原作构图复现与疑似署名（视觉门禁）
+
+即使生成图片通过单幅/题材/光照门禁，还需额外检查是否出现**不应有的签名或名画特征构图复现**。查看四角局部与完整布局，记录原作与生成图的主体布置、主要光源、倒影、前景元素等具体对应关系；证据不清时标记 `UNKNOWN`，不要猜出签名内容。若存在明确的复现，标记为 `REFERENCE_LEAKAGE` 并排除“风格可迁移成功”样本。构图相似不是已证明的像素复制，更不是自动法律判断。此门禁不修改四维 30/30/30/10 评分权重；分数可以记录用于诊断，但不能抵消泄漏或宿主不合格。
+
+
+## 9. ChatGPT 上下文路由失败后的隔离流程
+
+针对“请求 MOR-02 阳伞女子，实际连续返回 MOR-01 港口”的失败，优先检查 **会话级提示词污染风险** 而不是不断补充禁止港口的否定词。执行前使用 `generation_preflight.py prepare --case MOR-02 --prompt-variant compact-v1 --delivery-profile chatgpt-inferred --conversation-state reused --output /tmp/monet-mor02-clean`。输出仍会生成可单独复制的 `image-only-prompt.txt`，但状态为 `BLOCKED_CONTEXT_REUSE`，**不得在这个旧会话中调用生图**。在独立的新会话中仅提交该文件的正文，不携带历史图、评测表或其他场景；即使实际成功，仍只有 `FRESH_CHAT_EXPLORATORY_ONLY` 资格，不是正式参考锚点受控 A/B。
+
+首次图片回来后人工填写单幅、题材、天气与画幅门禁，`generation_preflight.py diagnose` 可以把三项真值门禁中任何失败和画幅失败记录为 `CONTENT_GATE_REJECTED`，但**无法自行从像素判定题材**，也不会自行评分。缺少视觉审看时保持 `GENERATED_PENDING_VISUAL_REVIEW`。错误图留存证据后立即停止，不继续同会话的下一臂测试。不调用外部收费 API、不伪造模型版本或 seed、不将未受控探索称为正式 A/B。
