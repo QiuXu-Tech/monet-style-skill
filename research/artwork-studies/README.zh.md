@@ -12,6 +12,7 @@
 | 04 | 《麦垛》 / *Stack of Wheat* | 1890/91 | Art Institute of Chicago · **1983.29 / W1283** | [研究 04](04-stack-of-wheat-1890-91-aic.zh.md) |
 | 05 | 《麦垛：落日与雪景》 / *Stacks of Wheat (Sunset, Snow Effect)* | 1890/91 | Art Institute of Chicago · **1922.431 / W1278** | [研究 05](05-stacks-wheat-sunset-snow-1890-91-aic.zh.md) |
 | 06 | 《鲁昂大教堂：西立面，阳光》 / *Rouen Cathedral, West Façade, Sunlight* | 1894 | National Gallery of Art · **1963.10.179** | [研究 06](06-rouen-cathedral-west-facade-sunlight-1894-nga.zh.md) |
+| 07 | 《鲁昂大教堂：西立面》 / *Rouen Cathedral, West Façade* | 1894 | National Gallery of Art · **1963.10.49 / W1351** | [研究 07](07-rouen-cathedral-west-facade-1894-nga.zh.md) |
 
 **历史专题补录：** [1875《撑阳伞的女人》原作研究](woman-with-parasol-1875-reference.zh.md)；其先前 P1/P2 试验记录仍在各自的实验日志里。
 
