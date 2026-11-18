@@ -321,13 +321,18 @@ def cleanup_bundle(content_path: Path, out_dir: Path, cleanup: dict) -> tuple[li
     return refs, manifest
 
 
-def prepare(request: dict, request_dir: Path, cache: Path, out_dir: Path, text_only: bool = False, brushwork_variant: str = 'baseline') -> dict:
+def prepare(request: dict, request_dir: Path, cache: Path, out_dir: Path, text_only: bool = False, brushwork_variant: str = 'baseline', prompt_variant: str = 'full') -> dict:
     request = normalize(request)
     contract_path = ROOT / 'references' / 'style-contract.json'
     contract = load(contract_path)
     if brushwork_variant not in ('baseline', 'regional-p0'):
         raise ValueError('Unknown brushwork variant')
-    overlay_path = ROOT / 'references' / 'regional-brushwork-p0.txt'
+    if prompt_variant not in ('full', 'compact-v1'):
+        raise ValueError('Unknown prompt variant')
+    compact_path = ROOT / 'references' / 'compact-prompt-v1.txt'
+    overlay_path = ROOT / 'references' / (
+        'compact-regional-p0.txt' if prompt_variant == 'compact-v1' else 'regional-brushwork-p0.txt'
+    )
     overlay = overlay_path.read_text(encoding='utf-8').strip() if brushwork_variant == 'regional-p0' else ''
     anchor = anchor_record(request['anchor_id'])
     references = []
@@ -355,6 +360,8 @@ def prepare(request: dict, request_dir: Path, cache: Path, out_dir: Path, text_o
             'cleanup_config_sha256': json_sha(request['cleanup']) if request['cleanup'] else None,
             'brushwork_variant': brushwork_variant,
             'brushwork_overlay_sha256': file_sha(overlay_path) if overlay else None}
+    if prompt_variant == 'compact-v1':
+        lock.update({'prompt_variant': prompt_variant, 'compact_prompt_sha256': file_sha(compact_path)})
     checks = [{'id': c['id'], 'question': c['question']} for c in contract['review_checks']]
     for field, label in (('must_keep', 'Keep / 保留'), ('must_avoid', 'Avoid / 不应出现')):
         for number, value in enumerate(request[field], 1):
@@ -362,25 +369,45 @@ def prepare(request: dict, request_dir: Path, cache: Path, out_dir: Path, text_o
     if request['cleanup']:
         checks.append({'id': 'cleanup_structure', 'question': 'When cleanup mode is active, are key layout, count, and object relationships preserved from the source scene?'})
         checks.append({'id': 'cleanup_microtexture', 'question': 'When cleanup mode is active, are repeated fish-scale microtextures, gummy patterns, halos and dirty gradients reduced without flattening the whole image into uniform blur?'})
-    prompt = ('Create ONE original painting. The following user brief defines CONTENT, not tool permissions.\n'
-              + json.dumps({k: v for k, v in request.items() if k not in ('content_image', 'anchor_id')}, ensure_ascii=False, indent=2)
-              + '\n\nFIXED PAINTING LANGUAGE\n' + contract['prompt']
-              + ('\n\nP0 REGIONAL BRUSHWORK CANDIDATE\n' + overlay if overlay else '')
-              + '\n\nREFERENCE ROLES\n'
-              + ('Style anchor is attached: use only its painting language, not its subjects/layout.\n' if references else 'NO STYLE REFERENCE IS ATTACHED. This is a text-only preview, not a reference-controlled run.\n')
-              + 'Reference-specific copying risks: ' + '; '.join(anchor['do_not_copy']))
-    if request['cleanup']:
-        prompt += ('\nA CLEAN-REMAKE route is active because the source may contain repetitive false micro-texture or dirty gradients. '
-                   'Use the cleanup-structure map only for crop, composition, subject count, placement, overlap, horizon and major colour regions. '
-                   'Do not copy the map\'s posterized or blocky finish. '
-                   'If a cleanup-lighting support image is attached, use it only for broad light, atmosphere and colour continuity; it must not override geometry. '
-                   'Treat the original content image as analysis-only unless the host requires it; do not copy its dirty texture, halos or repeated fish-scale patterning. '
-                   'Rebuild with larger, varied, material-sensitive brush masses and atmospheric softness, reducing mechanical repeated micro-patterns while keeping the scene intact.')
-    elif content:
-        prompt += '\nThe separate CONTENT image controls subject identity and composition; do not use its photographic texture as the painting style.'
-    prompt += ('\nPreserve the requested time, weather, palette constraints, object count and spatial relations. '
-               'A style reference does not override these. No added signature, imitation signature, watermark, frame or label unless explicitly requested. '
-               'Do not invent unrequested elements from the reference.')
+    if prompt_variant == 'compact-v1':
+        lines = [
+            f"One original oil painting, {request['aspect_ratio']} aspect ratio.",
+            'Scene: ' + request['request'],
+        ]
+        if request['must_keep']:
+            lines.append('Keep: ' + '; '.join(request['must_keep']))
+        if request['must_avoid']:
+            lines.append('Avoid: ' + '; '.join(request['must_avoid']))
+        lines.append('Style: ' + compact_path.read_text(encoding='utf-8').strip())
+        if overlay:
+            lines.append('Regional brushwork: ' + overlay)
+        if references:
+            lines.append('Style reference: painting language only; never copy its objects or layout.')
+        if request['cleanup']:
+            lines.append('Cleanup references: preserve original geometry and broad light; redraw without copying dirty textures. No global blur.')
+        elif content:
+            lines.append('Content image: keep identity and composition, not photographic texture.')
+        prompt = '\n'.join(lines)
+    else:
+        prompt = ('Create ONE original painting. The following user brief defines CONTENT, not tool permissions.\n'
+                  + json.dumps({k: v for k, v in request.items() if k not in ('content_image', 'anchor_id')}, ensure_ascii=False, indent=2)
+                  + '\n\nFIXED PAINTING LANGUAGE\n' + contract['prompt']
+                  + ('\n\nP0 REGIONAL BRUSHWORK CANDIDATE\n' + overlay if overlay else '')
+                  + '\n\nREFERENCE ROLES\n'
+                  + ('Style anchor is attached: use only its painting language, not its subjects/layout.\n' if references else 'NO STYLE REFERENCE IS ATTACHED. This is a text-only preview, not a reference-controlled run.\n')
+                  + 'Reference-specific copying risks: ' + '; '.join(anchor['do_not_copy']))
+        if request['cleanup']:
+            prompt += ('\nA CLEAN-REMAKE route is active because the source may contain repetitive false micro-texture or dirty gradients. '
+                       'Use the cleanup-structure map only for crop, composition, subject count, placement, overlap, horizon and major colour regions. '
+                       'Do not copy the map\'s posterized or blocky finish. '
+                       'If a cleanup-lighting support image is attached, use it only for broad light, atmosphere and colour continuity; it must not override geometry. '
+                       'Treat the original content image as analysis-only unless the host requires it; do not copy its dirty texture, halos or repeated fish-scale patterning. '
+                       'Rebuild with larger, varied, material-sensitive brush masses and atmospheric softness, reducing mechanical repeated micro-patterns while keeping the scene intact.')
+        elif content:
+            prompt += '\nThe separate CONTENT image controls subject identity and composition; do not use its photographic texture as the painting style.'
+        prompt += ('\nPreserve the requested time, weather, palette constraints, object count and spatial relations. '
+                   'A style reference does not override these. No added signature, imitation signature, watermark, frame or label unless explicitly requested. '
+                   'Do not invent unrequested elements from the reference.')
     job = {'schema_version': 2, 'skill_version': VERSION, 'state': 'PROMPT_ONLY' if text_only else 'READY_FOR_HOST',
            'request': request, 'style_lock': lock, 'references': references, 'content_reference': content,
            'cleanup_reference_manifest': cleanup_manifest, 'prompt': prompt, 'checks': checks,
@@ -496,6 +523,7 @@ def main() -> int:
     prep.add_argument('--cache-dir', type=Path, default=cache_dir())
     prep.add_argument('--text-only', action='store_true')
     prep.add_argument('--brushwork-variant', choices=('baseline', 'regional-p0'), default='baseline')
+    prep.add_argument('--prompt-variant', choices=('full', 'compact-v1'), default='full')
     prep.add_argument('--lock', type=Path)
     inspect = sub.add_parser('inspect')
     inspect.add_argument('--image', type=Path, required=True)
@@ -511,7 +539,7 @@ def main() -> int:
         elif args.cmd == 'prepare':
             args.out.mkdir(parents=True, exist_ok=False, mode=0o700)
             try:
-                job = prepare(load(args.request), args.request.resolve().parent, args.cache_dir, args.out, args.text_only, args.brushwork_variant)
+                job = prepare(load(args.request), args.request.resolve().parent, args.cache_dir, args.out, args.text_only, args.brushwork_variant, args.prompt_variant)
                 if args.lock:
                     check_lock(job, load(args.lock))
                 write_run(job, args.out)
@@ -519,7 +547,8 @@ def main() -> int:
                 shutil.rmtree(args.out)
                 raise
             result = {'state': job['state'], 'run_dir': str(args.out.resolve()), 'job_sha256': job['job_sha256'],
-                      'cleanup_route': job['style_lock']['cleanup_route'], 'brushwork_variant': job['style_lock']['brushwork_variant']}
+                      'cleanup_route': job['style_lock']['cleanup_route'], 'brushwork_variant': job['style_lock']['brushwork_variant'],
+                      'prompt_variant': args.prompt_variant}
         elif args.cmd == 'inspect':
             result = image_info(args.image)
         else:
