@@ -14,6 +14,7 @@
 | 06 | 《鲁昂大教堂：西立面，阳光》 / *Rouen Cathedral, West Façade, Sunlight* | 1894 | National Gallery of Art · **1963.10.179** | [研究 06](06-rouen-cathedral-west-facade-sunlight-1894-nga.zh.md) |
 | 07 | 《鲁昂大教堂：西立面》 / *Rouen Cathedral, West Façade* | 1894 | National Gallery of Art · **1963.10.49 / W1351** | [研究 07](07-rouen-cathedral-west-facade-1894-nga.zh.md) |
 | 08 | 《韦特伊的画家花园》 / *The Artist's Garden at Vétheuil* | 1881 | National Gallery of Art · **1970.17.45** | [研究 08](08-artists-garden-vetheuil-1881-nga.zh.md) |
+| 09 | 《韦特伊的塞纳河》 / *La Seine à Vétheuil* | 1879 | Musée des Beaux-Arts de Rouen / Musée d’Orsay · **MNR 205 / W537** | [研究 09](09-seine-at-vetheuil-1879-rouen-mnr205.zh.md) |
 
 **历史专题补录：** [1875《撑阳伞的女人》原作研究](woman-with-parasol-1875-reference.zh.md)；其先前 P1/P2 试验记录仍在各自的实验日志里。
 
