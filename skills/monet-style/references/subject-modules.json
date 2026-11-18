@@ -1,0 +1,52 @@
+{
+  "version": "1.0.0",
+  "status": "RESEARCH_INFORMED_NOT_VISUALLY_VALIDATED",
+  "policy": "Select only modules supported by the brief, at most three. These are subject-specific instructions within the selected profile, not new era profiles or evidence of generator performance. Study IDs are metadata and never injected into the painting prompt.",
+  "modules": {
+    "garden": {
+      "study_ids": [
+        "02",
+        "03",
+        "08"
+      ],
+      "prompt": "Where plants occur, relate flower touches to loose clusters, stem directions, leaf masses and overlaps. Let flower heads, slender stems, foliage and open ground have appropriate scale and rhythm without drawing every botanical connection. Preserve the path or ground plane through perspective, interrupted edges and coherent light/shadow masses. Use uneven concentration and intervals, including quieter spaces, rather than a carpet of identical dots. Keep decorative colour rhythm compatible with believable growth and depth; do not invent additional plants or a path."
+    },
+    "water": {
+      "study_ids": [
+        "01",
+        "09"
+      ],
+      "prompt": "Where water occurs, connect reflections to the position and colour masses of the actual sky and surrounding objects while reorganising them through the water surface. In calm passages, local lateral marks may interrupt an overall vertical reflection; change their length, grouping and contrast with distance, light and disturbance. Keep bright open water distinct from denser reflected masses when appropriate. Do not apply the same ripple stamp everywhere or require an exact mirrored outline; rough water should follow the requested conditions."
+    },
+    "figures": {
+      "study_ids": [
+        "02",
+        "08",
+        "1875-supplement"
+      ],
+      "prompt": "For figures, preserve the requested count, gesture, proportions, silhouette, clothing relationships and contact with the ground. Let faces and hands share the surrounding painting's light and level of finish. At small scale, use economical planes and colour touches to retain posture and action without miniature portrait detail or carefully outlined fingers. A larger focal figure may need more description, especially when identity is requested. Keep anatomical coherence and held objects intelligible; neither blurred faces nor distorted hands are a substitute for selective detail."
+    },
+    "architecture": {
+      "study_ids": [
+        "03",
+        "06",
+        "07"
+      ],
+      "prompt": "For built forms, keep the main planes, perspective, openings and overlaps coherent at normal viewing distance. Let local colour fragments and broken edges indicate surface and light without drawing every brick, window border or ornament. Change which details stand out according to illumination and visual importance. Preserve the requested building type and modern features; use quieter passages as well as accents, and do not replace the subject with a historical building from a reference."
+    },
+    "snow": {
+      "study_ids": [
+        "04",
+        "05"
+      ],
+      "prompt": "Where snow occurs, establish the ground plane and the weight of objects through broad light/shadow relationships. Relate its apparent colour to the requested sky, illumination and neighbouring surfaces rather than prescribing white highlights and violet shadows everywhere. Keep selective local strokes compatible with the larger mass. Visible strokes can remain low in apparent relief; do not give every snow patch the same raised daub. Preserve purposeful repeated rhythms and vary surface emphasis only where the scene calls for it."
+    },
+    "coast": {
+      "study_ids": [
+        "02",
+        "03"
+      ],
+      "prompt": "For coastal land, let vegetation marks respond to slope, planes, exposure, overlap and distance; the same grass need not look identical on each bank. Keep essential cliff and land silhouettes legible with selective edge breaks. Relate sea, sky and land through the specified light and distance without requiring mist or importing a reference horizon, boats or figures. Preserve the requested weather and give broad colour passages room to support concentrated foreground accents where useful."
+    }
+  }
+}

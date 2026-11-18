@@ -1,9 +1,9 @@
 {
-  "id": "monet-1880s-study-v2",
-  "version": "0.2.0",
-  "status": "EXPERIMENTAL_NOT_VISUALLY_BENCHMARKED",
-  "scope": "Reversible first implementation baseline: selected 1882/1888 paintings. Includes an experimental cleanup-aware route for repetitive artifact suppression, not a claim that all Monet periods are interchangeable.",
-  "prompt": "Interpret the requested subject through the painting language of the selected Claude Monet 1880s reference, not by reproducing its scene. Construct recognisable forms through relationships of adjacent colour patches and selective broken brushwork. Use varied, material-sensitive strokes: comparatively open strokes in sky, directional marks for planar structures, and concentrated touches only where the actual subject needs them. Keep broad light-and-shadow masses coherent at a distance. Modulate edges: retain essential silhouettes and spatial relations while letting some secondary boundaries dissolve into surrounding colour. Let light influence local colour and introduce chromatic variation within shadows without forcing every shadow to violet. Preserve the requested lighting and weather, including darkness when requested. Maintain atmospheric haze and optical softness through coherent colour relationships rather than global blur. Use plausible painted oil-surface variation rather than a uniform canvas-noise overlay, photographic detail with a blur filter, or an identical stipple pattern everywhere. Avoid repetitive fish-scale micro-texture, gummy texture, dirty gradients, over-sharpened halos and other false detail patterns. Avoid importing another painter's dominant spiral/swirling motif. Keep the scene intelligible; abstraction must not erase hard content requirements. Vary palette with the scene; never tint everything blue, purple or green merely to signal Monet.",
+  "id": "monet-1880s-research-v3",
+  "version": "0.3.0",
+  "status": "RESEARCH_INFORMED_VISUAL_VALIDATION_PENDING",
+  "scope": "Research-informed 1880s default using studies 02, 03 and 08; other studied periods supply qualified comparisons and counterexamples, not interchangeable era presets. User-authorized rule update; no new generated images or demonstrated quality gain.",
+  "prompt": "Create an original oil painting in a Monet-inspired 1880s painting language. Keep large forms, weight, overlap and spatial relationships readable while allowing local marks and some contours to break. Organise strokes by form, material, illumination, distance, visual importance and the rhythm of the whole painting; the same material can change handling within one scene. Vary direction, length, spacing and concentration where these relationships call for it, without forcing random variation or a different texture in every region. Let the specified light change local colour, contrast, edges and which details remain visible. Connect neighbouring colours and reflected light; neither shadows nor highlights have a mandatory hue. Preserve the requested weather, time, darkness and palette constraints. Allocate detail selectively: retain defining shapes and actions, concentrate attention where the scene needs it, and allow quieter passages. Small figures need convincing posture and proportion rather than polished facial or finger detail; do not replace simplification with blur or malformed anatomy. Build air and depth through colour relationships, overlap, scale and selective edge contrast. Add haze only when the scene calls for it. Distinguish visible brushwork from raised paint: combine quieter coverage, broken colour and local surface accents as appropriate, without uniform impasto or simulated aging. Avoid a repeated stamp or fish-scale texture running independently of forms across the painting. Keep purposeful clusters and shared rhythms; do not erase short strokes, flowers or waves merely because they repeat. Preserve coherent light and structure at a distance, with a varied but related painted surface close up.",
   "review_checks": [
     {
       "id": "single_painting_canvas",
@@ -27,27 +27,31 @@
     },
     {
       "id": "style_brushwork",
-      "question": "Does brushwork vary appropriately by material and spatial area instead of a repeated texture overlay?"
+      "question": "Do marks respond to form, light, distance and visual role, including changes within one material, without arbitrary variation or a repeated stamp across unrelated regions?"
     },
     {
       "id": "style_edges",
-      "question": "Are essential forms readable, with selective rather than global softness at edges?"
+      "question": "Are essential silhouettes, actions and spatial relationships readable while secondary edges can break or merge in a way consistent with the light?"
     },
     {
       "id": "style_atmosphere",
-      "question": "Does the image keep a convincing atmospheric haze or optical softness without collapsing into featureless blur?"
+      "question": "Do colour relationships, overlap, scale and selective edge contrast create scene-appropriate air and depth without forced haze, washed-out distance or uniform blur?"
     },
     {
       "id": "style_space",
       "question": "Are foreground/background scale, contrast and atmosphere coherent with the requested scene?"
     },
     {
+      "id": "style_detail_hierarchy",
+      "question": "Does detail follow size, distance and visual importance, keeping required identities/actions intact without uniformly polished faces, hands, flowers or clouds, or blanket simplification?"
+    },
+    {
       "id": "style_medium",
-      "question": "Does the visible paint handling fit the selected oil-painting reference rather than looking like a photograph plus blur?"
+      "question": "Are brushmark visibility and apparent surface relief handled separately, without uniform thick paint, canvas noise or fabricated aging? Judge appearance only, not actual pigment chemistry or layer history."
     },
     {
       "id": "reference_leakage",
-      "question": "Is the work original, without unrequested reference-specific objects, composition, or copied signature?"
+      "question": "After inspecting corners and layout, is the painting free of an unrequested imitation signature or distinctive source composition? Shared requested objects alone are not leakage; mark unclear cases unknown."
     },
     {
       "id": "artifacts",
@@ -57,5 +61,6 @@
       "id": "artifact_microtexture",
       "question": "Is the image free of repeated fish-scale / false micro-texture, gummy patterning, dirty gradients and over-sharpened halos?"
     }
-  ]
+  ],
+  "research_basis": "artwork-evidence.md"
 }

@@ -100,12 +100,14 @@ class AdapterTests(unittest.TestCase):
         self.lock = {
             "skill_version": monet.VERSION,
             "profile_sha256": monet.file_sha(SKILL / "references" / "style-contract.json"),
+            "subject_modules_sha256": monet.file_sha(SKILL / "references" / "subject-modules.json"),
             "anchor_id": self.anchor["id"],
             "anchor_sha256": self.anchor["sha256"],
             "brushwork_variant": "baseline",
             "brushwork_overlay_sha256": None,
         }
         self.job = {
+            "profile": "research-v3",
             "state": "READY_FOR_HOST", "execution": {"generation_performed": False},
             "request": {"mode": "generate", "content_image": None, "cleanup": None, "aspect_ratio": "4:3"},
             "prompt": "ONE PORT PAINTING: fixed brief and Monet painting-language text.",
@@ -142,6 +144,33 @@ class AdapterTests(unittest.TestCase):
     def test_prompt_only_blocked(self):
         job = dict(self.job, state="PROMPT_ONLY")
         with self.assertRaisesRegex(ValueError, "READY_FOR_HOST"):
+            adapter.verify_job(job)
+
+    def test_explicit_legacy_profile_uses_its_own_contract(self):
+        job = json.loads(json.dumps(self.job))
+        job['profile'] = 'legacy-v2'
+        job['style_lock']['profile_sha256'] = monet.file_sha(SKILL / 'references' / 'style-contract-v2.json')
+        del job['style_lock']['subject_modules_sha256']
+        job['job_sha256'] = monet.json_sha({key: value for key, value in job.items() if key != 'job_sha256'})
+        self.assertEqual(adapter.verify_job(job)['id'], 'antibes-1888')
+        job['profile'] = 'research-v3'
+        job['job_sha256'] = monet.json_sha({key: value for key, value in job.items() if key != 'job_sha256'})
+        with self.assertRaisesRegex(ValueError, 'style lock'):
+            adapter.verify_job(job)
+
+    def test_changed_module_library_lock_is_rejected(self):
+        job = json.loads(json.dumps(self.job))
+        job['style_lock']['subject_modules_sha256'] = '0' * 64
+        job['job_sha256'] = monet.json_sha({key: value for key, value in job.items() if key != 'job_sha256'})
+        with self.assertRaisesRegex(ValueError, 'module library'):
+            adapter.verify_job(job)
+
+    def test_p0_cannot_be_combined_with_research_profile(self):
+        job = json.loads(json.dumps(self.job))
+        job['style_lock']['brushwork_variant'] = 'regional-p0'
+        job['style_lock']['brushwork_overlay_sha256'] = monet.file_sha(SKILL / 'references' / 'regional-brushwork-p0.txt')
+        job['job_sha256'] = monet.json_sha({key: value for key, value in job.items() if key != 'job_sha256'})
+        with self.assertRaisesRegex(ValueError, 'requires the legacy-v2'):
             adapter.verify_job(job)
 
     def test_style_hash_required(self):

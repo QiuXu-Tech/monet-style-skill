@@ -274,6 +274,29 @@ class ContractTests(unittest.TestCase):
                 self.assertEqual(job['state'], 'PROMPT_ONLY')
                 self.assertGreater(len(job['checks']), 10)
 
+    def test_37_prepared_images_require_separate_delivery_evidence(self):
+        anchor = self.base / 'cache' / 'cma-1916-1044.jpg'
+        anchor.parent.mkdir()
+        anchor.write_bytes(png())
+        content = self.base / 'content.png'
+        content.write_bytes(png(60, 40))
+        record = dict(m.anchor_record('antibes-1888'), sha256=m.file_sha(anchor))
+        with patch.object(m, 'anchor_record', return_value=record):
+            job = self.plan(dict(self.request, mode='restyle', content_image='content.png'), text_only=False)
+        self.assertEqual(job['reference_delivery']['required_roles'], ['content-and-composition', 'style-only'])
+        self.assertTrue(job['reference_delivery']['style_anchor_prepared'])
+        self.assertFalse(job['reference_delivery']['style_anchor_attached'])
+        output = self.base / 'output.png'
+        output.write_bytes(png(96, 64))
+        for role in job['reference_delivery']['required_roles']:
+            with self.subTest(role=role):
+                assessment = self.assessment(job, output)
+                gate = next(c for c in assessment['checks'] if c['id'] == 'reference_delivery_' + role.replace('-', '_'))
+                gate.update(result='unknown', evidence='')
+                self.assertEqual(m.evaluate(job, output, assessment)['state'], 'NEEDS_REVIEW')
+        # A supplied pass is a reviewer's claim, not proof of actual attachment.
+        self.assertEqual(m.evaluate(job, output, self.assessment(job, output))['state'], 'ACCEPTED_REPORTED')
+
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)

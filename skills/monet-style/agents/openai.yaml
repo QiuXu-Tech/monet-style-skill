@@ -1,6 +1,4 @@
 interface:
   display_name: "Monet Style · 莫奈画风"
-  short_description: "参考原作的莫奈风格生图与内容保真工作流，支持 clean-remake 纹理清洁重绘"
-  default_prompt: "Use $monet-style to create or cleanly restyle the requested image with a verified Monet style reference, preserving my subject, and when needed activate the cleanup route for repetitive texture artifacts."
-policy:
-  allow_implicit_invocation: true
+  short_description: "依据原作研究准备莫奈油画提示词与评审，按场景组织笔触、光色和空间"
+  default_prompt: "Use $monet-style to prepare a complete prompt for my original painting, preserve my subject and lighting, and explain the key scene-specific painting choices without generating an image."

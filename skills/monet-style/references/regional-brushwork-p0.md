@@ -1,5 +1,7 @@
 # P0 · 区域笔触实验（未实测）
 
+> 0.5.0兼容说明：本文件保留历史P0假设，叠加文本未变。当前调用必须同时指定 `--profile legacy-v2 --brushwork-variant regional-p0`；旧基线用 `--profile legacy-v2 --brushwork-variant baseline`。不得与research-v3混用，也不能将本次研究指导升级解释成P0实验成功。
+
 **状态：NOT_VISUALLY_BENCHMARKED。** 依据此前三张独立画作的人工观察：港口水面有相似细碎鳞纹；人物画天空、衣裙、草地的笔触过于同质；干草堆的光影块面仍可改进。分数是视觉诊断，不是经过固定宿主的 Skill A/B。
 
 ## 单一假设

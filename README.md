@@ -1,36 +1,48 @@
 # Monet Style Skill
 
-**Status: 工程实验版 0.4.0-alpha.4（默认基线不变，P0 区域笔触为可选实验）。真实 A/B 画风增益仍未验证。**
+**Status: 0.5.0-alpha.1 · 九篇原作研究指导的 Skill 升级。默认1880s与Antibes1888锚点保留；新版实际出图质量尚待验证。**
 
 本项目由 QiuXu-Tech 发起，以 Claude Monet 的原作为研究基础，探索跨题材、跨光照保持绘画语言一致性的开源图像生成 Agent Skill。
 
 **Research before claims.** 不将“印象派滤镜”、睡莲图案、油画噪声视作莫奈风格；不把单元测试通过等同于视觉质量通过。早先 `monet-stable` 草稿没有并入正式实现。
 
+## 2026-11-18 研究指导升级
+
+[完整更新与验证记录](docs/research-upgrade-2026-11-18.zh.md) · [九篇原作研究索引](research/artwork-studies/README.zh.md) · [运行时证据与适用边界](skills/monet-style/references/artwork-evidence.md)
+
+本次根据用户明确要求更新Skill：将形体与局部笔触分开处理，把结构、光照、距离和视觉作用带入区域选择；让光照影响颜色、边缘与可见细节；避免统一雾化、全面精修与全图厚涂。花园、水面、人物、建筑、雪景、海岸按需选用，保留有意的整体节奏，不把机械鳞纹控制等同于随机化或删除所有短笔触。
+
+工作流先区分提示词、评审、研究和授权生成。本项目仍由用户另开对话生成测试图；提示词直接在聊天中完整给出。评审使用对应原作四维10分定义锚点，权重30/30/30/10；缺图、未审看或硬门未知时不计算有效总分。
+
+新版默认 `research-v3`，旧核心保存在 `legacy-v2`，历史P0仅配合旧配置。Draft PR #1与历史研究/实验记录保持独立。这是可回溯的规则更新，尚无新版真实生成图或视觉提升分数。
+
 ## 可安装的 Skill
 
 入口：[skills/monet-style/SKILL.md](skills/monet-style/SKILL.md) · [中文安装与用法](skills/monet-style/README.zh.md) · [工程测试记录](docs/implementation-validation.json)
 
-将 `skills/monet-style/` 整个目录复制到 Codex 的 `~/.agents/skills/`，或 Claude Code 的 `~/.claude/skills/`。宿主必须已有支持真实图片参考的生图工具。安装 Skill 不会自动提供生图模型。
+将 `skills/monet-style/` 整个目录复制到 Codex 的 `~/.agents/skills/`，或 Claude Code 的 `~/.claude/skills/`。实际参考受控生图需要宿主支持真实图片参考；准备提示词和评审不要求调用生图工具。安装 Skill 不会自动提供生图模型。
 
 ```bash
 # 在仓库根目录验证与打包，普通规则检查无第三方依赖，cleanup 预处理需要 Pillow
 python3 -m unittest discover -s tests -p test_monet.py -v
 python3 -m unittest discover -s skills/monet-style/tests -p 'test_*.py' -v
 python3 skills/monet-style/scripts/monet.py check
-python3 tools/package_skill.py --output dist/monet-style-0.4.0-alpha.4.zip
+python3 tools/package_skill.py --output dist/monet-style-0.5.0-alpha.1.zip
 ```
 
 实际使用：`使用 $monet-style，画一列驶入现代车站的高速列车，保留现代车头，3:2。`
 
-本版实现固定画法文本、两幅原作锚点按需下载与 SHA-256 校验、内容/风格角色分离、系列输入锁、宿主生图调用指令和逐图验收记录。默认 1880s 只是可修订的实验基线，非最终艺术风格定稿。没有 GPU 服务、模型权重、LoRA 或隐藏付费调用。
+本版实现研究指导的核心画法与按需题材模块、两幅原作锚点按需下载与 SHA-256 校验、内容/风格角色分离、系列输入锁、提示词交付和逐图验收记录。默认 1880s 只是可修订的实验基线，非最终艺术风格定稿。没有 GPU 服务、模型权重、LoRA 或隐藏付费调用。
 
 ## 可选的显式 ComfyUI 执行器（实验功能）
 
 [执行器说明](skills/monet-style/references/explicit-comfyui.md) · [源码](skills/monet-style/scripts/execute_comfyui.py) · [Mock 后端测试](skills/monet-style/tests/test_execute_comfyui.py)
 
-现在可以在用户已运行且配置好风格控制工作流的**本地 ComfyUI** 上，明确传入提示词、原作参考、宽高和种子并按任务 ID 取图。默认 dry-run，不自动下载模型、调用收费 API 或重试未知结果。模拟服务端 12 项验证通过，尚未完成真实 GPU 模型生图和莫奈画风 A/B 评测。
+保留的可选适配器可以在用户已运行且配置好风格控制工作流的**本地 ComfyUI** 上，明确传入提示词、原作参考、宽高和种子并按任务 ID 取图。默认 dry-run，不自动下载模型、调用收费 API 或重试未知结果。模拟服务端 12 项验证通过，尚未完成真实 GPU 模型生图和莫奈画风 A/B 评测。
 
-**[Alpha.4 双设备测试报告](docs/alpha4-regression-2026-11-10.json)**：Mac 55 项通过、14 项因 Pillow 缺失跳过；Windows 69/69 项通过。真实 ComfyUI 推理仍未执行。\n\n## 可复用优化循环
+**[Alpha.4 双设备测试报告](docs/alpha4-regression-2026-11-10.json)**：Mac 55 项通过、14 项因 Pillow 缺失跳过；Windows 69/69 项通过。真实 ComfyUI 推理仍未执行。
+
+## 可复用优化循环
 
 [优化计划 V1.0](docs/optimization/README.zh.md) · [单轮执行指令](docs/optimization/EXECUTE_ONE_ROUND.zh.md) · [已复核的工程基线](docs/optimization/rounds/R000-baseline.json)
 
@@ -38,7 +50,7 @@ python3 tools/package_skill.py --output dist/monet-style-0.4.0-alpha.4.zip
 
 [P0 后端资格检查与第二次路由失败记录](benchmarks/original-paintings-v1/rounds/P0-2026-11-10-second-blocker.md) · [P0 区域笔触候选与操作说明](skills/monet-style/references/regional-brushwork-p0.md) · [待执行的对照计划](benchmarks/original-paintings-v1/rounds/P0-regional-brushwork-plan.json) · [Alpha.2 真实失败记录](docs/optimization/rounds/R001-results-2026-11-10.md)
 
-**本轮 21 项离线测试通过，真实生图与画风改进仍未获验证。**
+**上述21项为早期P0离线测试记录，非本版测试总数；当前验证见本次升级记录。真实生图与画风改进仍未获验证。**
 
 ## 原作图像参考集
 

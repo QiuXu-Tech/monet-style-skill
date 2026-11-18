@@ -25,10 +25,10 @@ class RegionalP0Tests(unittest.TestCase):
         }
 
     def prepare(self, variant='baseline'):
-        return monet.prepare(self.request, self.dir, self.dir / 'cache', self.dir / 'run', True, variant)
+        return monet.prepare(self.request, self.dir, self.dir / 'cache', self.dir / 'run', True, variant, 'legacy-v2')
 
-    def test_baseline_remains_default(self):
-        self.assertEqual(monet.prepare(self.request, self.dir, self.dir / 'cache', self.dir / 'x', True), self.prepare())
+    def test_baseline_remains_default_within_legacy_profile(self):
+        self.assertEqual(monet.prepare(self.request, self.dir, self.dir / 'cache', self.dir / 'x', True, profile='legacy-v2'), self.prepare())
         self.assertNotIn('P0 REGIONAL BRUSHWORK CANDIDATE', self.prepare()['prompt'])
 
     def test_p0_is_only_prompt_overlay(self):
@@ -67,7 +67,7 @@ class RegionalP0Tests(unittest.TestCase):
         req = self.dir / 'request.json'
         req.write_text(json.dumps(self.request, ensure_ascii=False), encoding='utf-8')
         out = self.dir / 'prepared'
-        proc = subprocess.run([sys.executable,str(ROOT/'scripts/monet.py'),'prepare','--request',str(req),'--text-only','--brushwork-variant','regional-p0','--out',str(out)],capture_output=True,text=True)
+        proc = subprocess.run([sys.executable,str(ROOT/'scripts/monet.py'),'prepare','--request',str(req),'--text-only','--profile','legacy-v2','--brushwork-variant','regional-p0','--out',str(out)],capture_output=True,text=True)
         self.assertEqual(proc.returncode,0,proc.stderr)
         job = json.loads((out/'job.json').read_text())
         self.assertEqual(job['state'], 'PROMPT_ONLY')

@@ -13,3 +13,8 @@
 - https://github.com/openai/codex/blob/main/codex-rs/skills/src/assets/samples/imagegen/SKILL.md
 
 图像事实、下载源和许可标记见 anchors.json。下载地址固定到本项目研究提交，字节通过 SHA-256 核验。开放图像的来源标记不等于博物馆为本项目背书。模型本身可能有独立使用条款。
+
+
+## 0.5.0 原作研究依据
+
+见 [artwork-evidence.md](artwork-evidence.md)：逐一列出九篇正式研究、1875人物专题、官方馆藏与技术来源，以及事实/视觉观察/工程假设边界。历史研究链接固定到升级前提交，避免后续文字漂移改变证据含义。新版prompt效果尚未经过真实生图验证。

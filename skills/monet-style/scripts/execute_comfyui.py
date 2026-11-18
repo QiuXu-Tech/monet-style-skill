@@ -86,17 +86,25 @@ def verify_job(job: dict) -> dict:
     if reference["sha256"] != anchor["sha256"]:
         raise ValueError("Style reference does not match the pinned anchor")
     lock = job["style_lock"]
-    contract = monet.ROOT / "references" / "style-contract.json"
+    profile = job.get("profile")
+    if profile not in monet.PROFILES:
+        raise ValueError("Unknown prepared profile")
+    contract = monet.ROOT / "references" / monet.PROFILES[profile]
     if (lock["skill_version"] != monet.VERSION or
             lock["profile_sha256"] != monet.file_sha(contract) or
             lock["anchor_sha256"] != anchor["sha256"] or
             lock["anchor_id"] != anchor["id"]):
         raise ValueError("Stale or inconsistent style lock")
+    if profile == "research-v3" and lock.get("subject_modules_sha256") != monet.file_sha(
+            monet.ROOT / "references" / "subject-modules.json"):
+        raise ValueError("Subject module library SHA-256 mismatch")
     variant = lock.get("brushwork_variant")
     overlay = monet.ROOT / "references" / "regional-brushwork-p0.txt"
     if variant not in ("baseline", "regional-p0"):
         raise ValueError("Unknown brushwork variant")
     if variant == "regional-p0":
+        if profile != "legacy-v2":
+            raise ValueError("P0 overlay requires the legacy-v2 profile")
         if lock.get("brushwork_overlay_sha256") != monet.file_sha(overlay):
             raise ValueError("P0 overlay SHA-256 mismatch")
     elif lock.get("brushwork_overlay_sha256") is not None:

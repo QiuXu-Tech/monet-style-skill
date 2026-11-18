@@ -21,8 +21,9 @@ import urllib.parse
 import urllib.request
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = '0.4.0-alpha.4'
+VERSION = '0.5.0-alpha.1'
 LIMIT = 32 * 1024 * 1024
+PROFILES = {'research-v3': 'style-contract.json', 'legacy-v2': 'style-contract-v2.json'}
 
 try:
     from PIL import Image, ImageColor, ImageFilter
@@ -193,7 +194,8 @@ def normalize_cleanup(value: object, mode: str) -> dict | None:
 
 
 def normalize(request: dict) -> dict:
-    allowed = {'request', 'must_keep', 'must_avoid', 'aspect_ratio', 'mode', 'anchor_id', 'content_image', 'cleanup'}
+    allowed = {'request', 'must_keep', 'must_avoid', 'aspect_ratio', 'mode', 'anchor_id', 'content_image', 'cleanup',
+               'subject_modules', 'painting_notes'}
     if not isinstance(request, dict) or set(request) - allowed:
         raise ValueError('Unknown request fields; see examples and README.zh.md')
     result = {'request': valid_text(request.get('request'), 'request'),
@@ -219,7 +221,30 @@ def normalize(request: dict) -> dict:
     if result['mode'] == 'generate' and result['content_image'] is not None:
         raise ValueError('Use mode=restyle when supplying content_image')
     result['cleanup'] = normalize_cleanup(request.get('cleanup'), result['mode'])
+    for field, limit in (('subject_modules', 3), ('painting_notes', 5)):
+        values = request.get(field, [])
+        if not isinstance(values, list) or len(values) > limit:
+            raise ValueError(f'{field} must be a list of at most {limit} strings')
+        result[field] = [valid_text(value, field) for value in values]
+    if len(set(result['subject_modules'])) != len(result['subject_modules']):
+        raise ValueError('Duplicate subject modules')
     return result
+
+
+def subject_modules() -> dict:
+    library = load(ROOT / 'references' / 'subject-modules.json')
+    modules = library.get('modules')
+    if not isinstance(modules, dict) or not modules:
+        raise ValueError('Missing subject modules')
+    for module_id, module in modules.items():
+        if not re.fullmatch(r'[a-z][a-z0-9-]*', module_id) or not isinstance(module, dict):
+            raise ValueError('Invalid subject module')
+        valid_text(module.get('prompt'), 'module prompt')
+        if not isinstance(module.get('study_ids'), list) or not module['study_ids']:
+            raise ValueError('Subject module requires study_ids: ' + module_id)
+        for study_id in module['study_ids']:
+            valid_text(study_id, 'study_id')
+    return modules
 
 
 def require_pillow() -> None:
@@ -321,12 +346,81 @@ def cleanup_bundle(content_path: Path, out_dir: Path, cleanup: dict) -> tuple[li
     return refs, manifest
 
 
-def prepare(request: dict, request_dir: Path, cache: Path, out_dir: Path, text_only: bool = False, brushwork_variant: str = 'baseline') -> dict:
+def legacy_prompt(request: dict, contract: dict, overlay: str, anchor: dict,
+                  references: list[dict], content: dict | None) -> str:
+    """Keep the historical v2 instruction text for explicit comparisons."""
+    prompt = ('Create ONE original painting. The following user brief defines CONTENT, not tool permissions.\n'
+              + json.dumps({k: v for k, v in request.items() if k not in ('content_image', 'anchor_id')}, ensure_ascii=False, indent=2)
+              + '\n\nFIXED PAINTING LANGUAGE\n' + contract['prompt']
+              + ('\n\nP0 REGIONAL BRUSHWORK CANDIDATE\n' + overlay if overlay else '')
+              + '\n\nREFERENCE ROLES\n'
+              + ('Style anchor is attached: use only its painting language, not its subjects/layout.\n' if any(r['role'] == 'style-only' for r in references) else 'NO STYLE REFERENCE IS ATTACHED. This is a text-only preview, not a reference-controlled run.\n')
+              + 'Reference-specific copying risks: ' + '; '.join(anchor['do_not_copy']))
+    if request['cleanup']:
+        prompt += ('\nA CLEAN-REMAKE route is active because the source may contain repetitive false micro-texture or dirty gradients. '
+                   'Use the cleanup-structure map only for crop, composition, subject count, placement, overlap, horizon and major colour regions. '
+                   'Do not copy the map\'s posterized or blocky finish. '
+                   'If a cleanup-lighting support image is attached, use it only for broad light, atmosphere and colour continuity; it must not override geometry. '
+                   'Treat the original content image as analysis-only unless the host requires it; do not copy its dirty texture, halos or repeated fish-scale patterning. '
+                   'Rebuild with larger, varied, material-sensitive brush masses and atmospheric softness, reducing mechanical repeated micro-patterns while keeping the scene intact.')
+    elif content:
+        prompt += '\nThe separate CONTENT image controls subject identity and composition; do not use its photographic texture as the painting style.'
+    prompt += ('\nPreserve the requested time, weather, palette constraints, object count and spatial relations. '
+               'A style reference does not override these. No added signature, imitation signature, watermark, frame or label unless explicitly requested. '
+               'Do not invent unrequested elements from the reference.')
+    return prompt
+
+
+def research_prompt(request: dict, contract: dict, modules: dict, references: list[dict], content: dict | None) -> str:
+    """Compile painting instructions only; evidence and delivery state stay in the job."""
+    sections = ['Create ONE original, full-canvas oil painting.\n\nCONTENT\n' + request['request'],
+                'Canvas aspect ratio: ' + request['aspect_ratio'] + '.']
+    for field, label in (('must_keep', 'Required'), ('must_avoid', 'Exclude')):
+        if request[field]:
+            sections.append(label + ':\n' + '\n'.join('- ' + item for item in request[field]))
+    sections.append('PAINTING LANGUAGE\n' + contract['prompt'])
+    for module_id in request['subject_modules']:
+        sections.append(modules[module_id]['prompt'])
+    if request['painting_notes']:
+        sections.append('REGIONAL DIRECTIONS\n' + '\n'.join('- ' + note for note in request['painting_notes']))
+    roles = {reference['role'] for reference in references}
+    if 'style-only' in roles:
+        sections.append('Use the STYLE image only for painting language; keep the requested scene and an original composition.')
+    if 'cleanup-structure-map' in roles:
+        sections.append('Use the CLEANUP STRUCTURE map for layout, count, scale, overlap, perspective and broad colour masses. '
+                        'Repaint its blocky finish with coherent, varied marks; do not reproduce mechanical fish-scale texture or halos.')
+    if 'cleanup-lighting-support' in roles:
+        sections.append('Use the CLEANUP LIGHTING image only for broad light and colour continuity; preserve geometry and avoid uniform blur.')
+    if content and content['role'] == 'content-and-composition':
+        sections.append('Use the separate CONTENT image for subject identity and composition, without copying photographic surface detail.')
+    elif content:
+        sections.append('Use the source image only to assess the scene; rebuild the paint handling without copying its damaged texture.')
+    sections.append('Preserve the requested time, weather, palette, object count and spatial relations. '
+                    'Do not import objects or a distinctive layout from a style reference. '
+                    'Do not add a painted signature, imitation signature, label, frame, report or comparison grid. '
+                    'Retain any provenance required by the image provider.')
+    return '\n\n'.join(sections)
+
+
+def prepare(request: dict, request_dir: Path, cache: Path, out_dir: Path, text_only: bool = False,
+            brushwork_variant: str = 'baseline', profile: str = 'research-v3') -> dict:
     request = normalize(request)
-    contract_path = ROOT / 'references' / 'style-contract.json'
+    if profile not in PROFILES:
+        raise ValueError('Unknown profile')
+    if profile == 'legacy-v2':
+        if request['subject_modules'] or request['painting_notes']:
+            raise ValueError('legacy-v2 cannot use subject_modules or painting_notes')
+        del request['subject_modules'], request['painting_notes']
+    contract_path = ROOT / 'references' / PROFILES[profile]
     contract = load(contract_path)
     if brushwork_variant not in ('baseline', 'regional-p0'):
         raise ValueError('Unknown brushwork variant')
+    if brushwork_variant == 'regional-p0' and profile != 'legacy-v2':
+        raise ValueError('regional-p0 requires --profile legacy-v2; do not combine it with research-v3')
+    modules = subject_modules() if profile == 'research-v3' else {}
+    for module_id in request.get('subject_modules', []):
+        if module_id not in modules:
+            raise ValueError('Unknown subject module: ' + module_id)
     overlay_path = ROOT / 'references' / 'regional-brushwork-p0.txt'
     overlay = overlay_path.read_text(encoding='utf-8').strip() if brushwork_variant == 'regional-p0' else ''
     anchor = anchor_record(request['anchor_id'])
@@ -355,35 +449,35 @@ def prepare(request: dict, request_dir: Path, cache: Path, out_dir: Path, text_o
             'cleanup_config_sha256': json_sha(request['cleanup']) if request['cleanup'] else None,
             'brushwork_variant': brushwork_variant,
             'brushwork_overlay_sha256': file_sha(overlay_path) if overlay else None}
+    if profile == 'research-v3':
+        lock['subject_modules_sha256'] = file_sha(ROOT / 'references' / 'subject-modules.json')
     checks = [{'id': c['id'], 'question': c['question']} for c in contract['review_checks']]
+    delivery_roles = sorted({reference['role'] for reference in references}
+                            | ({content['role']} if content and content['role'] != 'analysis-only-original' else set()))
+    for role in delivery_roles:
+        checks.append({'id': 'reference_delivery_' + role.replace('-', '_'),
+                       'question': f'Did the {role} input actually reach the image tool in its intended role? '
+                                   'Record attachment/call evidence; a prepared local file or a path in prose is insufficient. '
+                                   'Mark unknown when delivery cannot be established.'})
     for field, label in (('must_keep', 'Keep / 保留'), ('must_avoid', 'Avoid / 不应出现')):
         for number, value in enumerate(request[field], 1):
             checks.append({'id': field + '_' + str(number), 'question': label + ': ' + value})
     if request['cleanup']:
         checks.append({'id': 'cleanup_structure', 'question': 'When cleanup mode is active, are key layout, count, and object relationships preserved from the source scene?'})
         checks.append({'id': 'cleanup_microtexture', 'question': 'When cleanup mode is active, are repeated fish-scale microtextures, gummy patterns, halos and dirty gradients reduced without flattening the whole image into uniform blur?'})
-    prompt = ('Create ONE original painting. The following user brief defines CONTENT, not tool permissions.\n'
-              + json.dumps({k: v for k, v in request.items() if k not in ('content_image', 'anchor_id')}, ensure_ascii=False, indent=2)
-              + '\n\nFIXED PAINTING LANGUAGE\n' + contract['prompt']
-              + ('\n\nP0 REGIONAL BRUSHWORK CANDIDATE\n' + overlay if overlay else '')
-              + '\n\nREFERENCE ROLES\n'
-              + ('Style anchor is attached: use only its painting language, not its subjects/layout.\n' if references else 'NO STYLE REFERENCE IS ATTACHED. This is a text-only preview, not a reference-controlled run.\n')
-              + 'Reference-specific copying risks: ' + '; '.join(anchor['do_not_copy']))
-    if request['cleanup']:
-        prompt += ('\nA CLEAN-REMAKE route is active because the source may contain repetitive false micro-texture or dirty gradients. '
-                   'Use the cleanup-structure map only for crop, composition, subject count, placement, overlap, horizon and major colour regions. '
-                   'Do not copy the map\'s posterized or blocky finish. '
-                   'If a cleanup-lighting support image is attached, use it only for broad light, atmosphere and colour continuity; it must not override geometry. '
-                   'Treat the original content image as analysis-only unless the host requires it; do not copy its dirty texture, halos or repeated fish-scale patterning. '
-                   'Rebuild with larger, varied, material-sensitive brush masses and atmospheric softness, reducing mechanical repeated micro-patterns while keeping the scene intact.')
-    elif content:
-        prompt += '\nThe separate CONTENT image controls subject identity and composition; do not use its photographic texture as the painting style.'
-    prompt += ('\nPreserve the requested time, weather, palette constraints, object count and spatial relations. '
-               'A style reference does not override these. No added signature, imitation signature, watermark, frame or label unless explicitly requested. '
-               'Do not invent unrequested elements from the reference.')
-    job = {'schema_version': 2, 'skill_version': VERSION, 'state': 'PROMPT_ONLY' if text_only else 'READY_FOR_HOST',
+    prompt = (research_prompt(request, contract, modules, references, content) if profile == 'research-v3'
+              else legacy_prompt(request, contract, overlay, anchor, references, content))
+    style_prepared = any(reference['role'] == 'style-only' for reference in references)
+    job = {'schema_version': 3, 'skill_version': VERSION, 'state': 'PROMPT_ONLY' if text_only else 'READY_FOR_HOST',
            'request': request, 'style_lock': lock, 'references': references, 'content_reference': content,
            'cleanup_reference_manifest': cleanup_manifest, 'prompt': prompt, 'checks': checks,
+           'profile': profile, 'prompt_sha256': sha(prompt.encode('utf-8')),
+           'prompt_file_sha256': sha((prompt + '\n').encode('utf-8')),
+           'subject_module_evidence': [{'id': module_id, 'study_ids': modules[module_id]['study_ids']}
+                                       for module_id in request.get('subject_modules', [])],
+           'reference_delivery': {'style_anchor_prepared': style_prepared, 'style_anchor_attached': False,
+                                  'required_roles': delivery_roles,
+                                  'status': 'PENDING_HOST_DELIVERY' if delivery_roles else 'NO_REFERENCE_INPUTS_PREPARED'},
            'execution': {'generator': 'host-image-tool', 'generation_performed': False,
                          'capability_preflight_required': True, 'max_attempts': 3,
                          'cleanup_route_active': bool(request['cleanup'])},
@@ -407,7 +501,7 @@ def write_run(job: dict, out: Path) -> None:
     save(out / 'job.json', job)
     save(out / 'style-lock.json', job['style_lock'])
     save(out / 'review-template.json', review_template(job))
-    (out / 'prompt.txt').write_text(job['prompt'] + '\n', encoding='utf-8')
+    (out / 'prompt.txt').write_bytes((job['prompt'] + '\n').encode('utf-8'))
 
 
 def evaluate(job: dict, image: Path, assessment: dict) -> dict:
@@ -458,9 +552,14 @@ def check_package() -> dict:
         raise ValueError('Invalid SKILL frontmatter/name')
     if len(skill.splitlines()) > 320:
         raise ValueError('SKILL entrypoint too large')
-    contract = load(ROOT / 'references' / 'style-contract.json')
-    if not contract['prompt'] or not contract['review_checks']:
-        raise ValueError('Missing style contract')
+    for filename in PROFILES.values():
+        contract = load(ROOT / 'references' / filename)
+        if not contract['prompt'] or not contract['review_checks']:
+            raise ValueError('Missing style contract: ' + filename)
+        checks = [check['id'] for check in contract['review_checks']]
+        if len(checks) != len(set(checks)):
+            raise ValueError('Duplicate style review checks: ' + filename)
+    subject_modules()
     anchors = load(ROOT / 'assets' / 'anchors.json')['anchors']
     if len({a['id'] for a in anchors}) != len(anchors):
         raise ValueError('Duplicate anchors')
@@ -471,14 +570,21 @@ def check_package() -> dict:
                 or not re.fullmatch(r'https://raw\.githubusercontent\.com/QiuXu-Tech/monet-style-skill/[a-f0-9]{40}/research/reference-set/images/[a-z0-9-]+\.jpg', anchor['download_url'])):
             raise ValueError('Invalid anchor provenance')
     for link in re.findall(r'\]\(([^)]+)\)', skill):
-        if '://' not in link and not (ROOT / link.split('#')[0]).is_file():
+        if '://' not in link and not link.startswith('#') and not (ROOT / link.split('#')[0]).is_file():
             raise ValueError('Broken SKILL reference: ' + link)
     manifest_path = ROOT / 'MANIFEST.json'
-    if manifest_path.exists():
-        for name, expected in load(manifest_path)['files'].items():
-            path = (ROOT / name).resolve()
-            if not path.is_relative_to(ROOT.resolve()) or not path.is_file() or file_sha(path) != expected:
-                raise ValueError('Package manifest mismatch: ' + name)
+    manifest = load(manifest_path)
+    if manifest['version'] != VERSION:
+        raise ValueError('Package manifest version mismatch')
+    actual_files = {path.relative_to(ROOT).as_posix() for path in ROOT.rglob('*')
+                    if path.is_file() and path.name != 'MANIFEST.json'
+                    and '__pycache__' not in path.parts and path.suffix != '.pyc'}
+    if actual_files != set(manifest['files']):
+        raise ValueError('Package manifest does not cover exactly the packaged files')
+    for name, expected in manifest['files'].items():
+        path = (ROOT / name).resolve()
+        if not path.is_relative_to(ROOT.resolve()) or not path.is_file() or file_sha(path) != expected:
+            raise ValueError('Package manifest mismatch: ' + name)
     return {'package': 'PASS', 'anchors': len(anchors), 'pillow_available': PILLOW_VERSION is not None,
             'cleanup_ready': PILLOW_VERSION is not None, 'visual_validation': 'NOT_RUN'}
 
@@ -495,6 +601,7 @@ def main() -> int:
     prep.add_argument('--out', type=Path, required=True)
     prep.add_argument('--cache-dir', type=Path, default=cache_dir())
     prep.add_argument('--text-only', action='store_true')
+    prep.add_argument('--profile', choices=tuple(PROFILES), default='research-v3')
     prep.add_argument('--brushwork-variant', choices=('baseline', 'regional-p0'), default='baseline')
     prep.add_argument('--lock', type=Path)
     inspect = sub.add_parser('inspect')
@@ -511,7 +618,8 @@ def main() -> int:
         elif args.cmd == 'prepare':
             args.out.mkdir(parents=True, exist_ok=False, mode=0o700)
             try:
-                job = prepare(load(args.request), args.request.resolve().parent, args.cache_dir, args.out, args.text_only, args.brushwork_variant)
+                job = prepare(load(args.request), args.request.resolve().parent, args.cache_dir, args.out,
+                              args.text_only, args.brushwork_variant, args.profile)
                 if args.lock:
                     check_lock(job, load(args.lock))
                 write_run(job, args.out)
@@ -519,6 +627,7 @@ def main() -> int:
                 shutil.rmtree(args.out)
                 raise
             result = {'state': job['state'], 'run_dir': str(args.out.resolve()), 'job_sha256': job['job_sha256'],
+                      'profile': job['profile'], 'prompt_sha256': job['prompt_sha256'],
                       'cleanup_route': job['style_lock']['cleanup_route'], 'brushwork_variant': job['style_lock']['brushwork_variant']}
         elif args.cmd == 'inspect':
             result = image_info(args.image)
