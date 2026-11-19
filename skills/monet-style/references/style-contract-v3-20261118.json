@@ -1,0 +1,66 @@
+{
+  "id": "monet-1880s-research-v3",
+  "version": "0.3.0",
+  "status": "RESEARCH_INFORMED_VISUAL_VALIDATION_PENDING",
+  "scope": "Research-informed 1880s default using studies 02, 03 and 08; other studied periods supply qualified comparisons and counterexamples, not interchangeable era presets. User-authorized rule update; no new generated images or demonstrated quality gain.",
+  "prompt": "Create an original oil painting in a Monet-inspired 1880s painting language. Keep large forms, weight, overlap and spatial relationships readable while allowing local marks and some contours to break. Organise strokes by form, material, illumination, distance, visual importance and the rhythm of the whole painting; the same material can change handling within one scene. Vary direction, length, spacing and concentration where these relationships call for it, without forcing random variation or a different texture in every region. Let the specified light change local colour, contrast, edges and which details remain visible. Connect neighbouring colours and reflected light; neither shadows nor highlights have a mandatory hue. Preserve the requested weather, time, darkness and palette constraints. Allocate detail selectively: retain defining shapes and actions, concentrate attention where the scene needs it, and allow quieter passages. Small figures need convincing posture and proportion rather than polished facial or finger detail; do not replace simplification with blur or malformed anatomy. Build air and depth through colour relationships, overlap, scale and selective edge contrast. Add haze only when the scene calls for it. Distinguish visible brushwork from raised paint: combine quieter coverage, broken colour and local surface accents as appropriate, without uniform impasto or simulated aging. Avoid a repeated stamp or fish-scale texture running independently of forms across the painting. Keep purposeful clusters and shared rhythms; do not erase short strokes, flowers or waves merely because they repeat. Preserve coherent light and structure at a distance, with a varied but related painted surface close up.",
+  "review_checks": [
+    {
+      "id": "single_painting_canvas",
+      "question": "Is this a single requested painting with no report layout, charts, tables, labels, split panels or multiple independent compositions?"
+    },
+    {
+      "id": "brief_content",
+      "question": "Does the image satisfy the complete original brief, including objects, count, actions and spatial relations?"
+    },
+    {
+      "id": "composition",
+      "question": "Are required structural relationships and, when supplied, the content image identity/composition retained?"
+    },
+    {
+      "id": "requested_light",
+      "question": "Are the requested time, weather and specified colours retained rather than replaced by the reference lighting?"
+    },
+    {
+      "id": "style_colour",
+      "question": "Are forms built through coherent colour/light relationships rather than a uniform tinted filter?"
+    },
+    {
+      "id": "style_brushwork",
+      "question": "Do marks respond to form, light, distance and visual role, including changes within one material, without arbitrary variation or a repeated stamp across unrelated regions?"
+    },
+    {
+      "id": "style_edges",
+      "question": "Are essential silhouettes, actions and spatial relationships readable while secondary edges can break or merge in a way consistent with the light?"
+    },
+    {
+      "id": "style_atmosphere",
+      "question": "Do colour relationships, overlap, scale and selective edge contrast create scene-appropriate air and depth without forced haze, washed-out distance or uniform blur?"
+    },
+    {
+      "id": "style_space",
+      "question": "Are foreground/background scale, contrast and atmosphere coherent with the requested scene?"
+    },
+    {
+      "id": "style_detail_hierarchy",
+      "question": "Does detail follow size, distance and visual importance, keeping required identities/actions intact without uniformly polished faces, hands, flowers or clouds, or blanket simplification?"
+    },
+    {
+      "id": "style_medium",
+      "question": "Are brushmark visibility and apparent surface relief handled separately, without uniform thick paint, canvas noise or fabricated aging? Judge appearance only, not actual pigment chemistry or layer history."
+    },
+    {
+      "id": "reference_leakage",
+      "question": "After inspecting corners and layout, is the painting free of an unrequested imitation signature or distinctive source composition? Shared requested objects alone are not leakage; mark unclear cases unknown."
+    },
+    {
+      "id": "artifacts",
+      "question": "Is the image visually decodable and free of unintended text, malformed key objects, framing and other disruptive artifacts?"
+    },
+    {
+      "id": "artifact_microtexture",
+      "question": "Is the image free of repeated fish-scale / false micro-texture, gummy patterning, dirty gradients and over-sharpened halos?"
+    }
+  ],
+  "research_basis": "artwork-evidence.md"
+}

@@ -1,10 +1,14 @@
 # Monet Style Skill
 
-**Status: 0.5.0-alpha.1 · 九篇原作研究指导的 Skill 升级。默认1880s与Antibes1888锚点保留；新版实际出图质量尚待验证。**
+**Status: 0.5.0-alpha.2 · V3-W02笔触构形修订，保留1880s及Antibes1888锚点；真实视觉A/B待验证。**
 
 本项目由 QiuXu-Tech 发起，以 Claude Monet 的原作为研究基础，探索跨题材、跨光照保持绘画语言一致性的开源图像生成 Agent Skill。
 
 **Research before claims.** 不将“印象派滤镜”、睡莲图案、油画噪声视作莫奈风格；不把单元测试通过等同于视觉质量通过。早先 `monet-stable` 草稿没有并入正式实现。
+
+## 2026-11-19 V3-W02｜让笔触构成形体
+
+根据真实返回图及用户批评，修订默认核心规则，避免“漂亮数字风景+整齐油画纹理”。原V3核心原样保留为 `research-v3-previous`，水面模块不变。详见[修订与对照方案](docs/V3-W02-paint-construction-2026-11-19.zh.md)。此修改不是视觉效果已提升的证明。
 
 ## 2026-11-18 研究指导升级
 
@@ -27,7 +31,7 @@
 python3 -m unittest discover -s tests -p test_monet.py -v
 python3 -m unittest discover -s skills/monet-style/tests -p 'test_*.py' -v
 python3 skills/monet-style/scripts/monet.py check
-python3 tools/package_skill.py --output dist/monet-style-0.5.0-alpha.1.zip
+python3 tools/package_skill.py --output dist/monet-style-0.5.0-alpha.2.zip
 ```
 
 实际使用：`使用 $monet-style，画一列驶入现代车站的高速列车，保留现代车头，3:2。`

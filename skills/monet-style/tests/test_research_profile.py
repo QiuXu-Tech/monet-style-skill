@@ -37,6 +37,34 @@ class ResearchProfileTests(unittest.TestCase):
         self.assertNotIn('P0 REGIONAL BRUSHWORK CANDIDATE', job['prompt'])
         self.assertFalse(job['execution']['generation_performed'])
 
+    def test_v3_paint_constructs_form_and_preserves_old_contract(self):
+        before_contract = monet.load(ROOT / 'references' / 'style-contract-v3-20261118.json')
+        after_contract = monet.load(ROOT / 'references' / 'style-contract.json')
+        self.assertEqual(before_contract['version'], '0.3.0')
+        self.assertEqual(after_contract['version'], '0.3.1')
+        self.assertNotIn('Construct forms through adjoining', before_contract['prompt'])
+        self.assertIn('Construct forms through adjoining', after_contract['prompt'])
+        before = self.prepare(profile='research-v3-previous')
+        after = self.prepare()
+        self.assertEqual(before['request'], after['request'])
+        self.assertEqual(before['reference_delivery'], after['reference_delivery'])
+        self.assertNotEqual(before['prompt_sha256'], after['prompt_sha256'])
+        with self.assertRaisesRegex(ValueError, 'Style lock mismatch'):
+            monet.check_lock(after, before['style_lock'])
+
+    def test_w02_same_scene_and_water_module_in_two_profiles(self):
+        request = monet.load(ROOT / 'examples' / 'river-w02.json')
+        old_arm = self.prepare(request, profile='research-v3-previous')
+        new_arm = self.prepare(request)
+        self.assertEqual(old_arm['request'], new_arm['request'])
+        self.assertEqual(old_arm['subject_module_evidence'], new_arm['subject_module_evidence'])
+        self.assertEqual(old_arm['subject_module_evidence'][0]['id'], 'water')
+        self.assertIn('Where water occurs', old_arm['prompt'])
+        self.assertIn('Where water occurs', new_arm['prompt'])
+        self.assertNotEqual(old_arm['style_lock']['profile_sha256'], new_arm['style_lock']['profile_sha256'])
+        self.assertEqual(old_arm['style_lock']['subject_modules_sha256'], new_arm['style_lock']['subject_modules_sha256'])
+        self.assertFalse(new_arm['execution']['generation_performed'])
+
     def test_historical_v2_prompts_are_preserved(self):
         # SHA-256 of real text-only compiler output at a9721b98; no image scores.
         expected = {

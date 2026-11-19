@@ -1,8 +1,19 @@
-# Monet Style · 0.5.0-alpha.1
+# Monet Style · 0.5.0-alpha.2
 
 **研究指导升级版：已将九篇原作研究和1875人物专题转化为绘画决策、按题材调用的指令和原作对照评审。新版真实出图质量尚待验证。**
 
 默认仍为1880s，默认图像锚点仍为 `antibes-1888`。本版支持准备提示词、评审返回图、原作研究，以及在当前会话授权下使用已有生图工具。不会因为安装Skill就获得模型或自动启动测试。
+
+## V3-W02：笔触构形修订
+
+针对实际返回的花园、河流两幅图“色彩好看但画风和笔触不像莫奈”的问题，将默认绘画语言改为**用相邻色笔构成形体、光影与边缘**，避免在光滑数字插画上均匀铺设装饰性短笔。旧核心保持原样，作为 `research-v3-previous` 对照配置；水面模块和默认锚点未修改。
+
+```bash
+python3 scripts/monet.py prepare --request examples/river-w02.json --text-only --profile research-v3-previous --out /tmp/w02-old
+python3 scripts/monet.py prepare --request examples/river-w02.json --text-only --profile research-v3 --out /tmp/w02-new
+```
+
+需在两个独立生图聊天里分别使用上述输出；当前本项目研究聊天不生图。原图W01不是冻结编译结果，不能据它与W02的差异宣称严格单变量实验。[定向实验记录](../../docs/V3-W02-paint-construction-2026-11-19.zh.md)。
 
 ## 本次升级
 
@@ -76,7 +87,7 @@ python3 scripts/monet.py prepare --request examples/train.json --text-only --pro
 python3 scripts/monet.py prepare --request examples/train.json --text-only --profile legacy-v2 --brushwork-variant regional-p0 --out /tmp/monet-legacy-p0-001
 ```
 
-旧核心原样保存在`style-contract-v2.json`；P0叠加文本未改变。新题材模块和painting_notes只适用research-v3。完整历史任务仍以当时提交和锁为准，新版本锁不假装与旧版本相同。旧prompt含历史元数据包装；本轮benchmark不把该包装伪称为清洁生成正文。
+旧核心原样保存在`style-contract-v2.json`；P0叠加文本未改变。新题材模块和painting_notes适用于research-v3和research-v3-previous。完整历史任务仍以当时提交和锁为准，新版本锁不假装与旧版本相同。旧prompt含历史元数据包装；本轮benchmark不把该包装伪称为清洁生成正文。
 
 ## 转绘与纹理清理
 

@@ -95,7 +95,7 @@ def verify_job(job: dict) -> dict:
             lock["anchor_sha256"] != anchor["sha256"] or
             lock["anchor_id"] != anchor["id"]):
         raise ValueError("Stale or inconsistent style lock")
-    if profile == "research-v3" and lock.get("subject_modules_sha256") != monet.file_sha(
+    if profile in ("research-v3", "research-v3-previous") and lock.get("subject_modules_sha256") != monet.file_sha(
             monet.ROOT / "references" / "subject-modules.json"):
         raise ValueError("Subject module library SHA-256 mismatch")
     variant = lock.get("brushwork_variant")

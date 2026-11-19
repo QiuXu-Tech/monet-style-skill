@@ -21,7 +21,7 @@ Apply persistent session constraints first. **In the Monet Style Skill project r
 
 ## 2. Set scope and preserve the brief
 
-Read [painting-language.md](references/painting-language.md). Default to `research-v3`, profile `monet-1880s-research-v3`, with `antibes-1888` as the registered style anchor. Use `pourville-1882` only when explicitly chosen. Keep the anchor stable across subjects in a series.
+Read [painting-language.md](references/painting-language.md). Default to `research-v3`, contract 0.3.1 (paint-constructed forms), profile `monet-1880s-research-v3`, with `antibes-1888` as the registered style anchor. `research-v3-previous` preserves the exact 2026-11-18 core for comparison; never silently reuse an old series lock. Use `pourville-1882` only when explicitly chosen. Keep the anchor stable across subjects in a series.
 
 The closest research for this default is 1881/1882/1888. Use 1870s and 1890s studies for qualified comparisons and counterexamples, not to import their palette, composition or surface into every task. If a user explicitly requests another period, provide a clearly labeled research-based text proposal when the available studies support it; do not compile it under the 1880s profile or claim a validated era preset. For late large Water Lilies, explain the current research gap instead of relabeling the default.
 
@@ -33,7 +33,7 @@ Resolve routine artistic choices without unnecessary questions. Surface a materi
 
 Use [painting-language.md](references/painting-language.md) for scene planning and [artwork-evidence.md](references/artwork-evidence.md) for evidence and exceptions. Do this briefly before writing the prompt:
 
-1. Identify the large masses, main planes, overlaps and the features that make the requested action readable.
+1. Identify the large masses, main planes, overlaps and the features that make the requested action readable. Ensure colour strokes and paint masses construct these forms instead of serving as a decorative overlay.
 2. Establish the requested illumination and broad light/shadow relationships. Decide which edges and details the light makes prominent or recessive.
 3. Compare the important regions: form, material, distance, visual role, stroke direction/scale/concentration, and useful quiet passages. Include differences within one material where needed.
 4. Keep detail proportional to scale and purpose. Preserve small figures through posture, proportions and colour relationships; keep hands/actions intelligible without miniature polish or anatomy errors.
@@ -68,6 +68,10 @@ python3 "$SKILL_ROOT/scripts/monet.py" prepare --request request.json --out mone
 `prepare` never generates images or silently downloads references. A verified local reference is **prepared**, not proof its pixels reached a model. Confirm actual attachments through the host's supported mechanism. Treat content, style and any cleanup helpers as distinct roles; a URL in prose is not an attached image. Never claim a reference is attached merely because cleanup helper files exist.
 
 To continue a series, pass `--lock previous-run/style-lock.json`. Reject changed profile, anchor, rule-library or version hashes. Topic-module selection and scene notes can vary with content while the rule library stays fixed; compare exact job/prompt hashes when testing. Input locks do not control undisclosed model versions or guarantee pixel reproducibility.
+
+### V3-W02 paint-construction comparison
+
+The V3-G01 and V3-W01 exploratory images drew user feedback: pleasant colours but unconvincing Monet brushwork. Use the same [V3-W02 river fixture](examples/river-w02.json) with `--profile research-v3-previous` and `--profile research-v3` to isolate the changed core painting instructions. The water module and anchor do not change. The earlier W01 prompt had no standardized frozen compiler job, so W01 versus W02 is not a strict A/B. Do not claim image improvement without real returned pictures.
 
 ### Historical baseline and P0
 

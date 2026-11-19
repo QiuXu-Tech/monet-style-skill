@@ -21,9 +21,9 @@ import urllib.parse
 import urllib.request
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = '0.5.0-alpha.1'
+VERSION = '0.5.0-alpha.2'
 LIMIT = 32 * 1024 * 1024
-PROFILES = {'research-v3': 'style-contract.json', 'legacy-v2': 'style-contract-v2.json'}
+PROFILES = {'research-v3': 'style-contract.json', 'research-v3-previous': 'style-contract-v3-20261118.json', 'legacy-v2': 'style-contract-v2.json'}
 
 try:
     from PIL import Image, ImageColor, ImageFilter
@@ -417,7 +417,7 @@ def prepare(request: dict, request_dir: Path, cache: Path, out_dir: Path, text_o
         raise ValueError('Unknown brushwork variant')
     if brushwork_variant == 'regional-p0' and profile != 'legacy-v2':
         raise ValueError('regional-p0 requires --profile legacy-v2; do not combine it with research-v3')
-    modules = subject_modules() if profile == 'research-v3' else {}
+    modules = subject_modules() if profile in ('research-v3', 'research-v3-previous') else {}
     for module_id in request.get('subject_modules', []):
         if module_id not in modules:
             raise ValueError('Unknown subject module: ' + module_id)
@@ -449,7 +449,7 @@ def prepare(request: dict, request_dir: Path, cache: Path, out_dir: Path, text_o
             'cleanup_config_sha256': json_sha(request['cleanup']) if request['cleanup'] else None,
             'brushwork_variant': brushwork_variant,
             'brushwork_overlay_sha256': file_sha(overlay_path) if overlay else None}
-    if profile == 'research-v3':
+    if profile in ('research-v3', 'research-v3-previous'):
         lock['subject_modules_sha256'] = file_sha(ROOT / 'references' / 'subject-modules.json')
     checks = [{'id': c['id'], 'question': c['question']} for c in contract['review_checks']]
     delivery_roles = sorted({reference['role'] for reference in references}
@@ -465,7 +465,7 @@ def prepare(request: dict, request_dir: Path, cache: Path, out_dir: Path, text_o
     if request['cleanup']:
         checks.append({'id': 'cleanup_structure', 'question': 'When cleanup mode is active, are key layout, count, and object relationships preserved from the source scene?'})
         checks.append({'id': 'cleanup_microtexture', 'question': 'When cleanup mode is active, are repeated fish-scale microtextures, gummy patterns, halos and dirty gradients reduced without flattening the whole image into uniform blur?'})
-    prompt = (research_prompt(request, contract, modules, references, content) if profile == 'research-v3'
+    prompt = (research_prompt(request, contract, modules, references, content) if profile in ('research-v3', 'research-v3-previous')
               else legacy_prompt(request, contract, overlay, anchor, references, content))
     style_prepared = any(reference['role'] == 'style-only' for reference in references)
     job = {'schema_version': 3, 'skill_version': VERSION, 'state': 'PROMPT_ONLY' if text_only else 'READY_FOR_HOST',
